@@ -1,2 +1,0 @@
-# Wesbite
-Website for School
