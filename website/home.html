@@ -9,9 +9,13 @@
     body{
         width:100%;
     }
+    .flex{
+        display: flex;
+        flex-direction:row;
+        height:100%;
+    }
     #frame{
-        display: none;
-      
+        display: none; 
     }
 
     #frame>iframe{
@@ -24,17 +28,38 @@
         transition: width 2s height 2s;
     }
 
+    .navbar>.navlist{
+        list-style: none;
+        padding: 0px;
+    }
+
+    .navbar{
+        background-color: aqua;
+    }
+
 </style>
 
 
 </head>
 
 <body>
-    <h1>Restaurant</h1>
-    <button class="btn" onclick="document.getElementById('frame').style.display='block'">Login</button>
+    <div class="flex">
+        <div class="navbar">
+                <ul class="navlist">
+                    <li><button id="about">About</button></li>
+                    <li><button id="about">About</button></li>
+                    <li><button id="about">About</button></li>
+                    <li><button id="about">About</button></li>
+                </ul>
+        </div>
+        <div class="mainbody">
+            <h1>Restaurant</h1>
+            <button class="btn" onclick="document.getElementById('frame').style.display='block'">Login</button>
 
-    <div id="frame">
-        <iframe id ="popup" src="login page.html">
-        </iframe>
+            <div id="frame">
+                <iframe id ="popup" src="login page.html">
+                </iframe>
+            </div>
+        </div>
     </div>
 </body>
