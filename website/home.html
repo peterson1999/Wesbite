@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HomePage</title>
+<style>
+    body{
+        width:100%;
+    }
+    #frame{
+        display: none;
+      
+    }
+
+    #frame>iframe{
+        border: none;
+        border: none;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        left: 40%;
+        transition: width 2s height 2s;
+    }
+
+</style>
+
+
+</head>
+
+<body>
+    <h1>Restaurant</h1>
+    <button class="btn" onclick="document.getElementById('frame').style.display='block'">Login</button>
+
+    <div id="frame">
+        <iframe id ="popup" src="login page.html">
+        </iframe>
+    </div>
+</body>
