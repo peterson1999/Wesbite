@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log In</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:aliceblue;
+        }
+   
+        input[type=text], input[type=password]{
+            text-align: center;
+            padding:12px 20px;
+            margin-top: 8px;
+            border-radius: 25px;
+            width:100%;
+            box-sizing: border-box;
+            color:rgb(44, 16, 146);
+            border-color: transparent;
+        }
+        input[type=text]:focus, input[type=password]:focus{
+            outline: none;
+            border-color:rgb(44, 16, 146);
+        }
+        .container{
+            text-align: left;
+            padding: 15px;
+        }
+        .login-popup{
+            text-align: center;
+            position: absolute;
+            z-index: 1;
+	        top:0;
+	        bottom: 0;
+	        left: 0;
+	        right: 0;
+            width: 300px;
+            height: 80%;
+	        margin: 0px;
+            border-radius: 20px;
+            background-color: rgb(59, 61, 63);
+        }
+        .login-button{
+            text-align: center;
+            padding:12px 20px;
+            margin-top: 8px;
+            border-radius: 25px;
+            width:70%;
+            box-sizing: border-box;
+            background-color:rgb(59, 26, 182);
+            color: white;
+            border-color: transparent;
+        }
+        button:hover{
+            opacity: 0.8;
+        }
+        button:focus{
+            outline: none;
+            background-color:rgb(44, 16, 146);
+        }
+       /* .bg{
+            width:100%;
+            height:100%;
+            position:absolute;
+            top:0; 
+            left:0; 
+            z-index:-2; 
+            opacity:0.5; 
+            background-color: black;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="login-popup">
+        <div class="container">
+            User Name<br>
+            <input type="text" placeholder="Enter User Name">
+        </div>
+        <div class="container">
+            Password<br>
+            <input type="password" placeholder="Enter Password">
+        </div>
+        
+        <input type="checkbox">Remember my user name.<br>
+        <button class="login-button">Login</button>
+        
+    </div>
+</body>
+</html>
