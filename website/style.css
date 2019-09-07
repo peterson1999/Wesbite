@@ -52,24 +52,3 @@ header{
     color: red;
 }
 
-.exitbutton{
-    float: right;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    margin:0;
-    border:none;
-    color:white;
-    z-index: 2;
-    position: relative;
-    right: 39.5%;
-    top: 25px;
-}
-.exitbutton:hover{
-    color: black;
-}
-.exitbutton:focus{
-    color: black;
-    outline: none;
-}
