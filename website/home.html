@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href = "style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HomePage</title>
 <style>
-    
+    html ,body, .flex{
+        height: 100%;
+    }
+
+    body{
+        margin: 0px;
+    }
     #frame{
         display: none;
     }
@@ -28,32 +33,90 @@
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         
     }
+
+    .flex{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar>ul{
+        list-style: none;
+        padding: 0px;
+    }
+
+    .navbar{
+        background-color: blueviolet;
+        width: 8%;
+        border-radius: 0px 30px 30px 0px;
+        position: relative;
+        left: -80px;
+        transition: 0.3s;
+    }
+
+    .navbar:hover{
+        left:0;
+    }
+
+    .btn{
+        border:none;
+        background-color: blueviolet;
+        margin:15px;
+        font-size: 25px;
+        width:100%;
+        margin-left: 0px;
+        color:white;
+    }
+
+    .btn:hover{
+        background-color: violet;
+    }
+
+    #navlist{
+        display: none;
+    }
+
+    .exitbutton{
+        float: right;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        margin:0;
+        border:none;
+        color:white;
+        background-color: transparent;
+        z-index: 2;
+        position: absolute;
+        right: 40%;
+        top: 70px;
+    }
+    .exitbutton:hover{
+        color: black;
+    }
+    .exitbutton:focus{
+        color: black;
+        outline: none;
+    }
 </style>
 </head>
 
 <body>
-    <header>
-
-
-    <!-- <h1>Restaurant</h1> -->
-    <button class="btn" onclick="document.getElementById('frame').style.display='block'">Login</button>
-    <div id="frame">
-        <iframe id ="popup" src="login page.html">
-        </iframe>
-        <button class = "exitbutton" onclick="document.getElementById('frame').style.display='none'">×</button>
-    </div>
-
-    <div class="name">
-        <a href="">RESTAURANT</a>
-
-        <div class="button">
-            <button1 href="" class="btn one">See Menu</button1>
-            <button1 href="" class="btn one">Order Online</button1>
-            <button1 href="" class="btn one">Reservation</button1>
-
+    <div class="flex">
+        <div class="navbar" onmouseover="document.getElementById('navlist').style.display='block'" onmouseout="document.getElementById('navlist').style.display='none'">
+            <ul id="navlist">
+                <li><button class="btn">home</button></li>
+                <li><button class="btn">home</button></li>
+                <li><button class="btn">home</button></li>
+                <li><button class="btn">home</button></li>
+            </ul>
+        </div>
+        <div class="mainbody">
+            <h1>Restaurant</h1>
+            <button class="btn1" onclick="document.getElementById('frame').style.display='block'">Login</button>
+            <div id="frame">
+                <iframe id ="popup" src="login page.html">
+                </iframe>
+                <button class = "exitbutton" onclick="document.getElementById('frame').style.display='none'">×</button>
+            </div>
         </div>
     </div>
-
-
-    </header>
 </body>
