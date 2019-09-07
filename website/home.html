@@ -75,6 +75,27 @@
         display: none;
     }
 
+    .exitbutton{
+        float: right;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        margin:0;
+        border:none;
+        color:white;
+        background-color: transparent;
+        z-index: 2;
+        position: absolute;
+        right: 40%;
+        top: 70px;
+    }
+    .exitbutton:hover{
+        color: black;
+    }
+    .exitbutton:focus{
+        color: black;
+        outline: none;
+    }
 </style>
 </head>
 
@@ -90,11 +111,25 @@
         </div>
         <div class="mainbody">
             <h1>Restaurant</h1>
-            <button class="btn1" onclick="document.getElementById('frame').style.display='block'">Login</button>
+            <button class="btn1" onclick=fadein()>Login</button>
             <div id="frame">
                 <iframe id ="popup" src="login page.html">
                 </iframe>
+                <button class = "exitbutton" onclick=fadeout() >×</button>
             </div>
         </div>
     </div>
+    <script>
+        var s = document.getElementById('frame').style;
+        function fadein(){
+            s.opacity= 1;
+            s.display="block";
+        }
+        function fadeout(){
+            s.opacity = 1;
+            (function fade(){(s.opacity-=.1)==0?s.display="none":setTimeout(fade,40)})();
+        }
+        
+    </script>
 </body>
+</html>
