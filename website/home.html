@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href = "style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HomePage</title>
 <style>
-<<<<<<< HEAD
+    html ,body, .flex{
+        height: 100%;
+    }
+
     body{
-        width:100%;
+        margin: 0px;
     }
-    .flex{
-        display: flex;
-        flex-direction:row;
-        height:100%;
-    }
-    #frame{
-        display: none; 
-=======
-    
     #frame{
         display: none;
->>>>>>> a52e26b64dc07e3408e3c119ab188f5c4dfb7d52
     }
 
     #frame>iframe{
@@ -30,17 +22,6 @@
         position: absolute;
         transition: width 2s height 2s;
 
-<<<<<<< HEAD
-    .navbar>.navlist{
-        list-style: none;
-        padding: 0px;
-    }
-
-    .navbar{
-        background-color: aqua;
-    }
-
-=======
         /* The Modal (background) */
         z-index: 1; /*Sit on top*/ 
         left: 0;
@@ -52,57 +33,68 @@
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         
     }
->>>>>>> a52e26b64dc07e3408e3c119ab188f5c4dfb7d52
+
+    .flex{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar>ul{
+        list-style: none;
+        padding: 0px;
+    }
+
+    .navbar{
+        background-color: blueviolet;
+        width: 8%;
+        border-radius: 0px 30px 30px 0px;
+        position: relative;
+        left: -80px;
+        transition: 0.3s;
+    }
+
+    .navbar:hover{
+        left:0;
+    }
+
+    .btn{
+        border:none;
+        background-color: blueviolet;
+        margin:15px;
+        font-size: 25px;
+        width:100%;
+        margin-left: 0px;
+        color:white;
+    }
+
+    .btn:hover{
+        background-color: violet;
+    }
+
+    #navlist{
+        display: none;
+    }
+
 </style>
 </head>
 
 <body>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div class="flex">
-        <div class="navbar">
-                <ul class="navlist">
-                    <li><button id="about">About</button></li>
-                    <li><button id="about">About</button></li>
-                    <li><button id="about">About</button></li>
-                    <li><button id="about">About</button></li>
-                </ul>
+        <div class="navbar" onmouseover="document.getElementById('navlist').style.display='block'" onmouseout="document.getElementById('navlist').style.display='none'">
+            <ul id="navlist">
+                <li><button class="btn">home</button></li>
+                <li><button class="btn">home</button></li>
+                <li><button class="btn">home</button></li>
+                <li><button class="btn">home</button></li>
+            </ul>
         </div>
         <div class="mainbody">
             <h1>Restaurant</h1>
-            <button class="btn" onclick="document.getElementById('frame').style.display='block'">Login</button>
-
+            <button class="btn1" onclick="document.getElementById('frame').style.display='block'">Login</button>
             <div id="frame">
                 <iframe id ="popup" src="login page.html">
                 </iframe>
             </div>
         </div>
-=======
-    <h1>Restaurant</h1>
-=======
-    <header>
-
-
-    <!-- <h1>Restaurant</h1> -->
->>>>>>> 8cf73203db45c462c18aef1aed5d68604f163b50
-    <button class="btn" onclick="document.getElementById('frame').style.display='block'">Login</button>
-    <div id="frame">
-        <iframe id ="popup" src="login page.html">
-        </iframe>
->>>>>>> a52e26b64dc07e3408e3c119ab188f5c4dfb7d52
     </div>
-
-    <div class="name">
-        <a href="">RESTAURANT</a>
-
-        <div class="button">
-            <button1 href="" class="btn one">See Menu</button1>
-            <button1 href="" class="btn one">Order Online</button1>
-            <button1 href="" class="btn one">Reservation</button1>
-
-        </div>
-    </div>
-
-
-    </header>
 </body>
