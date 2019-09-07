@@ -111,12 +111,25 @@
         </div>
         <div class="mainbody">
             <h1>Restaurant</h1>
-            <button class="btn1" onclick="document.getElementById('frame').style.display='block'">Login</button>
+            <button class="btn1" onclick=fadein()>Login</button>
             <div id="frame">
                 <iframe id ="popup" src="login page.html">
                 </iframe>
-                <button class = "exitbutton" onclick="document.getElementById('frame').style.display='none'">×</button>
+                <button class = "exitbutton" onclick=fadeout() >×</button>
             </div>
         </div>
     </div>
+    <script>
+        var s = document.getElementById('frame').style;
+        function fadein(){
+            s.opacity= 1;
+            s.display="block";
+        }
+        function fadeout(){
+            s.opacity = 1;
+            (function fade(){(s.opacity-=.1)==0?s.display="none":setTimeout(fade,40)})();
+        }
+        
+    </script>
 </body>
+</html>
