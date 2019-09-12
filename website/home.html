@@ -17,7 +17,7 @@
         display: none;
     }
 
-    #frame>iframe{
+    #frame>.modal{
         border: none;
         position: absolute;
         transition: width 2s height 2s;
@@ -81,21 +81,140 @@
         width: 40px;
         height: 40px;
         margin:0;
-        border:none;
+        border:solid;
+        border-color: azure;
+        border-radius:20px;
         color:white;
-        background-color: transparent;
+        background-color: rgba(218, 8, 36, 0.7);;
         z-index: 2;
-        position: absolute;
+        position: fixed;
         right: 40%;
         top: 70px;
     }
     .exitbutton:hover{
         color: black;
+        border-color:black;
     }
     .exitbutton:focus{
         color: black;
         outline: none;
     }
+
+    .body{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+
+    }
+
+    .body>.header{
+        height:10%;
+    }
+
+    .body>.mainbody1{
+        display:flex;
+        flex-direction:row;
+        height:40%;
+    }
+    .body>.mainbody1>.section1-1{
+        width:50%;
+    }
+
+    .body>.mainbody1>.section1-2{
+        display:flex;
+        flex-direction: column;
+        width:50%;
+    }   
+    .body>.mainbody1>.section1-2>.section1-2-contents{
+        display:flex;
+        flex-direction: row;
+        width:100%;
+    } 
+    .body>.mainbody1>.section1-2>.section1-2-contents>.section1-2-x{
+        width:33.33%
+    }
+    .body>.mainbody2{
+        display:flex;
+        flex-direction:row;
+        height:40%;
+    }
+    .body>.mainbody2>.section2-1{
+        width:50%;
+    }
+    .body>.mainbody2>.section2-2{
+        width:50%;
+    }    
+    .body>.footer{
+        height:10%;
+    }
+    
+    
+    input[type=text], input[type=password]{
+        text-align: center;
+        padding:12px 20px;
+        margin-top: 8px;
+        border-radius: 25px;
+        width:100%;
+        box-sizing: border-box;
+        color:rgb(44, 16, 146);
+        border-color: transparent;
+    }
+    input[type=text]:focus, input[type=password]:focus{
+        outline: none;
+        border-color:rgb(44, 16, 146);
+    }
+    .container{
+        text-align: left;
+        padding: 15px;
+    }
+    .login-popup{
+        text-align: center;
+        z-index: 2;
+        position: relative;
+        width: 20%;
+        border-radius: 20px;
+        background: rgba(218, 8, 36);
+        padding: 20px 10px 200px 10px;
+        margin-left:37%;
+        margin-top: 10%;
+    }
+    .login-button{
+        text-align: center;
+        padding:12px 20px;
+        margin-top: 8px;
+        border-radius: 25px;
+        width:50%;
+        box-sizing: border-box;
+        background-color: black;
+        color: white;
+        border-color: transparent;
+    }
+    button:hover{
+        background-color: white;
+        color: red;
+    }
+    button:focus{
+        outline: none;
+        background-color:rgb(27, 9, 18);
+        color: white;
+    }
+
+    /* Add Fade In Animation */
+    .animate {
+    -webkit-animation: fadein 1s;
+    animation: fadein 1s;
+    }
+
+    @-webkit-keyframes fadein {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+    }
+    
+    @keyframes fadein {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+    }
+
 </style>
 </head>
 
@@ -106,18 +225,67 @@
                 <li><button class="btn">home</button></li>
                 <li><button class="btn">home</button></li>
                 <li><button class="btn">home</button></li>
-                <li><button class="btn">home</button></li>
+                <li><button class="btn" onclick=fadein()>Log In</button></li>
             </ul>
         </div>
-        <div class="mainbody">
-            <h1>Restaurant</h1>
-            <button class="btn1" onclick=fadein()>Login</button>
-            <div id="frame">
-                <iframe id ="popup" src="login page.html">
-                </iframe>
-                <button class = "exitbutton" onclick=fadeout() >×</button>
+        <div id="frame">
+            <div class = "modal">
+                <div class="login-popup animate">
+                    <button class="exitbutton" onclick=fadeout()>x</button>
+                    <div class="container">
+                        User Name<br>
+                        <input type="text" placeholder="Enter User Name">
+                    </div>
+                    <div class="container">
+                        Password<br>
+                        <input type="password" placeholder="Enter Password">
+                    </div>
+                    <input type="checkbox">Remember my user name.<br>
+                    <button class="login-button">Login</button>
+                </div>
             </div>
         </div>
+        <div class="body">
+            <div class="header">
+                <h1>header</h1>
+            </div>
+            <div class="mainbody1">
+                <div class="section1-1">
+                    <h1>section1-1</h1>
+                </div>
+                <div class="section1-2">
+                    <div class="section1-2-header">
+                    <h1>
+                        section1-2(header)
+                    </h1>
+                    </div>
+                    <div class="section1-2-contents" id="section1-2-1">
+                    <div class="section1-2-x">
+                        <p>section1-2-1</p>
+                    </div>
+                    <div class="section1-2-x" id="section1-2-2">
+                            <p>section1-2-2</p>
+                    </div>
+                    <div class="section1-2-x" id="section1-2-3">
+                            <p>section1-2-3</p>
+                     </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainbody2">
+                <div class="section2-1">
+                    <h1>Section2-1</h1>
+                </div>
+                <div class="section2-1">
+                    <h1>Section2-2</h1>
+                </div>
+
+            </div>
+            <div class="footer">
+                    <h1>footer</h1>
+                </div>
+        </div>
+        
     </div>
     <script>
         var s = document.getElementById('frame').style;
