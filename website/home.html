@@ -13,26 +13,7 @@
     body{
         margin: 0px;
     }
-    #frame{
-        display: none;
-    }
-
-    #frame>.modal{
-        border: none;
-        position: absolute;
-        transition: width 2s height 2s;
-
-        /* The Modal (background) */
-        z-index: 1; /*Sit on top*/ 
-        left: 0;
-        top: 0;
-        width: 100%; /*Full height */
-        height: 100%; /*Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        
-    }
+    
 
     .flex{
         display: flex;
@@ -75,30 +56,7 @@
         display: none;
     }
 
-    .exitbutton{
-        float: right;
-        font-size: 20px;
-        width: 40px;
-        height: 40px;
-        margin:0;
-        border:solid;
-        border-color: azure;
-        border-radius:20px;
-        color:white;
-        background-color: rgba(218, 8, 36, 0.7);;
-        z-index: 2;
-        position: fixed;
-        right: 40%;
-        top: 70px;
-    }
-    .exitbutton:hover{
-        color: black;
-        border-color:black;
-    }
-    .exitbutton:focus{
-        color: black;
-        outline: none;
-    }
+    
 
     .body{
         width:100%;
@@ -147,7 +105,51 @@
     .body>.footer{
         height:10%;
     }
-    
+
+    #frame{
+        display: none;
+    }
+
+    #frame>.modal{
+        border: none;
+        position: fixed;
+        transition: width 2s height 2s;
+
+        /* The Modal (background) */
+        z-index: 1; /*Sit on top*/ 
+        left: 0;
+        top: 0;
+        width: 100%; /*Full height */
+        height: 100%; /*Full height */
+        overflow: hidden; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        
+    }
+
+    .exitbutton{
+        float: right;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        margin:0;
+        border:none;
+        color:white;
+        background-color: transparent;
+        z-index: 2;
+        position: fixed;
+        right: 42.5%;
+        top: 80px;
+    }
+    .exitbutton:hover{
+        color: black;
+        background-color: transparent;
+    }
+    .exitbutton:focus{
+        color: black;
+        background-color: transparent;
+        outline: none;
+    }
     
     input[type=text], input[type=password]{
         text-align: center;
@@ -163,6 +165,10 @@
         outline: none;
         border-color:rgb(44, 16, 146);
     }
+    input[type=checkbox]:focus{
+        outline:2px solid rgb(44, 16, 146);
+        outline-offset: -2px;
+    }
     .container{
         text-align: left;
         padding: 15px;
@@ -176,7 +182,7 @@
         background: rgba(218, 8, 36);
         padding: 20px 10px 200px 10px;
         margin-left:37%;
-        margin-top: 10%;
+        margin-top: 5%;
     }
     .login-button{
         text-align: center;
@@ -231,7 +237,7 @@
         <div id="frame">
             <div class = "modal">
                 <div class="login-popup animate">
-                    <button class="exitbutton" onclick=fadeout()>x</button>
+                    <button class="exitbutton" onclick=fadeout()>×</button>
                     <div class="container">
                         User Name<br>
                         <input type="text" placeholder="Enter User Name">
@@ -243,6 +249,7 @@
                     <input type="checkbox">Remember my user name.<br>
                     <button class="login-button">Login</button>
                 </div>
+                
             </div>
         </div>
         <div class="body">
@@ -292,12 +299,17 @@
         function fadein(){
             s.opacity= 1;
             s.display="block";
-        }
+        };
         function fadeout(){
             s.opacity = 1;
             (function fade(){(s.opacity-=.1)==0?s.display="none":setTimeout(fade,40)})();
-        }
-        
+        };
+        document.addEventListener('keydown', function(event) {
+            const key = event.key; // Or const {key} = event; in ES6+
+            if (key === "Escape") {
+                fadeout();
+            }
+        });
     </script>
 </body>
 </html>
