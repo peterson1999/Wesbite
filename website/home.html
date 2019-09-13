@@ -4,218 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+          crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>HomePage</title>
-<style>
-    html ,body, .flex{
-        height: 100%;
-    }
-
-    body{
-        margin: 0px;
-    }
-    #frame{
-        display: none;
-    }
-
-    #frame>.modal{
-        border: none;
-        position: absolute;
-        transition: width 2s height 2s;
-
-        /* The Modal (background) */
-        z-index: 1; /*Sit on top*/ 
-        left: 0;
-        top: 0;
-        width: 100%; /*Full height */
-        height: 100%; /*Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        
-    }
-
-    .flex{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .navbar>ul{
-        list-style: none;
-        padding: 0px;
-    }
-
-    .navbar{
-        background-color: blueviolet;
-        width: 8%;
-        border-radius: 0px 30px 30px 0px;
-        position: relative;
-        left: -80px;
-        transition: 0.3s;
-    }
-
-    .navbar:hover{
-        left:0;
-    }
-
-    .btn{
-        border:none;
-        background-color: blueviolet;
-        margin:15px;
-        font-size: 25px;
-        width:100%;
-        margin-left: 0px;
-        color:white;
-    }
-
-    .btn:hover{
-        background-color: violet;
-    }
-
-    #navlist{
-        display: none;
-    }
-
-    .exitbutton{
-        float: right;
-        font-size: 20px;
-        width: 40px;
-        height: 40px;
-        margin:0;
-        border:solid;
-        border-color: azure;
-        border-radius:20px;
-        color:white;
-        background-color: rgba(218, 8, 36, 0.7);;
-        z-index: 2;
-        position: fixed;
-        right: 40%;
-        top: 70px;
-    }
-    .exitbutton:hover{
-        color: black;
-        border-color:black;
-    }
-    .exitbutton:focus{
-        color: black;
-        outline: none;
-    }
-
-    .body{
-        width:100%;
-        display:flex;
-        flex-direction: column;
-
-    }
-
-    .body>.header{
-        height:10%;
-    }
-
-    .body>.mainbody1{
-        display:flex;
-        flex-direction:row;
-        height:40%;
-    }
-    .body>.mainbody1>.section1-1{
-        width:50%;
-    }
-
-    .body>.mainbody1>.section1-2{
-        display:flex;
-        flex-direction: column;
-        width:50%;
-    }   
-    .body>.mainbody1>.section1-2>.section1-2-contents{
-        display:flex;
-        flex-direction: row;
-        width:100%;
-    } 
-    .body>.mainbody1>.section1-2>.section1-2-contents>.section1-2-x{
-        width:33.33%
-    }
-    .body>.mainbody2{
-        display:flex;
-        flex-direction:row;
-        height:40%;
-    }
-    .body>.mainbody2>.section2-1{
-        width:50%;
-    }
-    .body>.mainbody2>.section2-2{
-        width:50%;
-    }    
-    .body>.footer{
-        height:10%;
-    }
-    
-    
-    input[type=text], input[type=password]{
-        text-align: center;
-        padding:12px 20px;
-        margin-top: 8px;
-        border-radius: 25px;
-        width:100%;
-        box-sizing: border-box;
-        color:rgb(44, 16, 146);
-        border-color: transparent;
-    }
-    input[type=text]:focus, input[type=password]:focus{
-        outline: none;
-        border-color:rgb(44, 16, 146);
-    }
-    .container{
-        text-align: left;
-        padding: 15px;
-    }
-    .login-popup{
-        text-align: center;
-        z-index: 2;
-        position: relative;
-        width: 20%;
-        border-radius: 20px;
-        background: rgba(218, 8, 36);
-        padding: 20px 10px 200px 10px;
-        margin-left:37%;
-        margin-top: 10%;
-    }
-    .login-button{
-        text-align: center;
-        padding:12px 20px;
-        margin-top: 8px;
-        border-radius: 25px;
-        width:50%;
-        box-sizing: border-box;
-        background-color: black;
-        color: white;
-        border-color: transparent;
-    }
-    button:hover{
-        background-color: white;
-        color: red;
-    }
-    button:focus{
-        outline: none;
-        background-color:rgb(27, 9, 18);
-        color: white;
-    }
-
-    /* Add Fade In Animation */
-    .animate {
-    -webkit-animation: fadein 1s;
-    animation: fadein 1s;
-    }
-
-    @-webkit-keyframes fadein {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-    }
-    
-    @keyframes fadein {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-    }
-
-</style>
 </head>
 
 <body>
@@ -245,10 +40,23 @@
                 </div>
             </div>
         </div>
-        <div class="body">
-            <div class="header">
-                <h1>header</h1>
+         <div class="body container-fluid"> <!--header or search bar -->
+            <div class=" mt-4">
+                <div class="row justify-content-between">
+                    <div class="col-lg-6">
+                        <form action="" class="form">
+                            <input type="text" class="form-control" name="search" placeholder="Search">
+                        </form>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="profile">
+                            <h5 class="pt-2"> FirstName LastName </h5> &nbsp; &nbsp;
+                            <img src="avatar.png" >
+                        </div>
+                    </div>
+                </div>
             </div>
+            <hr class="bg-info mt-6">
             <div class="mainbody1">
                 <div class="section1-1">
                     <h1>section1-1</h1>
