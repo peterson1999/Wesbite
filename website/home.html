@@ -79,7 +79,7 @@
         height: 50px; 
     } 
 
-    .body>input[type=text] { 
+    input[type=text] { 
         width: 100%;
         height: 46px;
         box-sizing: border-box;
@@ -176,7 +176,8 @@
         outline: none;
     }
     
-     input[type=text], input[type=password]{
+    .container>input[type=text], .container>input[type=password]{
+        background-image: none;
         text-align: center;
         padding:12px 20px;
         margin-top: 8px;
@@ -187,11 +188,11 @@
         border-color: transparent;
         background-color: rgb(255, 255, 255);
     }
-    input[type=text]:focus, input[type=password]:focus{
+    .container>input[type=text]:focus, .container>input[type=password]:focus{
         outline: none;
         border-color:#bf2828;
     } 
-     input[type=checkbox]:focus{
+    .container>input[type=checkbox]:focus{
         outline:2px solid #bf2828;
         outline-offset: -2px;
     } 
