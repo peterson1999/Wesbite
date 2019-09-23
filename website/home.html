@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
     <title>HomePage</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
@@ -12,12 +17,12 @@
     }
     html ,body, .flex{
         height: 100%;
+        background-color: #f9f9f9;
     }
 
     body{
         margin: 0px;
     }
-    
 
     .flex{
         display: flex;
@@ -60,18 +65,38 @@
         display: none;
     }
 
-    
-
-    .body{
+    /* .body{
         width:100%;
         display:flex;
         flex-direction: column;
 
+    } */
+
+    div #profile { /*Header or Searh bar -Prim*/
+        display: flex;
+        justify-content: flex-end; 
+        margin: 5px; 
     }
 
-    .body>.header{
-        height:10%;
-    }
+    div #profile img { /*Header or Searh bar -Prim*/
+        width: 50px;
+        height: 50px; 
+    } 
+
+    input[type=text] { 
+        width: 100%;
+        height: 46px;
+        box-sizing: border-box;
+        border: 2px solid #17a2b8;
+        border-radius: 25px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('search.png');
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        background-size: 22px;
+        padding: 12px 20px 12px 40px;
+    }  
 
     .body>.mainbody1{
         display:flex;
@@ -114,7 +139,7 @@
         display: none;
     }
 
-    #frame>.modal{
+    #frame>.modl{
         border: none;
         position: fixed;
         transition: width 2s height 2s;
@@ -142,8 +167,8 @@
         background-color: transparent;
         z-index: 2;
         position: fixed;
-        right: 25%;
-        top: 80px;
+        right: 26%;
+        top: 75px;
     }
     .exitbutton:hover{
         color: black;
@@ -155,7 +180,8 @@
         outline: none;
     }
     
-    input[type=text], input[type=password]{
+    .container>input[type=text], .container>input[type=password]{
+        background-image: none;
         text-align: center;
         padding:12px 20px;
         margin-top: 8px;
@@ -166,18 +192,19 @@
         border-color: transparent;
         background-color: rgb(255, 255, 255);
     }
-    input[type=text]:focus, input[type=password]:focus{
+    .container>input[type=text]:focus, .container>input[type=password]:focus{
         outline: none;
         border-color:#bf2828;
-    }
-    input[type=checkbox]:focus{
+    } 
+    .container>input[type=checkbox]:focus{
         outline:2px solid #bf2828;
         outline-offset: -2px;
-    }
+    } 
     .container{
         text-align: left;
         padding: 15px;
         width: 50%;
+        margin: 0;
     }
     .login-popup{
         text-align: center;
@@ -189,7 +216,7 @@
         background: rgb(238, 234, 234);
         padding: 20px 10px;
         margin-top: 5%;
-        margin-left: 25%;
+        margin-left:25%;
     }
     .login-button{
         text-align: center;
@@ -242,7 +269,7 @@
             </ul>
         </div>
         <div id="frame">
-            <div class = "modal">
+            <div class = "modl">
                 <div class="login-popup animate">
                     <b><button class="exitbutton" onclick=fadeout()>×</button>
                     <div class="container">
@@ -261,13 +288,25 @@
                         <br>Don't have an account? <a href="sign up.html">Sign Up</a>
                     </div>
                 </div>
-                
             </div>
         </div>
-        <div class="body">
-            <div class="header">
-                <h1>header</h1>
+        <div class="body container-fluid"> <!--header or search bar -->
+            <div class=" mt-4">
+                <div class="row justify-content-between">
+                    <div class="col-lg-6">
+                        <form action="" class="form">
+                            <input type="text" class="form-control" name="search" placeholder="Search">
+                        </form>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="profile">
+                            <h5 class="pt-2"> FirstName LastName </h5> &nbsp; &nbsp;
+                            <img src="avatar.png" >
+                        </div>
+                    </div>
+                </div>
             </div>
+            <hr class="bg-info mt-6">
             <div class="mainbody1">
                 <div class="section1-1">
                     <h1>section1-1</h1>
