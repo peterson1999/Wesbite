@@ -13,12 +13,13 @@
 <style>
     html ,body, .flex{
         height: 100%;
-        background-color: #f9f9f9
+        background-color: #f9f9f9;
     }
 
     body{
         margin: 0px;
     }
+
     .flex{
         display: flex;
         flex-direction: row;
@@ -68,30 +69,30 @@
     } */
 
     div #profile { /*Header or Searh bar -Prim*/
-     display: flex;
-    justify-content: flex-end; 
-     margin: 5px; 
+        display: flex;
+        justify-content: flex-end; 
+        margin: 5px; 
     }
 
-div #profile img { /*Header or Searh bar -Prim*/
-     width: 50px;
-    height: 50px; 
- } 
+    div #profile img { /*Header or Searh bar -Prim*/
+        width: 50px;
+        height: 50px; 
+    } 
 
- .body>input[type=text] { 
-    width: 100%;
-    height: 46px;
-    box-sizing: border-box;
-    border: 2px solid #17a2b8;
-    border-radius: 25px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('search.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    background-size: 22px;
-    padding: 12px 20px 12px 40px;
-}  
+    .body>input[type=text] { 
+        width: 100%;
+        height: 46px;
+        box-sizing: border-box;
+        border: 2px solid #17a2b8;
+        border-radius: 25px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('search.png');
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        background-size: 22px;
+        padding: 12px 20px 12px 40px;
+    }  
 
     .body>.mainbody1{
         display:flex;
@@ -134,7 +135,7 @@ div #profile img { /*Header or Searh bar -Prim*/
         display: none;
     }
 
-    #frame>.modal{
+    #frame>.modl{
         border: none;
         position: fixed;
         transition: width 2s height 2s;
@@ -153,17 +154,17 @@ div #profile img { /*Header or Searh bar -Prim*/
 
     .exitbutton{
         float: right;
-        font-size: 20px;
+        font-size: 26px;
         width: 40px;
         height: 40px;
         margin:0;
         border:none;
-        color:white;
+        color:#bf2828;
         background-color: transparent;
         z-index: 2;
         position: fixed;
-        right: 42.5%;
-        top: 80px;
+        right: 26%;
+        top: 75px;
     }
     .exitbutton:hover{
         color: black;
@@ -182,31 +183,35 @@ div #profile img { /*Header or Searh bar -Prim*/
         border-radius: 25px;
         width:100%;
         box-sizing: border-box;
-        color:rgb(44, 16, 146);
+        color:#bf2828;
         border-color: transparent;
+        background-color: rgb(255, 255, 255);
     }
     input[type=text]:focus, input[type=password]:focus{
         outline: none;
-        border-color:rgb(44, 16, 146);
+        border-color:#bf2828;
     } 
      input[type=checkbox]:focus{
-        outline:2px solid rgb(44, 16, 146);
+        outline:2px solid #bf2828;
         outline-offset: -2px;
     } 
     .container{
         text-align: left;
         padding: 15px;
+        width: 50%;
+        margin: 0;
     }
     .login-popup{
         text-align: center;
         z-index: 2;
         position: relative;
-        width: 20%;
+        width: 50%;
+        height: 75%;
         border-radius: 20px;
-        background: rgba(218, 8, 36);
-        padding: 20px 10px 200px 10px;
-        margin-left:37%;
+        background: rgb(238, 234, 234);
+        padding: 20px 10px;
         margin-top: 5%;
+        margin-left:25%;
     }
     .login-button{
         text-align: center;
@@ -221,7 +226,7 @@ div #profile img { /*Header or Searh bar -Prim*/
     }
     button:hover{
         background-color: white;
-        color: red;
+        color: #bf2828;
     }
     button:focus{
         outline: none;
@@ -259,9 +264,9 @@ div #profile img { /*Header or Searh bar -Prim*/
             </ul>
         </div>
         <div id="frame">
-            <div class = "modal">
+            <div class = "modl">
                 <div class="login-popup animate">
-                    <button class="exitbutton" onclick=fadeout()>×</button>
+                    <b><button class="exitbutton" onclick=fadeout()>×</button>
                     <div class="container">
                         User Name<br>
                         <input type="text" placeholder="Enter User Name">
@@ -270,10 +275,14 @@ div #profile img { /*Header or Searh bar -Prim*/
                         Password<br>
                         <input type="password" placeholder="Enter Password">
                     </div>
-                    <input type="checkbox">Remember my user name.<br>
-                    <button class="login-button">Login</button>
+                    </b>
+                    <div class="container" style="text-align: center">
+                        <input type="checkbox">Remember me<br>
+                        <button class="login-button">Login</button>
+                        <br><br><a class="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
+                        <br>Don't have an account? <a href="sign up.html">Sign Up</a>
+                    </div>
                 </div>
-                
             </div>
         </div>
         <div class="body container-fluid"> <!--header or search bar -->
