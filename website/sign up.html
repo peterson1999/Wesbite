@@ -1,175 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Log In</title>
-    <style>
-        *{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color:black;
-        }
-        body{
-            position: fixed;
-            width:100%;
-            height:100%;
-        }
-        head{
-            display:none;
-        }
-        html{
-            height:100%;
-        }
-        .flex{
-        display: flex;
-        flex-direction: row;
-        height:100%;
-        }
-        input[type=text], input[type=password]{
-            text-align: center;
-            padding:12px 20px;
-            margin-top: 8px;
-            border-radius: 25px;
-            width:100%;
-            box-sizing: border-box;
-            color:rgb(44, 16, 146);
-            border-color: transparent;
-        }
-        input[type=text]:focus, input[type=password]:focus{
-            outline: none;
-            border-color:rgb(44, 16, 146);
-        }
-        .navbar>ul{
-        list-style: none;
-        padding: 0px;
-        }
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" 
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+         crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>Sign Up</title>
+        <style>
+            *{
+                margin:0px;
+                padding:0px;
+                color: white;
+            }
+            body{
+                background-image: url(foodbg.jpg);
+                background-size: cover;
+                background-attachment: fixed;
+                font-family: new time roman;
+            }
+            h1 {
+                font-size: 40px;
+                color: white;
+                margin-top: 250px;
+            }
+            p {
+                font-size: 18px;
+                color: white;
+            }
+            h3 {
+                font-size: 25px;
+                color: white;
+            }
+            .glyphicon-pencil {
+                font-size: 35px;
+                color:white;
+                float: right;
+                margin-top: 20px;
+            }
+            .col-md-5 {
+                margin-top: 80px;
+                box-shadow: -1px 1px 60px 10px black;
+                background: rgba(0,0,0,0.4);
+            }
+            .label {
+                font-weight: normal;
+                margin-top: 15px;
+                color:white;
+                font-size: 18px;
+            }
+            .form-control {
+                background: transparent;
+                border-radius: 0px;
+                border: 0px;
+                border-bottom: 1px solid white;
+                font-size: 18px;
+                margin-top: 15px;
+                height: 40px;
+                color: white;
+            }
+            input[type="checkbox"] {
+                margin-top: 15px;
+                width: 15px;
+                height: 15px;
+            }
+            small{
+                font-size: 18px;
+                color: white;
+            }
+            .btn-info {
+                margin-top: 20px;
+                font-size: 18px;
+                width: 120px;
+                margin-left: 80px;
+                margin-bottom: 20px;
+            }
+            .btn-warning {
+                margin-top: 20px;
+                font-size: 18px;
+                width: 120px;
+                margin-bottom: 20px;
+            }
 
-        .navbar{
-            background-color: blueviolet;
-            width: 8%;
-            border-radius: 0px 30px 30px 0px;
-            position: relative;
-            left: -80px;
-            transition: 0.3s;
-        }
-
-
-        .navbar:hover{
-            left:0;
-        }
-        .btn{
-        border:none;
-        background-color: blueviolet;
-        margin:15px;
-        font-size: 25px;
-        width:100%;
-        margin-left: 0px;
-        color:white;
-        }
-
-        .btn:hover{
-            background-color: violet;
-        }
-        .body{
-        width:100%;
-        display:flex;
-        flex-direction: column;
-        }
-        .body>.header{
-        height:10%;
-        }
-
-        .body>.mainbody{
-            height:80%;
-        }
-
-        .container{
-            text-align: left;
-            padding: 15px;
-        }
-        .login-popup{
-            text-align: center;
-            z-index: 1;
-            position: relative;
-            width: 20%;
-            border-radius: 20px;
-            background: rgba(218, 8, 36, 0.7);
-            padding: 20px 10px 170px 10px;
-            margin-left:450px;
-        }
-        .login-button{
-            text-align: center;
-            padding:12px 20px;
-            margin-top: 8px;
-            border-radius: 25px;
-            width:50%;
-            box-sizing: border-box;
-            background-color: black;
-            color: white;
-            border-color: transparent;
-        }
-        button:hover{
-            background-color: white;
-            color: red;
-        }
-        button:focus{
-            outline: none;
-            background-color:rgb(27, 9, 18);
-            color: white;
-        }
-
-        /* Add Fade In Animation */
-        .animate {
-        -webkit-animation: fadein 1s;
-        animation: fadein 1s;
-        }
-
-        @-webkit-keyframes fadein {
-        from {opacity: 0;} 
-        to {opacity: 1;}
-        }
-        
-        @keyframes fadein {
-        from {opacity: 0;} 
-        to {opacity: 1;}
-        }
-    </style>
-</head>
-<body>
-    <div class="flex">
-            <div class="navbar" onmouseover="document.getElementById('navlist').style.display='block'" onmouseout="document.getElementById('navlist').style.display='none'">
-                    <ul id="navlist">
-                        <li><button class="btn">home</button></li>
-                        <li><button class="btn">home</button></li>
-                        <li><button class="btn">home</button></li>
-                        <li><button class="btn">home</button></li>
-                    </ul>
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 class="text-left"> Restaurant Registration Form</h1>
+                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                        deserunt mollit anim id est laborum.</p>
                 </div>
-            <div class="body">
-                <div class="header">
-                        <h1>header</h1>
-                </div>
-                <div class="mainbody">
-                    <div class="login-popup animate">
-                        <div class="container">
-                            User Name<br>
-                            <input type="text" placeholder="Enter User Name">
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="text-left">Registration Form</h3>
                         </div>
-                        <div class="container">
-                            Password<br>
-                            <input type="password" placeholder="Enter Password">
+                        <div class="col-md-6">
+                            <span class="glyphicon glyphicon-pencil"></span>
                         </div>
-                        
-                        <input type="checkbox">Remember my user name.<br>
-                        <button class="login-button">Login</button>
                     </div>
+                    <div class="row">
+                        <label class="labe col-md-2 control-label">E-mail </label>
+                        <div class="col-md-10">
+                            <input type="Email" class="form-control" name="E-mail" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="row">
+                            <label class="labe col-md-2 control-label">Password </label>
+                            <div class="col-md-10">
+                                <input type="Password" class="form-control" name="Password" placeholder="Password">
+                                <input type="checkbox"> <small> Remember me</small>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <label class="labe col-md-2 control-label">Message </label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                        </div>
+                        <a href="#"><div class="btn btn-info">Submit</div></a>
+                        <a href="#"><div class="btn btn-warning">Cancel</div></a>
                 </div>
-                <div class="footer">
-                        <h1>footer</h1>
-                </div>
-        
             </div>
-    </div>
-</body>
+        </div>
+    </body>
 </html>
