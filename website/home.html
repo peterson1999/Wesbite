@@ -65,12 +65,11 @@
         display: none;
     }
 
-    /* .body{
+    .body{
         width:100%;
         display:flex;
         flex-direction: column;
-
-    } */
+    } 
 
     div #profile { /*Header or Searh bar -Prim*/
         display: flex;
@@ -165,7 +164,7 @@
         border:none;
         color:#bf2828;
         background-color: transparent;
-        z-index: 2;
+        z-index: 3;
         position: fixed;
         right: 26%;
         top: 75px;
@@ -239,6 +238,20 @@
         color: white;
     }
 
+    .forgot-password{
+        display: none;
+        z-index: 2;
+        text-align: center;
+        position: relative;
+        width: 50%;
+        height: 75%;
+        border-radius: 20px;
+        background: rgb(238, 234, 234);
+        padding: 20px 10px;
+        margin-top: 5%;
+        margin-left:25%;
+    }
+
     /* Add Fade In Animation */
     .animate {
     -webkit-animation: fadein 1s;
@@ -270,8 +283,10 @@
         </div>
         <div id="frame">
             <div class = "modl">
+                <button class="exitbutton" onclick=fadeout()>×</button>
                 <div class="login-popup animate">
-                    <b><button class="exitbutton" onclick=fadeout()>×</button>
+                    <b>
+                    <div class="container" style="height: 100%; background-image: url('food.jpg'); opacity: 0.5; float: right;"></div>
                     <div class="container">
                         User Name<br>
                         <input type="text" placeholder="Enter User Name">
@@ -284,7 +299,21 @@
                     <div class="container" style="text-align: center">
                         <input type="checkbox">Remember me<br>
                         <button class="login-button">Login</button>
-                        <br><br><a class="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
+                        <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
+                        <br>Don't have an account? <a href="sign up.html">Sign Up</a>
+                    </div>
+                </div>
+                <div class="forgot-password">
+                    <b>
+                    <div class="container" style="height: 100%; background-image: url('food.jpg'); opacity: 0.5; float: left"></div>
+                    <div class="container" style="float: right;">
+                        Enter your User Name:<br>
+                        <input type="text" placeholder="Enter User Name">
+                    </div>
+                    </b>
+                    <div class="container" style="float: right; text-align: center">
+                        <button class="login-button" style="width: auto">Send me an email!</button>
+                        <br><br><a class="backtoLogin" href="javascript:void(0);">Back to Login</a>
                         <br>Don't have an account? <a href="sign up.html">Sign Up</a>
                     </div>
                 </div>
@@ -361,8 +390,13 @@
                 fadeout();
             }
         });
-        $(".forgot-pass").click(function(){
-            $(".forgot-pass").hide(1000);
+        $("#forgot-pass").click(function(){
+            $(".login-popup").slideUp(500);
+            $(".forgot-password").slideDown(500);
+        });
+        $(".backtoLogin").click(function(){
+            $(".forgot-password").slideUp(500);
+            $(".login-popup").slideDown(500);
         });
     </script>
 </body>
