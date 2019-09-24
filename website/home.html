@@ -82,6 +82,12 @@
         height: 50px; 
     } 
 
+    #search-icon {
+        font-size:28px;
+        position:absolute; 
+        top: 12px; 
+        padding-left: 12px;
+    }
     input[type=text] { 
         width: 100%;
         height: 46px;
@@ -90,10 +96,10 @@
         border-radius: 25px;
         font-size: 16px;
         background-color: white;
-        background-image: url('search.png');
+        /* background-image: url('search.png'); */
         background-position: 10px 10px; 
         background-repeat: no-repeat;
-        background-size: 22px;
+        /* background-size: 22px; */
         padding: 12px 20px 12px 40px;
     }  
 
@@ -312,8 +318,13 @@
                     </div>
                     </b>
                     <div class="container" style="float: right; text-align: center">
-                        <button class="login-button" style="width: auto">Send me an email!</button>
-                        <br><br><a class="backtoLogin" href="javascript:void(0);">Back to Login</a>
+                        <button class="login-button" 
+                                style="width: auto">
+                            Send me an email!
+                        </button>
+                        <br><br><a class="backtoLogin" href="javascript:void(0);">
+                            Back to Login
+                        </a>
                         <br>Don't have an account? <a href="sign up.html">Sign Up</a>
                     </div>
                 </div>
@@ -324,7 +335,13 @@
                 <div class="row justify-content-between">
                     <div class="col-lg-6">
                         <form action="" class="form">
-                            <input type="text" class="form-control" name="search" placeholder="Search">
+                            <div class="form-group">
+                                <i class="fa fa-search" id="search-icon"></i>
+                                <input type="text" 
+                                       class="form-control" 
+                                       name="search" 
+                                       placeholder="Search">
+                            </div>
                         </form>
                     </div>
                     <div class="col-lg-6">
