@@ -60,6 +60,15 @@
         border-top-right-radius: 50px;
     }
 
+    .active{
+        text-align: center;
+    }
+
+    #sidebar .active .material-icons{
+        font-size:50px;
+        margin: 30px;
+    }
+
     #sidebar ul.components {
         padding: 20px 0;
         border-bottom: 1px solid #47748b;
@@ -75,14 +84,12 @@
         font-size: 1.1em;
         display: block;
     }
-    #sidebar ul li a:hover {
-        color: #7386D5;
-        background: #fff;
+    #sidebar ul li .material-icons:hover {
+        color: #a4afdf;
     }
 
     #sidebar ul li.active > a, a[aria-expanded="true"] {
         color: #fff;
-        background: #6d7fcc;
     }
     ul ul a {
         font-size: 0.9em !important;
@@ -384,28 +391,17 @@
                         <li class="active">
                                 <a class="material-icons" href="#">home</a>
                         </li>
-                        <li>
-                                <a class="material-icons" href="#">home</a>
+                        <li class="active">
+                                <a class="material-icons" href="#">notifications</a>
                         </li>
-                        <li>
-                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                            <ul class="collapse list-unstyled" id="pageSubmenu">
-                                <li>
-                                    <a href="#">Page 1</a>
-                                </li>
-                                <li>
-                                    <a href="#">Page 2</a>
-                                </li>
-                                <li>
-                                    <a href="#">Page 3</a>
-                                </li>
-                            </ul>
+                        <li class="active" >
+                                <a class="material-icons" href="#">bookmarks</a>
                         </li>
-                        <li>
-                            <a href="#">Portfolio</a>
+                        <li class="active">
+                                <a class="material-icons" href="#">forum</a>
                         </li>
-                        <li>
-                            <a href="#">Contact</a>
+                        <li class="active">
+                                <a class="material-icons" href="#">help_outline</a>
                         </li>
                     </ul>
                 </nav>            
