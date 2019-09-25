@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" 
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+         crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>Sign Up</title>
+        <style>
+            *{
+                margin:0px;
+                padding:0px;
+                color: white;
+            }
+            body{
+                background-image: url(foodbg.jpg);
+                background-size: cover;
+                background-attachment: fixed;
+                font-family: new time roman;
+            }
+            h1 {
+                font-size: 40px;
+                color: white;
+                margin-top: 250px;
+            }
+            p {
+                font-size: 18px;
+                color: white;
+            }
+            h3 {
+                font-size: 25px;
+                color: white;
+            }
+            .glyphicon-pencil {
+                font-size: 35px;
+                color:white;
+                float: right;
+                margin-top: 20px;
+            }
+            .col-md-5 {
+                margin-top: 80px;
+                box-shadow: -1px 1px 60px 10px black;
+                background: rgba(0,0,0,0.4);
+            }
+            .label {
+                font-weight: normal;
+                margin-top: 15px;
+                color:white;
+                font-size: 18px;
+            }
+            .form-control {
+                background: transparent;
+                border-radius: 0px;
+                border: 0px;
+                border-bottom: 1px solid white;
+                font-size: 18px;
+                margin-top: 15px;
+                height: 40px;
+                color: white;
+            }
+            input[type="checkbox"] {
+                margin-top: 15px;
+                width: 15px;
+                height: 15px;
+            }
+            small{
+                font-size: 18px;
+                color: white;
+            }
+            .btn-info {
+                margin-top: 20px;
+                font-size: 18px;
+                width: 120px;
+                margin-left: 80px;
+                margin-bottom: 20px;
+            }
+            .btn-warning {
+                margin-top: 20px;
+                font-size: 18px;
+                width: 120px;
+                margin-bottom: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 class="text-left"> Restaurant Log In</h1>
+                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                        deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="text-left">Log In</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="labe col-md-2 control-label">E-mail </label>
+                        <div class="col-md-10">
+                            <input type="Email" class="form-control" name="E-mail" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="row">
+                            <label class="labe col-md-2 control-label">Password </label>
+                            <div class="col-md-10">
+                                <input type="Password" class="form-control" name="Password" placeholder="Password">
+                                <input type="checkbox"> <small> Remember me</small>
+                            </div>
+                        </div>
+                        <a href="#"><div class="btn btn-info">Log In</div></a>
+                        <a href="#"><div class="btn btn-warning">Sign Up</div></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
