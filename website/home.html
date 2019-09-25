@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,9 +12,82 @@
     crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
     <title>HomePage</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
 <style>
     *{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #fafafa;
+    }
+
+    p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1em;
+        font-weight: 300;
+        line-height: 1.7em;
+        color: #999;
+    }
+
+    a, a:hover, a:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    #sidebar {
+        /* don't forget to add all the previously mentioned styles here too */
+        background: #7386D5;
+        color: #fff;
+        transition: all 0.3s;
+    }
+
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background: #6d7fcc;
+        border-top-right-radius: 50px;
+    }
+
+    #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #47748b;
+    }
+
+    #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+    }
+
+    #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+    }
+    #sidebar ul li a:hover {
+        color: #7386D5;
+        background: #fff;
+    }
+
+    #sidebar ul li.active > a, a[aria-expanded="true"] {
+        color: #fff;
+        background: #6d7fcc;
+    }
+    ul ul a {
+        font-size: 0.9em !important;
+        padding-left: 30px !important;
+        background: #6d7fcc;
     }
     html ,body, .flex{
         height: 100%;
@@ -26,7 +100,20 @@
 
     .flex{
         display: flex;
+        width: 100%;
+        align-items: stretch;
         flex-direction: row;
+    }
+    .wrapper {
+    display: flex;
+    align-items: stretch;
+    }
+
+    #sidebar {
+        min-width: 220px;
+        max-width: 220px;
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 50px;
     }
 
     .navbar>ul{
@@ -287,14 +374,51 @@
 
 <body>
     <div class="flex">
-        <div class="navbar" onmouseover="document.getElementById('navlist').style.display='block'" onmouseout="document.getElementById('navlist').style.display='none'">
+        <nav id="sidebar">
+                <div class="sidebar-header">
+                        <h3>Bootstrap Sidebar</h3>
+                    </div>
+            
+                    <ul class="list-unstyled components">
+                        <p>Dummy Heading</p>
+                        <li class="active">
+                                <a class="material-icons" href="#">home</a>
+                        </li>
+                        <li>
+                                <a class="material-icons" href="#">home</a>
+                        </li>
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a href="#">Page 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Page 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Page 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>            
+        </nav>
+            
+        <!-- <div class="navbar" onmouseover="document.getElementById('navlist').style.display='block'" onmouseout="document.getElementById('navlist').style.display='none'">
             <ul id="navlist">
                 <li><button class="btn">home</button></li>
                 <li><button class="btn">home</button></li>
                 <li><button class="btn">home</button></li>
                 <li><button class="btn" onclick=fadein()>Log In</button></li>
             </ul>
-        </div>
+        </div> -->
         <div id="frame">
             <div class = "modl">
                 <button class="exitbutton" onclick=fadeout()>×</button>
