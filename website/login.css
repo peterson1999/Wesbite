@@ -1,0 +1,141 @@
+#frame{
+    display: none;
+}
+
+#frame>.modl{
+    border: none;
+    position: fixed;
+    transition: width 2s height 2s;
+
+    /* The Modal (background) */
+    z-index: 1; /*Sit on top*/ 
+    left: 0;
+    top: 0;
+    width: 100%; /*Full height */
+    height: 100%; /*Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+
+.exitbutton{
+    float: right;
+    font-size: 26px;
+    width: 40px;
+    height: 40px;
+    margin:0;
+    border:none;
+    color:#bf2828;
+    background-color: transparent;
+    z-index: 3;
+    position: fixed;
+    right: 26%;
+    top: 75px;
+}
+.exitbutton:hover{
+    color: black;
+    background-color: transparent;
+}
+.exitbutton:focus{
+    color: black;
+    background-color: transparent;
+    outline: none;
+}
+
+.login-container>input[type=text], .login-container>input[type=password]{
+    background-image: none;
+    text-align: center;
+    padding:12px 20px;
+    margin-top: 8px;
+    border-radius: 25px;
+    width:100%;
+    box-sizing: border-box;
+    color:#bf2828;
+    border-color: transparent;
+    background-color: rgb(255, 255, 255);
+}
+.login-container>input[type=text]:focus, .login-container>input[type=password]:focus{
+    outline: none;
+    border-color:#bf2828;
+} 
+.login-container>input[type=checkbox]:focus{
+    outline:2px solid #bf2828;
+    outline-offset: -2px;
+} 
+.login-container{
+    text-align: left;
+    padding: 15px;
+    width: 50%;
+    margin: 0;
+}
+.login-popup{
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    width: 50%;
+    height: 75%;
+    border-radius: 20px;
+    background: rgb(238, 234, 234);
+    padding: 20px 10px;
+    margin-top: 5%;
+    margin-left:25%;
+}
+.login-button{
+    text-align: center;
+    padding:12px 20px;
+    margin-top: 8px;
+    border-radius: 25px;
+    width:50%;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    border-color: transparent;
+}
+button:hover{
+    background-color: white;
+    color: #bf2828;
+}
+button:focus{
+    outline: none;
+    background-color:rgb(27, 9, 18);
+    color: white;
+}
+
+.forgot-password{
+    display: none;
+    z-index: 2;
+    text-align: center;
+    position: relative;
+    width: 50%;
+    height: 75%;
+    border-radius: 20px;
+    background: rgb(238, 234, 234);
+    padding: 20px 10px;
+    margin-top: 5%;
+    margin-left:25%;
+}
+/*Media Queries for Responsive Design*/
+@media only screen and (min-width: 1024px){
+    .exitbutton{
+        font-size: 26px;
+        right: 26%;
+        top: 75px;
+    }
+    
+}
+/* Add Fade In Animation */
+.animate {
+-webkit-animation: fadein 1s;
+animation: fadein 1s;
+}
+
+@-webkit-keyframes fadein {
+from {opacity: 0;} 
+to {opacity: 1;}
+}
+
+@keyframes fadein {
+from {opacity: 0;} 
+to {opacity: 1;}
+}

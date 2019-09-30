@@ -5,22 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--JQuery-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" 
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-    crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
-    <title>HomePage</title>
     <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
+    <!-- CSS for Login Modal-->
+    <link rel="stylesheet" href="login.css">
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+    <title>HomePage</title>
 <style>
     *{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -234,139 +229,7 @@
         height:10%;
     }
 
-    #frame{
-        display: none;
-    }
-
-    #frame>.modl{
-        border: none;
-        position: fixed;
-        transition: width 2s height 2s;
-
-        /* The Modal (background) */
-        z-index: 1; /*Sit on top*/ 
-        left: 0;
-        top: 0;
-        width: 100%; /*Full height */
-        height: 100%; /*Full height */
-        overflow: hidden; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        
-    }
-
-    .exitbutton{
-        float: right;
-        font-size: 26px;
-        width: 40px;
-        height: 40px;
-        margin:0;
-        border:none;
-        color:#bf2828;
-        background-color: transparent;
-        z-index: 3;
-        position: fixed;
-        right: 26%;
-        top: 75px;
-    }
-    .exitbutton:hover{
-        color: black;
-        background-color: transparent;
-    }
-    .exitbutton:focus{
-        color: black;
-        background-color: transparent;
-        outline: none;
-    }
     
-    .login-container>input[type=text], .login-container>input[type=password]{
-        background-image: none;
-        text-align: center;
-        padding:12px 20px;
-        margin-top: 8px;
-        border-radius: 25px;
-        width:100%;
-        box-sizing: border-box;
-        color:#bf2828;
-        border-color: transparent;
-        background-color: rgb(255, 255, 255);
-    }
-    .login-container>input[type=text]:focus, .login-container>input[type=password]:focus{
-        outline: none;
-        border-color:#bf2828;
-    } 
-    .login-container>input[type=checkbox]:focus{
-        outline:2px solid #bf2828;
-        outline-offset: -2px;
-    } 
-    .login-container{
-        text-align: left;
-        padding: 15px;
-        width: 50%;
-        margin: 0;
-    }
-    .login-popup{
-        text-align: center;
-        z-index: 2;
-        position: relative;
-        width: 50%;
-        height: 75%;
-        border-radius: 20px;
-        background: rgb(238, 234, 234);
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-    .login-button{
-        text-align: center;
-        padding:12px 20px;
-        margin-top: 8px;
-        border-radius: 25px;
-        width:50%;
-        box-sizing: border-box;
-        background-color: black;
-        color: white;
-        border-color: transparent;
-    }
-    button:hover{
-        background-color: white;
-        color: #bf2828;
-    }
-    button:focus{
-        outline: none;
-        background-color:rgb(27, 9, 18);
-        color: white;
-    }
-
-    .forgot-password{
-        display: none;
-        z-index: 2;
-        text-align: center;
-        position: relative;
-        width: 50%;
-        height: 75%;
-        border-radius: 20px;
-        background: rgb(238, 234, 234);
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-
-    /* Add Fade In Animation */
-    .animate {
-    -webkit-animation: fadein 1s;
-    animation: fadein 1s;
-    }
-
-    @-webkit-keyframes fadein {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-    }
-    
-    @keyframes fadein {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-    }
 
     .foot-style{
         text-align: center; 
@@ -391,6 +254,7 @@
                         <li class="active">
                                 <a class="material-icons" href="#">home</a>
                         </li>
+                        <li><button class="btn" onclick=fadein()>Log In</button></li>
                         <li class="active">
                                 <a class="material-icons" href="#">notifications</a>
                         </li>
@@ -433,7 +297,7 @@
                     <div class="login-container" style="text-align: center">
                         <input type="checkbox">Remember me<br>
                         <button class="login-button">Login</button>
-                        <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
+                        <br><br><a id="forgot-pass login-link" href="javascript:void(0);">Forgot Password?</a>
                         <br>Don't have an account? <a href="sign up.html">Sign Up</a>
                     </div>
                 </div>
@@ -447,7 +311,7 @@
                     </b>
                     <div class="login-container" style="float: right; text-align: center">
                         <button class="login-button" style="width: auto">Send me an email!</button>
-                        <br><br><a class="backtoLogin" href="javascript:void(0);">Back to Login</a>
+                        <br><br><a id="backtoLogin login-link" href="javascript:void(0);">Back to Login</a>
                         <br>Don't have an account? <a href="sign up.html">Sign Up</a>
                     </div>
                 </div>
@@ -533,7 +397,7 @@
             $(".login-popup").slideUp(500);
             $(".forgot-password").slideDown(500);
         });
-        $(".backtoLogin").click(function(){
+        $("#backtoLogin").click(function(){
             $(".forgot-password").slideUp(500);
             $(".login-popup").slideDown(500);
         });
