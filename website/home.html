@@ -5,22 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--JQuery-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" 
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-    crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
-    <title>HomePage</title>
     <!-- Bootstrap CSS CDN -->
-  
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
+    <!-- CSS for Login Modal-->
+    <link rel="stylesheet" href="login.css">
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+    <title>HomePage</title>
 <style>
     *{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -295,140 +290,6 @@
         height:10%;
     }
 
-    #frame{
-        display: none;
-    }
-
-    #frame>.modl{
-        border: none;
-        position: fixed;
-        transition: width 2s height 2s;
-
-        /* The Modal (background) */
-        z-index: 1; /*Sit on top*/ 
-        left: 0;
-        top: 0;
-        width: 100%; /*Full height */
-        height: 100%; /*Full height */
-        overflow: hidden; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        
-    }
-
-    .exitbutton{
-        float: right;
-        font-size: 26px;
-        width: 40px;
-        height: 40px;
-        margin:0;
-        border:none;
-        color:#bf2828;
-        background-color: transparent;
-        z-index: 3;
-        position: fixed;
-        right: 26%;
-        top: 75px;
-    }
-    .exitbutton:hover{
-        color: black;
-        background-color: transparent;
-    }
-    .exitbutton:focus{
-        color: black;
-        background-color: transparent;
-        outline: none;
-    }
-    
-    .login-container>input[type=text], .login-container>input[type=password]{
-        background-image: none;
-        text-align: center;
-        padding:12px 20px;
-        margin-top: 8px;
-        border-radius: 25px;
-        width:100%;
-        box-sizing: border-box;
-        color:#bf2828;
-        border-color: transparent;
-        background-color: rgb(255, 255, 255);
-    }
-    .login-container>input[type=text]:focus, .login-container>input[type=password]:focus{
-        outline: none;
-        border-color:#bf2828;
-    } 
-    .login-container>input[type=checkbox]:focus{
-        outline:2px solid #bf2828;
-        outline-offset: -2px;
-    } 
-    .login-container{
-        text-align: left;
-        padding: 15px;
-        width: 50%;
-        margin: 0;
-    }
-    .login-popup{
-        text-align: center;
-        z-index: 2;
-        position: relative;
-        width: 50%;
-        height: 75%;
-        border-radius: 20px;
-        background: rgb(238, 234, 234);
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-    .login-button{
-        text-align: center;
-        padding:12px 20px;
-        margin-top: 8px;
-        border-radius: 25px;
-        width:50%;
-        box-sizing: border-box;
-        background-color: black;
-        color: white;
-        border-color: transparent;
-    }
-    button:hover{
-        background-color: white;
-        color: #bf2828;
-    }
-    button:focus{
-        outline: none;
-        background-color:rgb(27, 9, 18);
-        color: white;
-    }
-
-    .forgot-password{
-        display: none;
-        z-index: 2;
-        text-align: center;
-        position: relative;
-        width: 50%;
-        height: 75%;
-        border-radius: 20px;
-        background: rgb(238, 234, 234);
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-
-    /* Add Fade In Animation */
-    .animate {
-    -webkit-animation: fadein 1s;
-    animation: fadein 1s;
-    }
-
-    @-webkit-keyframes fadein {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-    }
-    
-    @keyframes fadein {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-    }
-
     .foot-style{
         text-align: center; 
         color: white;
@@ -488,7 +349,7 @@
                 <button class="exitbutton" onclick=fadeout()>×</button>
                 <div class="login-popup animate">
                     <b>
-                    <div class="login-container" style="height: 100%; background-image: url('food.jpg'); opacity: 0.5; float: right;"></div>
+                    <div class="login-container login-picture"></div>
                     <div class="login-container">
                         User Name<br>
                         <input type="text" placeholder="Enter User Name">
@@ -507,7 +368,7 @@
                 </div>
                 <div class="forgot-password">
                     <b>
-                    <div class="login-container" style="height: 100%; background-image: url('food.jpg'); opacity: 0.5; float: left"></div>
+                    <div class="login-container login-picture" style="float: left"></div>
                     <div class="login-container" style="float: right;">
                         Enter your User Name:<br>
                         <input type="text" placeholder="Enter User Name">
@@ -515,7 +376,7 @@
                     </b>
                     <div class="login-container" style="float: right; text-align: center">
                         <button class="login-button" style="width: auto">Send me an email!</button>
-                        <br><br><a class="backtoLogin" href="javascript:void(0);">Back to Login</a>
+                        <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
                         <br>Don't have an account? <a href="sign up.html">Sign Up</a>
                     </div>
                 </div>
@@ -606,7 +467,7 @@
             $(".login-popup").slideUp(500);
             $(".forgot-password").slideDown(500);
         });
-        $(".backtoLogin").click(function(){
+        $("#backtoLogin").click(function(){
             $(".forgot-password").slideUp(500);
             $(".login-popup").slideDown(500);
         });
@@ -630,7 +491,7 @@
                 <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" style="color: #ffffff"> </i>
                 </a>
                 <!-- Twitter -->
-                <a class="tw-ic">
+                <a class="tw-ic" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonText%3DTry%2520out%2520this%2520new%2520food%2520review%2520website%2521%26buttonType%3DTweetButton%26buttonUrl%3Dhttp%253A%252F%252Fwww.ozweebo.com%26widget%3DButton&ref_src=twsrc%5Etfw&text=Try%20out%20this%20new%20food%20review%20website!&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ozweebo.com">
                 <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                 </a>
                 <!-- Google +-->
