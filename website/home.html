@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
     <title>HomePage</title>
     <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -49,24 +49,25 @@
 
     #sidebar {
         /* don't forget to add all the previously mentioned styles here too */
-        background: #7386D5;
+        background: blueviolet;
         color: #fff;
         transition: all 0.3s;
     }
 
     #sidebar .sidebar-header {
         padding: 20px;
-        background: #6d7fcc;
+        background: blueviolet;
         border-top-right-radius: 50px;
     }
 
-    .active{
+    .active1{
         text-align: center;
     }
 
-    #sidebar .active .material-icons{
+    #sidebar .active1 .material-icons{
         font-size:50px;
         margin: 30px;
+        margin-left:10px;
     }
 
     #sidebar ul.components {
@@ -115,31 +116,87 @@
     display: flex;
     align-items: stretch;
     }
+    @media (min-width: 768px) {
+    #sidebar{
+        min-width: 220px;
+        max-width: 220px; 
+    }
+    .navbar{
+        display:none;
+    }
+    #header-component{
+        width:50%;
+    }
+    #sidebar .active1 .material-icons .words{
+        font-size:20px;
+        vertical-align: super;
+        margin-left:20px;
+    }
+    #sidebar .active1 .material-icons{
+        float: left;
+    }
+    }
+
+    @media(max-width: 768px) and (min-width: 540px) {
+    #sidebar{
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+    }
+
+    #sidebar.active ,.words {
+        min-width:220px;
+        max-width:220px;
+        margin-left: 0px !important;
+        display:inline-block;
+    }
+
+    #sidebar .active1 .material-icons{
+        font-size:30px;
+        margin:0;
+    }
+    #sidebar .active1 .material-icons .words{
+        display:none;
+    }
+    .navbar{
+        width:20%;
+    }
+    #header-component{
+        width:40%;
+        align-self: center;
+    }
+
+
+
+    }
+    @media (max-width: 540px) {
+    #sidebar {
+        display:none;
+    }
+    #sidebar.active {
+        margin-left: 0;
+        display:inline-block;
+        min-width: 220px;
+        max-width: 220px; 
+    }
+    .navbar{
+        display:inline-block;
+    }
+    }
+
 
     #sidebar {
-        min-width: 220px;
-        max-width: 220px;
+        min-height: 100vh;
         border-bottom-right-radius: 50px;
         border-top-right-radius: 50px;
+        overflow: auto;
     }
 
-    .navbar>ul{
-        list-style: none;
-        padding: 0px;
-    }
+    #sidebar >ul {
+        overflow: auto;
+    } 
 
-    .navbar{
-        background-color: blueviolet;
-        width: 8%;
-        border-radius: 0px 30px 30px 0px;
-        position: relative;
-        left: -80px;
-        transition: 0.3s;
-    }
 
-    .navbar:hover{
-        left:0;
-    }
 
     .btn{
         border:none;
@@ -158,6 +215,10 @@
     #navlist{
         display: none;
     }
+
+    /* #header-component{
+        width:50%;
+    } */
 
     .body{
         width:100%;
@@ -388,24 +449,31 @@
             
                     <ul class="list-unstyled components">
                         <p>Dummy Heading</p>
-                        <li class="active">
-                                <a class="material-icons" href="#">home</a>
+                        <li class="active1">
+                                <a class="material-icons" href="#">home<span class="words">Home</span></a>
+                                
                         </li>
-                        <li class="active">
-                                <a class="material-icons" href="#">notifications</a>
+                        <li class="active1">
+                                <a class="material-icons" href="#">notifications<span class="words">Notifications</span></a>
                         </li>
-                        <li class="active" >
-                                <a class="material-icons" href="#">bookmarks</a>
+                        <li class="active1" >
+                                <a class="material-icons" href="#">bookmarks<span class="words">Bookmarks</span></a>
                         </li>
-                        <li class="active">
-                                <a class="material-icons" href="#">forum</a>
+                        <li class="active1">
+                                <a class="material-icons" href="#">forum<span class="words">Forum</span></a>
                         </li>
-                        <li class="active">
-                                <a class="material-icons" href="#">help_outline</a>
+                        <li class="active1">
+                                <a class="material-icons" href="#">help_outline<span class="words">Help</span></a>
                         </li>
                     </ul>
-                </nav>            
-        </nav>
+        </nav>  
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+            </button>
+    </nav> -->
+      
+        
             
         <!-- <div class="navbar" onmouseover="document.getElementById('navlist').style.display='block'" onmouseout="document.getElementById('navlist').style.display='none'">
             <ul id="navlist">
@@ -456,7 +524,12 @@
         <div class="body container-fluid"> <!--header or search bar -->
             <div class=" mt-4">
                 <div class="row justify-content-between">
-                    <div class="col-lg-6">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                    </nav>
+                    <div id="header-component" class="col-lg-6">
                         <form action="" class="form">
                             <div class="form-group">
                                 <i class="fa fa-search" id="search-icon"></i>
@@ -467,7 +540,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-6">
+                    <div id="header-component" class="col-lg-6">
                         <div id="profile">
                             <h5 class="pt-2"> FirstName LastName </h5> &nbsp; &nbsp;
                             <img src="avatar.png" >
@@ -605,6 +678,14 @@
                         "transition": "background ease-in 500ms"
                     });
                 }
+            });
+
+            $(document).ready(function () {
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+
             });
         </script>
     </footer>
