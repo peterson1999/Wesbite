@@ -229,8 +229,6 @@
         height:10%;
     }
 
-    
-
     .foot-style{
         text-align: center; 
         color: white;
@@ -254,7 +252,6 @@
                         <li class="active">
                                 <a class="material-icons" href="#">home</a>
                         </li>
-                        <li><button class="btn" onclick=fadein()>Log In</button></li>
                         <li class="active">
                                 <a class="material-icons" href="#">notifications</a>
                         </li>
@@ -284,7 +281,7 @@
                 <button class="exitbutton" onclick=fadeout()>×</button>
                 <div class="login-popup animate">
                     <b>
-                    <div class="login-container" style="height: 100%; background-image: url('food.jpg'); opacity: 0.5; float: right;"></div>
+                    <div class="login-container login-picture"></div>
                     <div class="login-container">
                         User Name<br>
                         <input type="text" placeholder="Enter User Name">
@@ -297,13 +294,13 @@
                     <div class="login-container" style="text-align: center">
                         <input type="checkbox">Remember me<br>
                         <button class="login-button">Login</button>
-                        <br><br><a id="forgot-pass login-link" href="javascript:void(0);">Forgot Password?</a>
+                        <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
                         <br>Don't have an account? <a href="sign up.html">Sign Up</a>
                     </div>
                 </div>
                 <div class="forgot-password">
                     <b>
-                    <div class="login-container" style="height: 100%; background-image: url('food.jpg'); opacity: 0.5; float: left"></div>
+                    <div class="login-container login-picture" style="float: left"></div>
                     <div class="login-container" style="float: right;">
                         Enter your User Name:<br>
                         <input type="text" placeholder="Enter User Name">
@@ -311,7 +308,7 @@
                     </b>
                     <div class="login-container" style="float: right; text-align: center">
                         <button class="login-button" style="width: auto">Send me an email!</button>
-                        <br><br><a id="backtoLogin login-link" href="javascript:void(0);">Back to Login</a>
+                        <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
                         <br>Don't have an account? <a href="sign up.html">Sign Up</a>
                     </div>
                 </div>
