@@ -10,11 +10,13 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
-    <!-- CSS for Login Modal-->
-    <link rel="stylesheet" href="login.css">
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="header.css">
     <title>HomePage</title>
 <style>
     *{
@@ -42,56 +44,6 @@
         transition: all 0.3s;
     }
 
-    #sidebar {
-        /* don't forget to add all the previously mentioned styles here too */
-        background: blueviolet;
-        color: #fff;
-        transition: all 0.3s;
-    }
-
-    #sidebar .sidebar-header {
-        padding: 20px;
-        background: blueviolet;
-        border-top-right-radius: 50px;
-    }
-
-    .active1{
-        text-align: center;
-    }
-
-    #sidebar .active1 .material-icons{
-        font-size:50px;
-        margin: 30px;
-        margin-left:10px;
-    }
-
-    #sidebar ul.components {
-        padding: 20px 0;
-        border-bottom: 1px solid #47748b;
-    }
-
-    #sidebar ul p {
-        color: #fff;
-        padding: 10px;
-    }
-
-    #sidebar ul li a {
-        padding: 10px;
-        font-size: 1.1em;
-        display: block;
-    }
-    #sidebar ul li .material-icons:hover {
-        color: #a4afdf;
-    }
-
-    #sidebar ul li.active > a, a[aria-expanded="true"] {
-        color: #fff;
-    }
-    ul ul a {
-        font-size: 0.9em !important;
-        padding-left: 30px !important;
-        background: #6d7fcc;
-    }
     html ,body, .flex{
         height: 100%;
         background-color: #f9f9f9;
@@ -111,87 +63,7 @@
     display: flex;
     align-items: stretch;
     }
-    @media (min-width: 768px) {
-    #sidebar{
-        min-width: 220px;
-        max-width: 220px; 
-    }
-    .navbar{
-        display:none;
-    }
-    #header-component{
-        width:50%;
-    }
-    #sidebar .active1 .material-icons .words{
-        font-size:20px;
-        vertical-align: super;
-        margin-left:20px;
-    }
-    #sidebar .active1 .material-icons{
-        float: left;
-    }
-    }
-
-    @media(max-width: 768px) and (min-width: 540px) {
-    #sidebar{
-        min-width: 80px;
-        max-width: 80px;
-        text-align: center;
-    }
-
-    #sidebar.active ,.words {
-        min-width:220px;
-        max-width:220px;
-        margin-left: 0px !important;
-        display:inline-block;
-    }
-
-    #sidebar .active1 .material-icons{
-        font-size:30px;
-        margin:0;
-    }
-    #sidebar .active1 .material-icons .words{
-        display:none;
-    }
-    .navbar{
-        width:20%;
-    }
-    #header-component{
-        width:40%;
-        align-self: center;
-    }
-
-
-
-    }
-    @media (max-width: 540px) {
-    #sidebar {
-        display:none;
-    }
-    #sidebar.active {
-        margin-left: 0;
-        display:inline-block;
-        min-width: 220px;
-        max-width: 220px; 
-    }
-    .navbar{
-        display:inline-block;
-    }
-    }
-
-
-    #sidebar {
-        min-height: 100vh;
-        border-bottom-right-radius: 50px;
-        border-top-right-radius: 50px;
-        overflow: auto;
-    }
-
-    #sidebar >ul {
-        overflow: auto;
-    } 
-
-
+    
 
     .btn{
         border:none;
@@ -211,47 +83,11 @@
         display: none;
     }
 
-    /* #header-component{
-        width:50%;
-    } */
-
     .body{
         width:100%;
         display:flex;
         flex-direction: column;
-    } 
-
-    div #profile { /*Header or Searh bar -Prim*/
-        display: flex;
-        justify-content: flex-end; 
-        margin: 5px; 
-    }
-
-    div #profile img { /*Header or Searh bar -Prim*/
-        width: 50px;
-        height: 50px; 
-    } 
-
-    #search-icon {
-        font-size:28px;
-        position:absolute; 
-        top: 12px; 
-        padding-left: 12px;
-    }
-    input[type=text] { 
-        width: 100%;
-        height: 46px;
-        box-sizing: border-box;
-        border: 2px solid #17a2b8;
-        border-radius: 25px;
-        font-size: 16px;
-        background-color: white;
-        /* background-image: url('search.png'); */
-        background-position: 10px 10px; 
-        background-repeat: no-repeat;
-        /* background-size: 22px; */
-        padding: 12px 20px 12px 40px;
-    }  
+    }   
 
     .body>.mainbody1{
         display:flex;
@@ -326,6 +162,7 @@
                         <li class="active1">
                                 <a class="material-icons" href="#">help_outline<span class="words">Help</span></a>
                         </li>
+                        <li><button class="btn" onclick=fadein()>Log In</button></li>
                     </ul>
         </nav>  
         <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">

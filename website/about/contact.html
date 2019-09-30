@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HomePage</title>
+    <!--JQuery-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../login.css">
+    <link rel="stylesheet" href="../sidebar.css">
+    <link rel="stylesheet" href="../header.css">
+    <title>About Us</title>
 <style>
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #fafafa;
+    }
+
+    p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1em;
+        font-weight: 300;
+        line-height: 1.7em;
+        color: #999;
+    }
+
+    a, a:hover, a:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
     html ,body, .flex{
         height: 100%;
+        background-color: #f9f9f9;
     }
 
     body{
         margin: 0px;
     }
-    #frame{
-        display: none;
-    }
-
-    #frame>iframe{
-        border: none;
-        position: absolute;
-        transition: width 2s height 2s;
-
-        /* The Modal (background) */
-        z-index: 1; /*Sit on top*/ 
-        left: 0;
-        top: 0;
-        width: 100%; /*Full height */
-        height: 100%; /*Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        
-    }
 
     .flex{
         display: flex;
+        width: 100%;
+        align-items: stretch;
         flex-direction: row;
-    }
-
-    .navbar>ul{
-        list-style: none;
-        padding: 0px;
-    }
-
-    .navbar{
-        background-color: blueviolet;
-        width: 8%;
-        border-radius: 0px 30px 30px 0px;
-        position: relative;
-        left: -80px;
-        transition: 0.3s;
-    }
-
-    .navbar:hover{
-        left:0;
     }
 
     .btn{
@@ -71,46 +74,11 @@
         background-color: violet;
     }
 
-    #navlist{
-        display: none;
-    }
-
-    .exitbutton{
-        float: right;
-        font-size: 20px;
-        width: 40px;
-        height: 40px;
-        margin:0;
-        border:solid;
-        border-color: azure;
-        border-radius:20px;
-        color:white;
-        background-color: rgba(218, 8, 36, 0.7);;
-        z-index: 2;
-        position: fixed;
-        right: 40%;
-        top: 70px;
-    }
-    .exitbutton:hover{
-        color: black;
-        border-color:black;
-    }
-    .exitbutton:focus{
-        color: black;
-        outline: none;
-    }
-
     .body{
         width:100%;
         display:flex;
         flex-direction: column;
-
-    }
-
-    .body>.header{
-        height:10%;
-    }
-
+    }   
     .body>.mainbody1{
         display:flex;
         flex-direction:column;
@@ -134,42 +102,82 @@
         text-align: center;
     }
 
-
-    .body>.footer{
-        height:10%;
+    .foot-style{
+        text-align: center; 
+        color: white;
+        background: #bf2828;
+        background: -webkit-linear-gradient(transparent, #bf2828);
+        background: linear-gradient(transparent, #bf2828);
+        transition: background ease-in 0ms;
     }
-    
 </style>
 </head>
 
 <body>
     <div class="flex">
-        <div class="navbar" onmouseover="document.getElementById('navlist').style.display='block'" onmouseout="document.getElementById('navlist').style.display='none'">
-            <ul id="navlist">
-                <li><button class="btn">home</button></li>
-                <li><button class="btn">home</button></li>
-                <li><button class="btn">home</button></li>
-                <li><button class="btn">home</button></li>
-            </ul>
-        </div>
-        <div class="body">
-            <div class="header">
-                <h1>header</h1>
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Bootstrap Sidebar</h3>
             </div>
+        
+            <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+                <li class="active1">
+                        <a class="material-icons" href="#">home<span class="words">Home</span></a>
+                </li>
+                <li class="active1">
+                        <a class="material-icons" href="#">notifications<span class="words">Notifications</span></a>
+                </li>
+                <li class="active1" >
+                        <a class="material-icons" href="#">bookmarks<span class="words">Bookmarks</span></a>
+                </li>
+                <li class="active1">
+                        <a class="material-icons" href="#">forum<span class="words">Forum</span></a>
+                </li>
+                <li class="active1">
+                        <a class="material-icons" href="#">help_outline<span class="words">Help</span></a>
+                </li>
+            </ul>
+        </nav>  
+        <div class="body container-fluid"> <!--header or search bar -->
+            <div class=" mt-4">
+                <div class="row justify-content-between">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                    </nav>
+                    <div id="header-component" class="col-lg-6">
+                        <form action="" class="form">
+                            <div class="form-group">
+                                <i class="fa fa-search" id="search-icon"></i>
+                                <input type="text" 
+                                       class="form-control" 
+                                       name="search" 
+                                       placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                    <div id="header-component" class="col-lg-6">
+                        <div id="profile">
+                            <h5 class="pt-2"> FirstName LastName </h5> &nbsp; &nbsp;
+                            <img src="../avatar.png" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-info mt-6">
             <div class="mainbody1">
                 <div class="section1" id="section1-1">
                     <h1>section1-1</h1>
                 </div>
                 <div class="section1"id="section1-2">
-                        <h1>section1-2</h1>
+                    <h1>section1-2</h1>
                 </div>
                 <div class="section1"id="section1-3">
-                        <h1>section1-3</h1>
+                    <h1>section1-3</h1>
                 </div>
             </div>
-            <div class="footer">
-                    <h1>footer</h1>
-                </div>
         </div>
     </div>
     <script>
@@ -177,12 +185,100 @@
         function fadein(){
             s.opacity= 1;
             s.display="block";
-        }
+        };
         function fadeout(){
             s.opacity = 1;
             (function fade(){(s.opacity-=.1)==0?s.display="none":setTimeout(fade,40)})();
-        }
-        
+        };
+        document.addEventListener('keydown', function(event) {
+            const key = event.key; // Or const {key} = event; in ES6+
+            if (key === "Escape") {
+                fadeout();
+            }
+        });
+        $("#forgot-pass").click(function(){
+            $(".login-popup").slideUp(500);
+            $(".forgot-password").slideDown(500);
+        });
+        $("#backtoLogin").click(function(){
+            $(".forgot-password").slideUp(500);
+            $(".login-popup").slideDown(500);
+        });
     </script>
 </body>
+<!-- Footer -->
+<footer class="foot-style">
+
+        <!-- Footer Elements -->
+        <div class="container">
+    
+        <!-- Grid row-->
+        <div class="row">
+    
+            <!-- Grid column -->
+            <div class="col-md-12 py-5">
+            <div class="mt-5 flex-center">
+    
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/sharer/sharer.php?u=home.html" class="fb-ic">
+                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" style="color: #ffffff"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonText%3DTry%2520out%2520this%2520new%2520food%2520review%2520website%2521%26buttonType%3DTweetButton%26buttonUrl%3Dhttp%253A%252F%252Fwww.ozweebo.com%26widget%3DButton&ref_src=twsrc%5Etfw&text=Try%20out%20this%20new%20food%20review%20website!&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ozweebo.com">
+                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                <!-- Google +-->
+                <a class="gplus-ic">
+                <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                <!--Linkedin -->
+                <a class="li-ic">
+                <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic">
+                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                <!--Pinterest-->
+                <a class="pin-ic">
+                <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                </a>
+            </div>
+            </div>
+            <!-- Grid column -->
+    
+        </div>
+        <!-- Grid row-->
+    
+        </div>
+        <!-- Footer Elements -->
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="home.html"> FoodReviews.com</a>
+        </div>
+        <!-- Copyright -->
+        <script>
+            $(window).scroll(function() {
+                if($(window).scrollTop() + $(window).height() > $(document).height() - 10) {
+                    $(".foot-style").css({
+                        "background": "#bf2828",
+                        "transition": "background ease-in 0ms"
+                    });
+                }
+                if($(window).scrollTop() + $(window).height() <= $(document).height() - 50){
+                    $(".foot-style").css({
+                        "background": "linear-gradient(transparent, #bf2828)",
+                        "transition": "background ease-in 500ms"
+                    });
+                }
+            });
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
+            });
+        </script>
+    </footer>
+    <!-- Footer -->
 </html>
