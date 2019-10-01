@@ -1,8 +1,29 @@
 .foot-style{
     text-align: center; 
     color: white;
-    background: greenyellow;
-    /* background: -webkit-linear-gradient(transparent, #bf2828);
-    background: linear-gradient(transparent, #bf2828); */
-    transition: background ease-in 0ms;
+    background: #50cf30;
+    background: -webkit-linear-gradient(transparent, #ffff96);
+    background: linear-gradient(transparent, #ffff96);
+}
+.bgcolor-animate{
+    -webkit-animation: foot-color 100ms;
+    animation: foot-color 100ms;
+}
+@-webkit-keyframes foot-color{
+    /*from {background: linear-gradient(transparent, #ffff96);}
+    to {background: linear-gradient(#ffff96, #50cf30);}*/
+    0%   {background: linear-gradient(transparent, #ffff96);}
+    25%  {background: linear-gradient(transparent 10%, #ffff96 100%);}
+    50%  {background: linear-gradient(#ffff96 60%, #50cf30 100%);}
+    75%  {background: linear-gradient(#ffff96 30%, #50cf30 100%);}
+    100% {background: linear-gradient(#ffff96, #50cf30);}
+}
+@keyframes foot-color{
+    /*from {background: linear-gradient(transparent, #ffff96);}
+    to {background: linear-gradient(#ffff96, #50cf30);}*/
+    0%   {background: linear-gradient(transparent, #ffff96);}
+    25%  {background: linear-gradient(transparent 10%, #ffff96 100%);}
+    50%  {background: linear-gradient(#ffff96 60%, #50cf30 100%);}
+    75%  {background: linear-gradient(#ffff96 30%, #50cf30 100%);}
+    100% {background: linear-gradient(#ffff96, #50cf30);}
 }

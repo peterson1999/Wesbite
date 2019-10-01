@@ -1,14 +1,16 @@
 $(window).scroll(function() {
     if($(window).scrollTop() + $(window).height() > $(document).height() - 10) {
+        $("footer").addClass("bgcolor-animate");
         $(".foot-style").css({
-            "background": "#bf2828",
-            "transition": "background ease-in 0ms"
+            "background": "linear-gradient(#ffff96, #50cf30)",
+            "transition": "background-ease-in 500ms"
         });
     }
     if($(window).scrollTop() + $(window).height() <= $(document).height() - 50){
+        $("footer").removeClass("bgcolor-animate");
         $(".foot-style").css({
-            "background": "linear-gradient(transparent, #bf2828)",
-            "transition": "background ease-in 500ms"
+            "background": "linear-gradient(transparent, #ffff96)",
+            "transition": "background-ease-in 500ms"
         });
     }
 });
