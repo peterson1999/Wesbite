@@ -10,7 +10,9 @@ ul ul a {
     color: #fff;
     transition: all 0.3s;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 #sidebar .sidebar-header {
     padding: 20px;
     background: blueviolet;
