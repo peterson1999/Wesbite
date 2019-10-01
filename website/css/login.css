@@ -74,7 +74,7 @@
 }
 .login-picture{
     height: 100%; 
-    background-image: url('food.jpg'); 
+    background-image: url('../photos/food.jpg'); 
     opacity: 0.5; 
     float: right;
 }
