@@ -10,11 +10,15 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
-    <!-- CSS for Login Modal-->
-    <link rel="stylesheet" href="login.css">
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/homelayout.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>HomePage</title>
 <style>
     *{
@@ -22,10 +26,10 @@
     }
     @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-
     body {
         font-family: 'Poppins', sans-serif;
         background: #fafafa;
+        margin: 0px;
     }
 
     p {
@@ -42,63 +46,9 @@
         transition: all 0.3s;
     }
 
-    #sidebar {
-        /* don't forget to add all the previously mentioned styles here too */
-        background: blueviolet;
-        color: #fff;
-        transition: all 0.3s;
-    }
-
-    #sidebar .sidebar-header {
-        padding: 20px;
-        background: blueviolet;
-        border-top-right-radius: 50px;
-    }
-
-    .active1{
-        text-align: center;
-    }
-
-    #sidebar .active1 .material-icons{
-        font-size:50px;
-        margin: 30px;
-        margin-left:10px;
-    }
-
-    #sidebar ul.components {
-        padding: 20px 0;
-        border-bottom: 1px solid #47748b;
-    }
-
-    #sidebar ul p {
-        color: #fff;
-        padding: 10px;
-    }
-
-    #sidebar ul li a {
-        padding: 10px;
-        font-size: 1.1em;
-        display: block;
-    }
-    #sidebar ul li .material-icons:hover {
-        color: #a4afdf;
-    }
-
-    #sidebar ul li.active > a, a[aria-expanded="true"] {
-        color: #fff;
-    }
-    ul ul a {
-        font-size: 0.9em !important;
-        padding-left: 30px !important;
-        background: #6d7fcc;
-    }
     html ,body, .flex{
         height: 100%;
         background-color: #f9f9f9;
-    }
-
-    body{
-        margin: 0px;
     }
 
     .flex{
@@ -111,88 +61,7 @@
     display: flex;
     align-items: stretch;
     }
-    @media (min-width: 768px) {
-    #sidebar{
-        min-width: 220px;
-        max-width: 220px; 
-    }
-    .navbar{
-        display:none;
-    }
-    #header-component{
-        width:50%;
-    }
-    #sidebar .active1 .material-icons .words{
-        font-size:20px;
-        vertical-align: super;
-        margin-left:20px;
-    }
-    #sidebar .active1 .material-icons{
-        float: left;
-    }
-    }
-
-    @media(max-width: 768px) and (min-width: 540px) {
-    #sidebar{
-        min-width: 80px;
-        max-width: 80px;
-        text-align: center;
-    }
-
-    #sidebar.active ,.words {
-        min-width:220px;
-        max-width:220px;
-        margin-left: 0px !important;
-        display:inline-block;
-    }
-
-    #sidebar .active1 .material-icons{
-        font-size:30px;
-        margin:0;
-    }
-    #sidebar .active1 .material-icons .words{
-        display:none;
-    }
-    .navbar{
-        width:20%;
-    }
-    #header-component{
-        width:40%;
-        align-self: center;
-    }
-
-
-
-    }
-    @media (max-width: 540px) {
-    #sidebar {
-        display:none;
-    }
-    #sidebar.active {
-        margin-left: 0;
-        display:inline-block;
-        min-width: 220px;
-        max-width: 220px; 
-    }
-    .navbar{
-        display:inline-block;
-    }
-    }
-
-
-    #sidebar {
-        min-height: 100vh;
-        border-bottom-right-radius: 50px;
-        border-top-right-radius: 50px;
-        overflow: auto;
-    }
-
-    #sidebar >ul {
-        overflow: auto;
-    } 
-
-
-
+    
     .btn{
         border:none;
         background-color: blueviolet;
@@ -210,94 +79,6 @@
     #navlist{
         display: none;
     }
-
-    /* #header-component{
-        width:50%;
-    } */
-
-    .body{
-        width:100%;
-        display:flex;
-        flex-direction: column;
-    } 
-
-    div #profile { /*Header or Searh bar -Prim*/
-        display: flex;
-        justify-content: flex-end; 
-        margin: 5px; 
-    }
-
-    div #profile img { /*Header or Searh bar -Prim*/
-        width: 50px;
-        height: 50px; 
-    } 
-
-    #search-icon {
-        font-size:28px;
-        position:absolute; 
-        top: 12px; 
-        padding-left: 12px;
-    }
-    input[type=text] { 
-        width: 100%;
-        height: 46px;
-        box-sizing: border-box;
-        border: 2px solid #17a2b8;
-        border-radius: 25px;
-        font-size: 16px;
-        background-color: white;
-        /* background-image: url('search.png'); */
-        background-position: 10px 10px; 
-        background-repeat: no-repeat;
-        /* background-size: 22px; */
-        padding: 12px 20px 12px 40px;
-    }  
-
-    .body>.mainbody1{
-        display:flex;
-        flex-direction:row;
-        height:40%;
-    }
-    .body>.mainbody1>.section1-1{
-        width:50%;
-    }
-
-    .body>.mainbody1>.section1-2{
-        display:flex;
-        flex-direction: column;
-        width:50%;
-    }   
-    .body>.mainbody1>.section1-2>.section1-2-contents{
-        display:flex;
-        flex-direction: row;
-        width:100%;
-    } 
-    .body>.mainbody1>.section1-2>.section1-2-contents>.section1-2-x{
-        width:33.33%
-    }
-    .body>.mainbody2{
-        display:flex;
-        flex-direction:row;
-        height:40%;
-    }
-    .body>.mainbody2>.section2-1{
-        width:50%;
-    }
-    .body>.mainbody2>.section2-2{
-        width:50%;
-    }    
-    .body>.footer{
-        height:10%;
-    }
-
-    .foot-style{
-        text-align: center; 
-        color: white;
-        background: #bf2828;
-        background: -webkit-linear-gradient(transparent, #bf2828);
-        background: linear-gradient(transparent, #bf2828);
-        transition: background ease-in 0ms;
-    }
 </style>
 </head>
 
@@ -311,8 +92,7 @@
                     <ul class="list-unstyled components">
                         <p>Dummy Heading</p>
                         <li class="active1">
-                                <a class="material-icons" href="#">home<span class="words">Home</span></a>
-                                
+                                <a class="material-icons" href="#">home<span class="words">Home</span></a>  
                         </li>
                         <li class="active1">
                                 <a class="material-icons" href="#">notifications<span class="words">Notifications</span></a>
@@ -326,24 +106,9 @@
                         <li class="active1">
                                 <a class="material-icons" href="#">help_outline<span class="words">Help</span></a>
                         </li>
+                        <li><button class="btn" onclick=fadein()>Log In</button></li>
                     </ul>
-        </nav>  
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button type="button" id="sidebarCollapse" class="btn btn-info">
-                <i class="fas fa-align-left"></i>
-            </button>
-    </nav> -->
-      
-        
-            
-        <!-- <div class="navbar" onmouseover="document.getElementById('navlist').style.display='block'" onmouseout="document.getElementById('navlist').style.display='none'">
-            <ul id="navlist">
-                <li><button class="btn">home</button></li>
-                <li><button class="btn">home</button></li>
-                <li><button class="btn">home</button></li>
-                <li><button class="btn" onclick=fadein()>Log In</button></li>
-            </ul>
-        </div> -->
+        </nav> 
         <div id="frame">
             <div class = "modl">
                 <button class="exitbutton" onclick=fadeout()>×</button>
@@ -404,7 +169,7 @@
                     <div id="header-component" class="col-lg-6">
                         <div id="profile">
                             <h5 class="pt-2"> FirstName LastName </h5> &nbsp; &nbsp;
-                            <img src="avatar.png" >
+                            <img src="photos/avatar.png" >
                         </div>
                     </div>
                 </div>
@@ -447,31 +212,7 @@
             </div>
         </div>
     </div>
-    <script>
-        var s = document.getElementById('frame').style;
-        function fadein(){
-            s.opacity= 1;
-            s.display="block";
-        };
-        function fadeout(){
-            s.opacity = 1;
-            (function fade(){(s.opacity-=.1)==0?s.display="none":setTimeout(fade,40)})();
-        };
-        document.addEventListener('keydown', function(event) {
-            const key = event.key; // Or const {key} = event; in ES6+
-            if (key === "Escape") {
-                fadeout();
-            }
-        });
-        $("#forgot-pass").click(function(){
-            $(".login-popup").slideUp(500);
-            $(".forgot-password").slideDown(500);
-        });
-        $("#backtoLogin").click(function(){
-            $(".forgot-password").slideUp(500);
-            $(".login-popup").slideDown(500);
-        });
-    </script>
+    <script src="js/login.js"></script>
 </body>
 <!-- Footer -->
 <footer class="foot-style">
@@ -494,19 +235,19 @@
                 <a class="tw-ic" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonText%3DTry%2520out%2520this%2520new%2520food%2520review%2520website%2521%26buttonType%3DTweetButton%26buttonUrl%3Dhttp%253A%252F%252Fwww.ozweebo.com%26widget%3DButton&ref_src=twsrc%5Etfw&text=Try%20out%20this%20new%20food%20review%20website!&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ozweebo.com">
                 <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                 </a>
-                <!-- Google +-->
+                <!-- Google+ -->
                 <a class="gplus-ic">
                 <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                 </a>
-                <!--Linkedin -->
+                <!-- Linkedin -->
                 <a class="li-ic">
                 <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                 </a>
-                <!--Instagram-->
+                <!-- Instagram -->
                 <a class="ins-ic">
                 <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                 </a>
-                <!--Pinterest-->
+                <!-- Pinterest -->
                 <a class="pin-ic">
                 <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
                 </a>
@@ -515,7 +256,7 @@
             <!-- Grid column -->
     
         </div>
-        <!-- Grid row-->
+        <!-- Grid row -->
     
         </div>
         <!-- Footer Elements -->
@@ -525,30 +266,7 @@
         <a href="home.html"> FoodReviews.com</a>
         </div>
         <!-- Copyright -->
-        <script>
-            $(window).scroll(function() {
-                if($(window).scrollTop() + $(window).height() > $(document).height() - 10) {
-                    $(".foot-style").css({
-                        "background": "#bf2828",
-                        "transition": "background ease-in 0ms"
-                    });
-                }
-                if($(window).scrollTop() + $(window).height() <= $(document).height() - 50){
-                    $(".foot-style").css({
-                        "background": "linear-gradient(transparent, #bf2828)",
-                        "transition": "background ease-in 500ms"
-                    });
-                }
-            });
-
-            $(document).ready(function () {
-
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-
-            });
-        </script>
+        <script src="js/footer.js"></script>
     </footer>
     <!-- Footer -->
 </html>

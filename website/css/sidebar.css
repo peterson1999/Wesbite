@@ -1,0 +1,127 @@
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: blueviolet;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: blueviolet;
+    border-top-right-radius: 50px;
+}
+
+.active1{
+    text-align: center;
+}
+
+#sidebar .active1 .material-icons{
+    font-size:50px;
+    margin: 30px;
+    margin-left:10px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li .material-icons:hover {
+    color: #a4afdf;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+}
+@media (min-width: 768px) {
+    #sidebar{
+        min-width: 220px;
+        max-width: 220px; 
+    }
+    .navbar{
+        display:none;
+    }
+    #header-component{
+        width:50%;
+    }
+    #sidebar .active1 .material-icons .words{
+        font-size:20px;
+        vertical-align: super;
+        margin-left:20px;
+    }
+    #sidebar .active1 .material-icons{
+        float: left;
+    }
+}
+
+@media(max-width: 768px) and (min-width: 540px) {
+    #sidebar{
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+    }
+
+    #sidebar.active ,.words {
+        min-width:220px;
+        max-width:220px;
+        margin-left: 0px !important;
+        display:inline-block;
+    }
+
+    #sidebar .active1 .material-icons{
+        font-size:30px;
+        margin:0;
+    }
+    #sidebar .active1 .material-icons .words{
+        display:none;
+    }
+    .navbar{
+        width:20%;
+    }
+    #header-component{
+        width:40%;
+        align-self: center;
+    }
+}
+
+@media (max-width: 540px) {
+    #sidebar {
+        display:none;
+    }
+    #sidebar.active {
+        margin-left: 0;
+        display:inline-block;
+        min-width: 220px;
+        max-width: 220px; 
+    }
+    .navbar{
+        display:inline-block;
+    }
+}
+
+#sidebar {
+    min-height: 100vh;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: auto;
+}
+
+#sidebar >ul {
+    overflow: hidden;
+} 
+

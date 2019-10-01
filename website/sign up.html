@@ -1,44 +1,100 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" 
-         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-         crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--JQuery-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/sidebar.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
         <title>Sign Up</title>
         <style>
             *{
-                margin:0px;
-                padding:0px;
-                color: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+            body {
+                font-family: 'Poppins', sans-serif;
+                background: #fafafa;
+            }
+
+            p {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.1em;
+                font-weight: 300;
+                line-height: 1.7em;
+                color: #999;
+            }
+
+            a, a:hover, a:focus {
+                color: inherit;
+                text-decoration: none;
+                transition: all 0.3s;
+            }
+
+            html ,body, .flex{
+                height: 100%;
+                background-color: #f9f9f9;
+            }
+
+            body{
+                margin: 0px;
+            }
+
+            .flex{
+                display: flex;
+                width: 100%;
+                align-items: stretch;
+                flex-direction: row;
+            }
+            .wrapper {
+            display: flex;
+            align-items: stretch;
+            }
+            
+
+            .btn{
+                border:none;
+                background-color: blueviolet;
+                margin:15px;
+                font-size: 25px;
+                width:100%;
+                margin-left: 0px;
+                color:white;
+            }
+
+            .btn:hover{
+                background-color: violet;
+            }
+
+            #navlist{
+                display: none;
+            }
+
+            .body{
+                width:100%;
+                display:flex;
+                flex-direction: column;
             }
             body{
-                background-image: url(foodbg.jpg);
+                /*background-image: url(foodbg.jpg);*/
                 background-size: cover;
                 background-attachment: fixed;
                 font-family: new time roman;
             }
-            h1 {
-                font-size: 40px;
-                color: white;
-                margin-top: 250px;
-            }
-            p {
-                font-size: 18px;
-                color: white;
-            }
-            h3 {
-                font-size: 25px;
-                color: white;
-            }
             .glyphicon-pencil {
                 font-size: 35px;
-                color:white;
                 float: right;
                 margin-top: 20px;
             }
@@ -50,7 +106,6 @@
             .label {
                 font-weight: normal;
                 margin-top: 15px;
-                color:white;
                 font-size: 18px;
             }
             .form-control {
@@ -61,7 +116,6 @@
                 font-size: 18px;
                 margin-top: 15px;
                 height: 40px;
-                color: white;
             }
             input[type="checkbox"] {
                 margin-top: 15px;
@@ -70,7 +124,6 @@
             }
             small{
                 font-size: 18px;
-                color: white;
             }
             .btn-info {
                 margin-top: 20px;
@@ -85,48 +138,188 @@
                 width: 120px;
                 margin-bottom: 20px;
             }
-
+            .foot-style{
+                text-align: center; 
+                color: white;
+                background: #bf2828;
+                background: -webkit-linear-gradient(transparent, #bf2828);
+                background: linear-gradient(transparent, #bf2828);
+                transition: background ease-in 0ms;
+            }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <h1 class="text-left"> Restaurant Log In</h1>
-                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                        deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="col-md-5">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h3 class="text-left">Log In</h3>
+        <div class="flex">
+            <nav id="sidebar">
+                    <div class="sidebar-header">
+                            <h3>Bootstrap Sidebar</h3>
                         </div>
-                        <div class="col-md-6">
-                            <span class="glyphicon glyphicon-pencil"></span>
+                
+                        <ul class="list-unstyled components">
+                            <p>Dummy Heading</p>
+                            <li class="active1">
+                                    <a class="material-icons" href="#">home<span class="words">Home</span></a>
+                                    
+                            </li>
+                            <li class="active1">
+                                    <a class="material-icons" href="#">notifications<span class="words">Notifications</span></a>
+                            </li>
+                            <li class="active1" >
+                                    <a class="material-icons" href="#">bookmarks<span class="words">Bookmarks</span></a>
+                            </li>
+                            <li class="active1">
+                                    <a class="material-icons" href="#">forum<span class="words">Forum</span></a>
+                            </li>
+                            <li class="active1">
+                                    <a class="material-icons" href="#">help_outline<span class="words">Help</span></a>
+                            </li>
+                        </ul>
+            </nav>  
+            <div class="body container-fluid"> <!--header or search bar -->
+                <div class=" mt-4">
+                    <div class="row justify-content-between">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                                <i class="fas fa-align-left"></i>
+                            </button>
+                        </nav>
+                        <div id="header-component" class="col-lg-6">
+                            <form action="" class="form">
+                                <div class="form-group">
+                                    <i class="fa fa-search" id="search-icon"></i>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="search" 
+                                           placeholder="Search">
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                    <div class="row">
-                        <label class="labe col-md-2 control-label">E-mail </label>
-                        <div class="col-md-10">
-                            <input type="Email" class="form-control" name="E-mail" placeholder="E-mail">
-                        </div>
-                    </div>
-                    <div class="row">
-                            <label class="labe col-md-2 control-label">Password </label>
-                            <div class="col-md-10">
-                                <input type="Password" class="form-control" name="Password" placeholder="Password">
-                                <input type="checkbox"> <small> Remember me</small>
+                        <div id="header-component" class="col-lg-6">
+                            <div id="profile">
+                                <h5 class="pt-2"> FirstName LastName </h5> &nbsp; &nbsp;
+                                <img src="avatar.png" >
                             </div>
                         </div>
-                        <a href="#"><div class="btn btn-info">Log In</div></a>
-                        <a href="#"><div class="btn btn-warning">Sign Up</div></a>
+                    </div>
+                </div>
+                <hr class="bg-info mt-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h1 class="text-left"> Restaurant Log In</h1>
+                            <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+                                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                                deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3 class="text-left">Log In</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="labe col-md-2 control-label">E-mail </label>
+                                <div class="col-md-10">
+                                    <input type="Email" class="form-control" name="E-mail" placeholder="E-mail">
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <label class="labe col-md-2 control-label">Password </label>
+                                    <div class="col-md-10">
+                                        <input type="Password" class="form-control" name="Password" placeholder="Password">
+                                        <input type="checkbox"> <small> Remember me</small>
+                                    </div>
+                                </div>
+                                <a href="#"><div class="btn btn-info">Log In</div></a>
+                                <a href="#"><div class="btn btn-warning">Sign Up</div></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </body>
+    <!-- Footer -->
+    <footer class="foot-style">
+        <!-- Footer Elements -->
+        <div class="container">
+    
+        <!-- Grid row-->
+        <div class="row">
+    
+            <!-- Grid column -->
+            <div class="col-md-12 py-5">
+            <div class="mt-5 flex-center">
+    
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/sharer/sharer.php?u=home.html" class="fb-ic">
+                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" style="color: #ffffff"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonText%3DTry%2520out%2520this%2520new%2520food%2520review%2520website%2521%26buttonType%3DTweetButton%26buttonUrl%3Dhttp%253A%252F%252Fwww.ozweebo.com%26widget%3DButton&ref_src=twsrc%5Etfw&text=Try%20out%20this%20new%20food%20review%20website!&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ozweebo.com">
+                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                <!-- Google +-->
+                <a class="gplus-ic">
+                <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                <!--Linkedin -->
+                <a class="li-ic">
+                <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic">
+                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                <!--Pinterest-->
+                <a class="pin-ic">
+                <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                </a>
+            </div>
+            </div>
+            <!-- Grid column -->
+    
+        </div>
+        <!-- Grid row-->
+    
+        </div>
+        <!-- Footer Elements -->
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="home.html"> FoodReviews.com</a>
+        </div>
+        <!-- Copyright -->
+        <script>
+            $(window).scroll(function() {
+                if($(window).scrollTop() + $(window).height() > $(document).height() - 10) {
+                    $(".foot-style").css({
+                        "background": "#bf2828",
+                        "transition": "background ease-in 0ms"
+                    });
+                }
+                if($(window).scrollTop() + $(window).height() <= $(document).height() - 50){
+                    $(".foot-style").css({
+                        "background": "linear-gradient(transparent, #bf2828)",
+                        "transition": "background ease-in 500ms"
+                    });
+                }
+            });
+
+            $(document).ready(function () {
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+
+            });
+        </script>
+    </footer>
+    <!-- Footer -->
 </html>
