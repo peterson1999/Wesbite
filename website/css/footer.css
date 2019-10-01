@@ -1,8 +1,8 @@
 .foot-style{
     text-align: center; 
     color: white;
-    background: #bf2828;
-    background: -webkit-linear-gradient(transparent, #bf2828);
-    background: linear-gradient(transparent, #bf2828);
+    background: greenyellow;
+    /* background: -webkit-linear-gradient(transparent, #bf2828);
+    background: linear-gradient(transparent, #bf2828); */
     transition: background ease-in 0ms;
 }

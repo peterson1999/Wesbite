@@ -6,6 +6,7 @@ ul ul a {
 #sidebar {
     /* don't forget to add all the previously mentioned styles here too */
     background: blueviolet;
+    background-image: linear-gradient(225deg, blueviolet 0%, #FF0099 214%);
     color: #fff;
     transition: all 0.3s;
 }
@@ -119,6 +120,7 @@ ul ul a {
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
     overflow: auto;
+    z-index: 1;
 }
 
 #sidebar >ul {

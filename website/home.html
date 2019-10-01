@@ -28,7 +28,7 @@
 
     body {
         font-family: 'Poppins', sans-serif;
-        background: #fafafa;
+        background-color: pink;
         margin: 0px;
     }
 
@@ -48,7 +48,7 @@
 
     html ,body, .flex{
         height: 100%;
-        background-color: #f9f9f9;
+        background-color: papayawhip;
     }
 
     .flex{
@@ -79,18 +79,41 @@
     #navlist{
         display: none;
     }
+
+    #row1{
+        height:33.33%;
+        border:solid;
+    }
+    #con{
+        border:solid;
+        height:100%;
+        max-width:1500px;
+        margin-top: 250px;
+        background-color: #ffffff;
+        opacity: 0.5;
+    }
+    .blob1{
+        position: absolute;
+        left:50px;
+        width:500px;
+    }
+    .sampleblob{
+        height:500px;
+        border-radius:24% 76% 27% 73% / 46% 30% 70% 54%;
+        background-color: purple;
+        z-index:1;
+    }
 </style>
 </head>
 
 <body>
+    <img class="blob1"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img>
+
     <div class="flex">
+            <!-- <div class="sampleblob"></div> -->
         <nav id="sidebar">
-                <div class="sidebar-header">
-                        <h3>Bootstrap Sidebar</h3>
-                    </div>
-            
                     <ul class="list-unstyled components">
-                        <p>Dummy Heading</p>
+                    
                         <li class="active1">
                                 <a class="material-icons" href="#">home<span class="words">Home</span></a>  
                         </li>
@@ -106,7 +129,6 @@
                         <li class="active1">
                                 <a class="material-icons" href="#">help_outline<span class="words">Help</span></a>
                         </li>
-                        <li><button class="btn" onclick=fadein()>Log In</button></li>
                     </ul>
         </nav> 
         <div id="frame">
@@ -174,42 +196,16 @@
                     </div>
                 </div>
             </div>
-            <hr class="bg-info mt-6">
-            <div class="mainbody1">
-                <div class="section1-1">
-                    <h1>section1-1</h1>
-                </div>
-                <div class="section1-2">
-                    <div class="section1-2-header">
-                    <h1>
-                        section1-2(header)
-                    </h1>
-                    </div>
-                    <div class="section1-2-contents" id="section1-2-1">
-                    <div class="section1-2-x">
-                        <p>section1-2-1</p>
-                    </div>
-                    <div class="section1-2-x" id="section1-2-2">
-                            <p>section1-2-2</p>
-                    </div>
-                    <div class="section1-2-x" id="section1-2-3">
-                            <p>section1-2-3</p>
-                     </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mainbody2">
-                <div class="section2-1">
-                    <h1>Section2-1</h1>
-                </div>
-                <div class="section2-1">
-                    <h1>Section2-2</h1>
-                </div>
 
+            <hr class="bg-info mt-6">
+            <div id="con" class="container">                
+                <div id="row1" class="row">
+                    <div  class="col-sm-4">.col-sm-4</div>
+                    <div  class="col-sm-4">.col-sm-4</div>
+                    <div  class="col-sm-4">.col-sm-4</div>
+                </div>
             </div>
-            <div class="footer">
-                    
-            </div>
+
         </div>
     </div>
     <script src="js/login.js"></script>
