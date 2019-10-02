@@ -40,6 +40,10 @@ input[type=password] {
 }
 
 #btn-submit {
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4 51%, #E55D87 100%);
+}
+
+.btn-submit {
     width: 100%;
     height: 46px;
     box-sizing: border-box;
@@ -48,12 +52,14 @@ input[type=password] {
     font-size: 16px;
     text-align: center;
     color: white;
-    background-color: yellow;
-    background-image: linear-gradient(to bottom right, rgb(219, 104, 123), violet);
+    transition: 0.5s;
+    background-size: 200% auto;
 }
 
-#btn-submit:hover {
-    background-color: #bf2828; 
+.btn-submit:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
 }
 
 hr.new {
@@ -84,6 +90,7 @@ hr.new {
     border: 2px solid;
     border-radius: 25px;
     font-size: 16px;
+    margin: 2px;
     text-align: center;
     color: white;
     background-color: #ea4335;  

@@ -5,6 +5,7 @@
     background: #50cf30;
     background: -webkit-linear-gradient(transparent, #ffff96);
     background: linear-gradient(transparent, #ffff96);
+    z-index: 2;
 }
 .bgcolor-animate{
     -webkit-animation: foot-color 200ms;
