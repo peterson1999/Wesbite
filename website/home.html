@@ -75,16 +75,16 @@
 
     #row1{
         height:33.33%;
-        border:solid;
+        
     }
     #con{
-        border:solid;
         height:100%;
         max-width:1500px;
         margin-top: 250px;
         background-color: #ffffff;
-        opacity: 0.5;
-        overflow:scroll;
+        opacity: 0.9;
+        border-radius: 1%;
+        overflow: scroll;
     }
     .blob1{
         position: absolute;
@@ -125,6 +125,90 @@
     }
     .body{
         z-index: 2;
+    }
+    .text-title{
+        font-family: graphik--semibold,Roboto,sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        margin-bottom: 0px;
+        /* align-items: center; */
+        color: black;
+    }
+    #trending{
+        background-color: rgb(190, 17, 176);
+        color: white;
+        border-radius: 46%;
+        padding: 3px;
+        font-size: 36px;
+        margin: 10px;
+    }
+    #column{
+        padding-top:5px;
+    }
+    .card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    height: 60%;
+    }
+    .word-container{
+        height: 45px;
+        margin-bottom: 26px;
+    }
+    hr{
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    }
+    .card-deck .card {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-bottom: 18px;
+    margin-left: 15px;
+    box-shadow: 10px 5px 5px rgba(215, 215, 193);
+    }
+    #row2{
+        height:20px;
+    }
+    #see-more{
+        margin-left: 47.5%;
+        background-color: blueviolet;
+        color: white;
+        border:none;
+        border-radius: 4%;
+    }
+    .card:hover{
+        background-color: pink;
+    }
+
+    .card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: .5rem;
+    }
+    .card-title,.card-text{
+        text-align:left;
+    }
+    button.material-icons{
+        border:none;
+        background: transparent;
+        font-size: 30px;
+        color:#212529;
+    }
+    button.material-icons:focus{
+        color: red;
+    }
+    #brush{
+        background-color: greenyellow;
+        color: white;
+        border-radius: 46%;
+        padding: 3px;
+        font-size: 36px;
+        margin: 10px;
     }
 </style>
 </head>
@@ -240,25 +324,147 @@
                     </div>
                 </div>
             </div>
-            <!--/.Header-->
-          
-            <hr class="bg-info mt-6">
-            <div id="con" class="container">                
-                <div id="row1" class="row">
-                    <div  class="col-sm-4">.col-sm-4</div>
-                    <div  class="col-sm-4">.col-sm-4</div>
-                    <div  class="col-sm-4">.col-sm-4</div>
-                </div>
-                <div id="row1" class="row">
-                        <div  class="col-sm-4">.col-sm-4</div>
-                        <div  class="col-sm-4">.col-sm-4</div>
-                        <div  class="col-sm-4">.col-sm-4</div>
-                    </div>
-                <div id="row1" class="row">
+    
+            <!-- <hr class="bg-info mt-6"> -->
+            <div id="con" class="container">   
+                                 <div class="word-container">
+                        <div id="row1" class="row">
+                                <div  class="col-0.5"> <i id="trending" class="material-icons" href="#">trending_up </i> </div>
+                                <div  id="column" class="col-11.5"><p class="text-title">Popular Artworks</p></div>
+                    
+                            </div>
+                        </div>
+                        <hr>
+                                  
+                        <div class="card-deck">
+                                <div id="card1" class="card bg-light">
+                                        <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
+                                  <div class="card-body text-center">
+                                        <h4 class="card-title">Starry Night</h4>
+                                    <p class="card-text">Vincent Van Gogh</p>
+                                    <button class="material-icons" href="#">favorite_border</button>
+                                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                                    <button class="material-icons" href="#">turned_in_not</button>
+                                  </div>
+                                </div>
+                                <div class="card bg-light">
+                                        <img class="card-img-top" src="photos/ui-pop-art.jpg" alt="Card image cap">
+                                  <div class="card-body text-center">
+                                        <h4 class="card-title">John Doe</h4>
+                                        <p class="card-text">Vincent Van Gogh</p>
+                                    <button class="material-icons" href="#">favorite_border</button>
+                                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                                    <button class="material-icons" href="#">turned_in_not</button>
+                                  </div>
+                                </div>
+                                <div class="card bg-light">
+                                        <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
+                                  <div class="card-body text-center">
+                                        <h4 class="card-title">John Doe</h4>
+                                        <p class="card-text">Vincent Van Gogh</p>
+                                    <button class="material-icons" href="#">favorite_border</button>
+                                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                                    <button class="material-icons" href="#">turned_in_not</button>
+                                  </div>
+                                </div>
+                                <div class="card bg-light">
+                                        <img class="card-img-top" src="photos/ui-pop-art.jpg" alt="Card image cap">
+                                  <div class="card-body text-center">
+                                        <h4 class="card-title">John Doe</h4>
+                                        <p class="card-text">Vincent Van Gogh</p>
+                                    <button class="material-icons" href="#">favorite_border</button>
+                                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                                    <button class="material-icons" href="#">turned_in_not</button>
+                                  </div>
+                                </div>  
+                              </div>
+                              <div class="card-deck">
+                                    <div class="card bg-light">
+                                            <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
+                                      <div class="card-body text-center">
+                                            <h4 class="card-title">John Doe</h4>
+                                            <p class="card-text">Vincent Van Gogh</p>
+                                        <button class="material-icons" href="#">favorite_border</button>
+                                        <button class="material-icons" href="#">chat_bubble_outline</button>
+                                        <button class="material-icons" href="#">turned_in_not</button>
+                                      </div>
+                                    </div>
+                                    <div class="card bg-light">
+                                            <img class="card-img-top" src="photos/ui-pop-art.jpg" alt="Card image cap">
+                                      <div class="card-body text-center">
+                                            <h4 class="card-title">John Doe</h4>
+                                            <p class="card-text">Vincent Van Gogh</p>
+                                        <button class="material-icons" href="#">favorite_border</button>
+                                        <button class="material-icons" href="#">chat_bubble_outline</button>
+                                        <button class="material-icons" href="#">turned_in_not</button>
+                                      </div>
+                                    </div>
+                                    <div class="card bg-light">
+                                            <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
+                                      <div class="card-body text-center">
+                                            <h4 class="card-title">John Doe</h4>
+                                            <p class="card-text">Vincent Van Gogh</p>
+                                        <button class="material-icons" href="#">favorite_border</button>
+                                        <button class="material-icons" href="#">chat_bubble_outline</button>
+                                        <button class="material-icons" href="#">turned_in_not</button>
+                                      </div>
+                                    </div>
+                                    <div class="card bg-light">
+                                            <img class="card-img-top" src="photos/ui-pop-art.jpg" alt="Card image cap">
+                                      <div class="card-body text-center">
+                                            <h4 class="card-title">John Doe</h4>
+                                            <p class="card-text">Vincent Van Gogh</p>
+                                        <button class="material-icons" href="#">favorite_border</button>
+                                        <button class="material-icons" href="#">chat_bubble_outline</button>
+                                        <button class="material-icons" href="#">turned_in_not</button>
+                                      </div>
+                                    </div>  
+                                  </div>
+                        <div id="row2" class="row">
+                         <button id="see-more" >See More</button>
+                              </div>
+                              <hr>
+
+                              <div class="word-container">
+                                <div id="row1" class="row">
+                                        <div  class="col-0.5"> <i id="brush" class="material-icons" href="#">brush</i> </div>
+                                        <div  id="column" class="col-11.5"><p class="text-title">Today's Featured Artists</p></div>
+                            
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="card-deck">
+                                    <div id="card1" class="card bg-light">
+                                            <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
+                                      <div class="card-body text-center">
+                                        <p class="card-text">Some more text to increase the height</p>
+                                        <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                                      </div>
+                                    </div>
+                                    <div class="card bg-light">
+                                            <img class="card-img-top" src="photos/ui-pop-art.jpg" alt="Card image cap">
+                                      <div class="card-body text-center">
+                                        <p class="card-text">Some text inside the second card</p>
+                                        <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                                      </div>
+                                    </div>
+                                    <div class="card bg-light">
+                                            <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
+                                      <div class="card-body text-center">
+                                        <p class="card-text">Some text inside the third card</p>
+                                        <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                        <div id="row2" class="row">
+                         <button id="see-more" >See More</button>
+                              </div>
+                                </div>
+                <!-- <div id="row1" class="row">
                     <div  class="col-sm-4">.col-sm-4</div> 
                     <div  class="col-sm-4">.col-sm-4</div>
                     <div  class="col-sm-4">.col-sm-4</div>
-                </div>
+                </div> -->
             </div>
 
         </div>
@@ -316,7 +522,9 @@
             <!-- Copyright -->
             <script src="js/footer.js"></script>
         </footer>
+   
     </div>
+    
     <script src="js/login.js"></script>
 </body>
 <!-- Footer -->
