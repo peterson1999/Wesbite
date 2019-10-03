@@ -7,6 +7,12 @@ h4 {
     display: inline-block;
 }
 
+h6 {
+    font-size: 1rem;
+    margin-top: 6px;
+    margin-right: 0px;
+}
+
 input[type=username] {
     width: 100%;
     height: 46px;
