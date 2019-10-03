@@ -8,9 +8,9 @@
     <script src="jquery/jquery-3.4.1.min.js"></script>
     <!-- Bootstrap CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -26,15 +26,17 @@
     <title>HomePage</title>
 <style>
     *{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
-    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+    
 
     body {
         font-family: 'Poppins', sans-serif;
         background-color: pink;
         margin: 0px;
+        overflow-x: hidden;
     }
+
 
     p {
         font-family: 'Poppins', sans-serif;
@@ -64,20 +66,6 @@
     .wrapper {
     display: flex;
     align-items: stretch;
-    }
-    
-    .btn{
-        border:none;
-        background-color: blueviolet;
-        margin:15px;
-        font-size: 25px;
-        width:100%;
-        margin-left: 0px;
-        color:white;
-    }
-
-    .btn:hover{
-        background-color: violet;
     }
 
     #navlist{
@@ -140,6 +128,8 @@
 
 <body>
     <img class="blob1"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img>
+    <img class="blob2"src="Background.svg"></img>
+    <img class="blob3"src="yellow.svg"></img>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <!--Pictures-->
         <div class="carousel-inner">
@@ -164,8 +154,7 @@
         </div>
     </div>
     <div class="flex1">
-    <img class="blob2"src="Background.svg"></img>
-    <img class="blob3"src="yellow.svg"></img>
+
     <div class="flex">
             <!-- <div class="sampleblob"></div> -->
         <nav id="sidebar">
@@ -225,34 +214,31 @@
                 </div>
             </div>
         </div>
-        <div class="body container-fluid"> <!--header or search bar -->
-            <div class=" mt-4">
-                <div class="row justify-content-between">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <button type="button" id="sidebarCollapse" class="btn btn-info">
-                            <i class="fas fa-align-left"></i>
-                        </button>
-                    </nav>
-                    <div id="header-component" class="col-lg-6">
-                        <form action="" class="form">
-                            <div class="form-group">
-                                <i class="fa fa-search" id="search-icon"></i>
-                                <input type="text" 
-                                       class="form-control" 
-                                       name="search" 
-                                       placeholder="Search">
+        <div class="body container-fluid"> <!--.Header-->
+            <div class="container header">
+                <div class="row">
+                    <!-- Collapsible content -->
+                    <div class="col-8">
+                
+                        <!-- Search form -->
+                        <form class="form-inline mr-auto">
+                            <div class="md-form my-0 header-search">
+                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                <button type="submit"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
                             </div>
                         </form>
+                    
                     </div>
-                    <div id="header-component" class="col-lg-6">
-                        <div id="profile">
-                            <h5 class="pt-2"> FirstName LastName </h5> &nbsp; &nbsp;
-                            <img src="photos/avatar.png" >
-                        </div>
+                    <!-- Collapsible content -->
+                    <div class="col-4  header-login">
+                        <!-- Navbar brand -->
+                        <button class="navbar-brand" onclick="fadein()">Login</button>
+                        <button class="navbar-brand"><a href="sign up.html">Sign Up</a></button>
                     </div>
                 </div>
             </div>
-    
+            <!--/.Header-->
+          
             <hr class="bg-info mt-6">
             <div id="con" class="container">                
                 <div id="row1" class="row">
@@ -322,7 +308,7 @@
         
             <!-- Copyright -->
             <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="home.html"> FoodReviews.com</a>
+            <a href="home.html"> ozweebo.com</a>
             </div>
             <!-- Copyright -->
             <script src="js/footer.js"></script>
