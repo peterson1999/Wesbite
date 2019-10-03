@@ -8,7 +8,7 @@
     transition: width 2s height 2s;
 
     /* The Modal (background) */
-    z-index: 1; /*Sit on top*/ 
+    z-index: 4; /*Sit on top*/ 
     left: 0;
     top: 0;
     width: 100%; /*Full height */
@@ -28,7 +28,7 @@
     border:none;
     color:#bf2828;
     background-color: transparent;
-    z-index: 3;
+    z-index: 6;
     position: fixed;
     right: 26%;
     top: 75px;
@@ -80,7 +80,7 @@
 }
 .login-popup{
     text-align: center;
-    z-index: 2;
+    z-index: 5;
     position: relative;
     width: 50%;
     height: 75%;
@@ -113,7 +113,7 @@ button:focus{
 
 .forgot-password{
     display: none;
-    z-index: 2;
+    z-index: 5;
     text-align: center;
     position: relative;
     width: 50%;
