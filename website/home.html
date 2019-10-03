@@ -88,16 +88,16 @@
 
     #row1{
         height:33.33%;
-        border:solid;
+        
     }
     #con{
-        border:solid;
         height:100%;
         max-width:1500px;
         margin-top: 250px;
         background-color: #ffffff;
-        opacity: 0.5;
-        overflow:scroll;
+        opacity: 0.9;
+        border-radius: 1%;
+        overflow: scroll;
     }
     .blob1{
         position: absolute;
@@ -136,6 +136,38 @@
     }
     .body{
         z-index: 2;
+    }
+    .text-title{
+        font-family: graphik--semibold,Roboto,sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        margin-bottom: 0px;
+        /* align-items: center; */
+        color: black;
+    }
+    #trending{
+        background-color: purple;
+        color: white;
+        border-radius: 46%;
+        padding: 3px;
+        font-size: 36px;
+        margin: 10px;
+    }
+    #column{
+        padding-top:5px;
+    }
+    .card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    height: 60%;
+    }
+    .word-container{
+        height: 45px;
+    }
+    hr{
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
     }
 </style>
 </head>
@@ -256,13 +288,46 @@
                 </div>
             </div>
     
-            <hr class="bg-info mt-6">
-            <div id="con" class="container">                
-                <div id="row1" class="row">
-                    <div  class="col-sm-4">.col-sm-4</div>
-                    <div  class="col-sm-4">.col-sm-4</div>
-                    <div  class="col-sm-4">.col-sm-4</div>
-                </div>
+            <!-- <hr class="bg-info mt-6"> -->
+            <div id="con" class="container">   
+                                 <div class="word-container">
+                        <div id="row1" class="row">
+                                <div  class="col-0.5"> <i id="trending" class="material-icons" href="#">trending_up </i> </div>
+                                <div  id="column" class="col-11.5"><p class="text-title">Popular Artworks</p></div>
+                    
+                            </div>
+                        </div>
+                        <hr>
+                                  
+                        <div class="card-deck">
+                                <div class="card bg-light">
+                                        <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
+                                  <div class="card-body text-center">
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some more text to increase the height</p>
+                                    <p class="card-text">Some more text to increase the height</p>
+                                    <p class="card-text">Some more text to increase the height</p>
+                                  </div>
+                                </div>
+                                <div class="card bg-light">
+                                        <img class="card-img-top" src="photos/ui-pop-art.jpg" alt="Card image cap">
+                                  <div class="card-body text-center">
+                                    <p class="card-text">Some text inside the second card</p>
+                                  </div>
+                                </div>
+                                <div class="card bg-light">
+                                        <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
+                                  <div class="card-body text-center">
+                                    <p class="card-text">Some text inside the third card</p>
+                                  </div>
+                                </div>
+                                <div class="card bg-light">
+                                        <img class="card-img-top" src="photos/ui-pop-art.jpg" alt="Card image cap">
+                                  <div class="card-body text-center">
+                                    <p class="card-text">Some text inside the fourth card</p>
+                                  </div>
+                                </div>  
+                              </div>
                 <div id="row1" class="row">
                         <div  class="col-sm-4">.col-sm-4</div>
                         <div  class="col-sm-4">.col-sm-4</div>
