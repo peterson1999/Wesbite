@@ -1,11 +1,16 @@
 h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
     font-size: 24px;
     color: #ea4c88;
 }
 
 h4 {
     display: inline-block;
+}
+
+h6 {
+    font-size: 1rem;
+    margin-top: 6px;
+    margin-right: 0px;
 }
 
 input[type=username] {
