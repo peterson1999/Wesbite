@@ -134,3 +134,74 @@ hr.new {
 .form-check-label {
     padding-left: 40px;
 }
+
+.body{
+    margin-left: 205px;
+}
+
+.blob1{
+    position: absolute;
+    left: -5%;
+    width: 30vw;
+}
+.blob2 {
+    position: absolute;
+    left: 60%;
+    bottom: 80%;
+    width: 100vw;
+    opacity: 0.5;
+}
+.blob3 {
+    position: absolute;
+    left: 89%;
+    bottom: 40%;
+    width: 13vw;
+    opacity: 0.8;
+}
+.blob4 {
+    position: absolute;
+    left: 88%;
+    bottom: 52%;
+    width: 49vw;
+    opacity: 0.5;
+    z-index: 0;
+}
+.blob5 {
+    position: absolute;
+    left: 89%;
+    bottom: -7%;
+    width: 17vw;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+@media only screen and (max-width: 1024px){
+    .blob1{
+        left: -2%;
+    }
+    .blob2{
+        left: 70%;
+    }
+    .blob3{
+        bottom: 45%;
+    }
+    .blob4{
+        bottom: 60%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .body{
+        margin-left: 50px;
+    }
+    .blob1{
+        display: none;
+    }
+    .blob3{
+        bottom: 50%;
+    }
+}
+@media only screen and (max-width: 540px){
+    .body{
+        margin: 0;
+    }
+}
