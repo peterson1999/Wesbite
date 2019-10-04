@@ -9,6 +9,7 @@ ul ul a {
     background-image: linear-gradient(225deg, blueviolet 0%, #FF0099 214%);
     color: #fff;
     transition: all 0.3s;
+    position: fixed;
 }
 ::-webkit-scrollbar {
     display: none;
