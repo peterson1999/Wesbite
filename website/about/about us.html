@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- JQuery -->
+        <script src="../jquery/jquery-3.4.1.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/sidebar.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/homelayout.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/stylesignup.css">
+        <link rel="stylesheet" href="../css/aboutlayout.css">
+        <title>About Us</title>
+        <style>
+            *{
+                font-family: 'Poppins', sans-serif;
+             }
+            body {
+                font-family: 'Poppins', sans-serif;
+                background-color: pink;
+                margin: 0px;
+            }
+        
+            p {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.1em;
+                font-weight: 300;
+                line-height: 1.7em;
+                color: #999;
+            }
+        
+            a, a:hover, a:focus {
+                color: inherit;
+                text-decoration: none;
+                transition: all 0.3s;
+            }
+        
+            html ,body, .flex{
+                height: 100%;
+                background-color: papayawhip;
+            }
+        
+            .flex{
+                display: flex;
+                width: 100%;
+                align-items: stretch;
+                flex-direction: row;
+            }
+            .wrapper {
+            display: flex;
+            align-items: stretch;
+            }
+            
+            .btn:hover{
+                background-color: violet;
+            }
+
+            #navlist{
+                display: none;
+            }
+        
+            #row1{
+                height:33.33%;
+                border:solid;
+            }
+            #con{
+                border:solid;
+                height:100%;
+                max-width:1500px;
+                margin-top: 250px;
+                background-color: #ffffff;
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex">
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li class="active1">
+                        <a class="material-icons" href="#">home<span class="words">Home</span></a>  
+                    </li>
+                    <li class="active1">
+                        <a class="material-icons" href="#">notifications<span class="words">Notifications</span></a>
+                    </li>
+                    <li class="active1" >
+                        <a class="material-icons" href="#">bookmarks<span class="words">Bookmarks</span></a>
+                    </li>
+                    <li class="active1">
+                        <a class="material-icons" href="#">forum<span class="words">Forum</span></a>
+                    </li>
+                    <li class="active1">
+                        <a class="material-icons" href="#">help_outline<span class="words">Help</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="frame">
+                    <div class = "modl">
+                        <button class="exitbutton" onclick=fadeout()>×</button>
+                        <div class="login-popup animate">
+                            <b>
+                            <div class="login-container login-picture"></div>
+                            <div class="login-container">
+                                User Name<br>
+                                <input type="text" placeholder="Enter User Name">
+                            </div>
+                            <div class="login-container">
+                                Password<br>
+                                <input type="password" placeholder="Enter Password">
+                            </div>
+                            </b>
+                            <div class="login-container" style="text-align: center">
+                                <input type="checkbox">Remember me<br>
+                                <button class="login-button">Login</button>
+                                <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
+                                <br>Don't have an account? <a href="../sign up.html">Sign Up</a>
+                            </div>
+                        </div>
+                        <div class="forgot-password">
+                            <b>
+                            <div class="login-container login-picture" style="float: left"></div>
+                            <div class="login-container" style="float: right;">
+                                Enter your User Name:<br>
+                                <input type="text" placeholder="Enter User Name">
+                            </div>
+                            </b>
+                            <div class="login-container" style="float: right; text-align: center">
+                                <button class="login-button" style="width: auto">Send me an email!</button>
+                                <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
+                                <br>Don't have an account? <a href="../sign up.html">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="body container-fluid"> <!--.Header-->
+                <div class="container header">
+                    <div class="row">
+                        <!-- Collapsible content -->
+                        <div class="col-8">
+                    
+                            <!-- Search form -->
+                            <form class="form-inline mr-auto">
+                                <div class="md-form my-0 header-search">
+                                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                    <button type="submit"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
+                                </div>
+                            </form>
+                        
+                        </div>
+                        <!-- Collapsible content -->
+                        <div class="col-4  header-login">
+                            <!--Blue blob-->
+                            <img class="blob"src="../Blue.svg"></img>
+                            <!-- Navbar brand -->
+                            <button class="navbar-brand" onclick="fadein()">Login</button>
+                            <button class="navbar-brand"><a href="../sign up.html">Sign Up</a></button>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Header-->
+                <!-- Body -->
+                <div class="container about">
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 about-title">WHAT IS OZWEEBO?</div>
+                                    <div class="col-12 about-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque rerum voluptates, eligendi vel odit cum maiores inventore nemo. Quisquam porro rem id sint ipsum numquam qui incidunt saepe officiis voluptates?
+                                    </div>
+                                    <div class="col-12 about-btn-container">
+                                        <a href="../home.html"><button class="about-button">Learn More</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-8 photo1">
+                            <img class="about-photo" src="../photos/ui-pop-art.jpg" alt="Photo">
+                        </div>
+                    </div>
+                </div>
+                <div class="container about team">
+                    <div class="row">
+                        <div class="col-12 col-lg-8 photo2">
+                            <img class="about-photo" src="../photos/designui.jpg" alt="Photo">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 about-title">ABOUT US</div>
+                                    <div class="col-12 about-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque rerum voluptates, eligendi vel odit cum maiores inventore nemo. Quisquam porro rem id sint ipsum numquam qui incidunt saepe officiis voluptates?
+                                    </div>
+                                    <div class="col-12 about-btn-container">
+                                        <a href="contact.html"><button class="about-button">Contact Us</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Body -->
+            </div>
+        </div>
+            <!-- Footer -->
+    <footer class="foot-style">
+            <!-- Footer Elements -->
+            <div class="container">
+                <!-- Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-12 py-5">
+                        <div class="mt-5 flex-center">
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=home.html" class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" style="color: #ffffff"> </i>
+                            </a>
+                            <!-- Twitter -->
+                            <a class="tw-ic" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonText%3DTry%2520out%2520this%2520new%2520food%2520review%2520website%2521%26buttonType%3DTweetButton%26buttonUrl%3Dhttp%253A%252F%252Fwww.ozweebo.com%26widget%3DButton&ref_src=twsrc%5Etfw&text=Try%20out%20this%20new%20food%20review%20website!&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ozweebo.com">
+                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Google+ -->
+                            <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Linkedin -->
+                            <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Instagram -->
+                            <a class="ins-ic">
+                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Pinterest -->
+                            <a class="pin-ic">
+                            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+            <!-- Footer Elements -->
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="../home.html"> ozweebo.com</a>
+            </div>
+            <!-- Copyright -->
+            <script src="../js/footer.js"></script>
+        </footer>
+        <!-- Footer -->
+        </div>
+        <script src="../js/login.js"></script>
+    </body>
+    
+</html>
