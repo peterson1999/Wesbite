@@ -119,7 +119,11 @@
     border-color: transparent;
 }
 
-:-ms-input-placeholder {
+input[type="text"]::placeholder {
+    color: white;
+}
+
+input[type="password"]::placeholder {
     color: white;
 }
 
