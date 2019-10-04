@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <!-- Our Custom CSS -->
@@ -281,13 +282,22 @@
                 <div class="login-popup animate">
                     <h1 style="color:white">Log In</h1>
                     <h6 style="color:white">via</h6>
+                    <div>
+                        <a href="#" class="media-btn">
+                            <i class="fab fa-facebook-f pr-1"></i>
+                        </a> &nbsp;
+                        <a href="#" class="media-btn">
+                            <i class="fab fa-twitter-square pr-1"></i>
+                        </a> &nbsp;
+                        <a href="#" class="media-btn">
+                            <i class="fab fa-google pr-1"></i>
+                        </a>
+                    </div>
                     <form action="/action_page.php">
                         <div class="login-container">
-                            <!-- <i class='fas fa-user' id="user-logicon"></i> -->
                             <input type="text" class="form-control" id="username" placeholder="Username" name="username">
                         </div>
                         <div class="login-container">
-                            <!-- <i class="fa fa-lock" id="pass-logicon"></i> -->
                             <input type="password" class="form-control" id="pwd" placeholder="Password" name="pswd">
                         </div>
                         <div class="login-container">
@@ -305,21 +315,27 @@
                     </div>
                 </div>
                 <div class="forgot-password">
-                    <b>
-                    <form action="/action_page.php">
-                        <div class="login-container">
-                            <i class='fas fa-user' id="user-logicon"></i>
-                            <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+                    <div class="fp-row">
+                        <b>
+                        <form action="/action_page.php">
+                            <div class="login-container">
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="username" 
+                                       placeholder="E-Mail" 
+                                       name="email">
+                            </div>
+                        </form>
+                        </b>
+                        <div class="login-container" style="text-align: center">
+                            <button type="submit" 
+                                    id="btn-login"
+                                    class="btn btn-block btn-info btn-login">
+                                    Send Code via Email
+                            </button>
+                            <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
+                            <br>Don't have an account? <br> <a href="sign up.html">Sign Up</a>
                         </div>
-                    </b>
-                    <div class="login-container" style="text-align: center">
-                        <button type="submit" 
-                                id="btn-login"
-                                class="btn btn-block btn-info btn-login">
-                                Send me an Email
-                        </button>
-                        <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
-                        <br>Don't have an account? <br> <a href="sign up.html">Sign Up</a>
                     </div>
                 </div>
             </div>

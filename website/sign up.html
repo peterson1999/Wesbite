@@ -152,43 +152,69 @@
                 </ul>
             </nav>
             <div id="frame">
-                    <div class = "modl">
-                        <button class="exitbutton" onclick=fadeout()>×</button>
-                        <div class="login-popup animate">
+                <div class = "modl">
+                    <button class="exitbutton" onclick=fadeout()>×</button>
+                    <div class="login-popup animate">
+                        <h1 style="color:white">Log In</h1>
+                        <h6 style="color:white">via</h6>
+                        <div>
+                            <a href="#" class="media-btn">
+                                <i class="fab fa-facebook-f pr-1"></i>
+                            </a> &nbsp;
+                            <a href="#" class="media-btn">
+                                <i class="fab fa-twitter-square pr-1"></i>
+                            </a> &nbsp;
+                            <a href="#" class="media-btn">
+                                <i class="fab fa-google pr-1"></i>
+                            </a>
+                        </div>
+                        <form action="/action_page.php">
+                            <div class="login-container">
+                                <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+                            </div>
+                            <div class="login-container">
+                                <input type="password" class="form-control" id="pwd" placeholder="Password" name="pswd">
+                            </div>
+                            <div class="login-container">
+                                <button type="submit" 
+                                        id="btn-login"
+                                        class="btn btn-block btn-info btn-login">
+                                    LOG IN
+                                </button>
+                            </div>
+                            
+                        </b>
+                        <div class="login-container" style="text-align: center">
+                            <a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
+                            <br>Don't have an account? <br> <a id="forgot-pass" href="sign up.html">Sign Up</a>
+                        </div>
+                    </div>
+                    <div class="forgot-password">
+                        <div class="fp-row">
                             <b>
-                            <div class="login-container login-picture"></div>
-                            <div class="login-container">
-                                User Name<br>
-                                <input type="text" placeholder="Enter User Name">
-                            </div>
-                            <div class="login-container">
-                                Password<br>
-                                <input type="password" placeholder="Enter Password">
-                            </div>
+                            <form action="/action_page.php">
+                                <div class="login-container">
+                                    <input type="text" 
+                                           class="form-control text-light" 
+                                           id="username" 
+                                           placeholder="E-Mail" 
+                                           name="email">
+                                </div>
+                            </form>
                             </b>
                             <div class="login-container" style="text-align: center">
-                                <input type="checkbox">Remember me<br>
-                                <button class="login-button">Login</button>
-                                <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
-                                <br>Don't have an account? <a href="sign up.html">Sign Up</a>
-                            </div>
-                        </div>
-                        <div class="forgot-password">
-                            <b>
-                            <div class="login-container login-picture" style="float: left"></div>
-                            <div class="login-container" style="float: right;">
-                                Enter your User Name:<br>
-                                <input type="text" placeholder="Enter User Name">
-                            </div>
-                            </b>
-                            <div class="login-container" style="float: right; text-align: center">
-                                <button class="login-button" style="width: auto">Send me an email!</button>
+                                <button type="submit" 
+                                        id="btn-login"
+                                        class="btn btn-block btn-info btn-login">
+                                        Send Code via Email
+                                </button>
                                 <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
-                                <br>Don't have an account? <a href="sign up.html">Sign Up</a>
+                                <br>Don't have an account? <br> <a href="sign up.html">Sign Up</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             <div class="body container-fluid"> <!--.Header-->
                 <div class="container header">
                     <div class="row">

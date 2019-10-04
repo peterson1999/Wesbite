@@ -40,12 +40,7 @@
 }
 
 #btn-login {
-    background-image: linear-gradient(to right, rgb(94, 243, 254) 0%, #C779D0 51%, rgb(194, 58, 160) 100%);
-}
-
-#forgot-pass {
-    color: black;
-    text-align: center;
+    background-image: linear-gradient(to right, rgb(94, 243, 254) 0%, #C779D0 51%, rgba(194, 58, 160, 0.767) 80%);
 }
 
 .exitbutton{
@@ -75,12 +70,13 @@
 .login-container{
     text-align: left;
     font-size: 1.1vw;
-    padding: 15px;
+    padding: 8px;
     width: 50%;
     margin: 0;
     overflow: auto;
     color:white;
 }
+
 .login-container>input[type=text], .login-container>input[type=password]{
     background-image: none;
     background: none;
@@ -95,23 +91,9 @@
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom:1px solid blue;
+    border-bottom:2px solid white;
+}
 
-}
-/* .login-container>input[type=text]:focus, .login-container>input[type=password]:focus{
-    outline: none;
-    border-color:#bf2828;
-}  */
-.login-container>input[type=checkbox]:focus{
-    outline:2px solid #bf2828;
-    outline-offset: -2px;
-}
-.login-picture{
-    height: 100%; 
-    background-image: url('../photos/food.jpg'); 
-    opacity: 0.5; 
-    float: right;
-}
 .login-popup{
     text-align: center;
     z-index: 5;
@@ -119,11 +101,12 @@
     width: 50%;
     height: 75%;
     border-radius: 20px;
-    background-image: linear-gradient(to bottom right, rgba(97, 99, 219, 0.897) 0%, #C779D0 51%, rgb(144, 35, 117) 100%);
+    background-image: linear-gradient(to bottom right, rgba(97, 99, 219, 0.644) 0%, #C779D0 51%, rgba(144, 35, 117, 0.712) 90%);
     padding: 20px 10px;
     margin-top: 5%;
     margin-left:25%;
 }
+
 .login-button{
     text-align: center;
     padding:12px 20px;
@@ -135,10 +118,17 @@
     color: white;
     border-color: transparent;
 }
+
+:-ms-input-placeholder {
+    color: white;
+}
+
+
 button:hover{
     background-color: white;
     color: #bf2828;
 }
+
 button:focus{
     outline: none;
     background-color:rgb(27, 9, 18);
@@ -158,6 +148,21 @@ button:focus{
     margin-top: 5%;
     margin-left:25%;
 }
+
+.fp-row {
+    margin-top: 10%;
+}
+
+.media-btn {
+    font-size:30px;
+    color: #81c9ee;
+    border-radius: 50%;
+}
+
+.media-btn:hover {
+    color: white;
+}
+
 /*Media Queries for Responsive Design*/
 @media only screen and (min-width: 2001px){
     .exitbutton{
@@ -197,6 +202,19 @@ button:focus{
     }
 }
 @media only screen and (max-width: 2000px){
+    .btn-login {
+        width: 100%;
+        height: 46px;
+        box-sizing: border-box;
+        border: 2px solid;
+        border-radius: 25px;
+        font-size: 16px;
+        text-align: center;
+        color: white;
+        transition: 0.5s;
+        background-size: 200% auto;
+    }
+
     .exitbutton{
         font-size: 26px;
         right: 26%;
@@ -233,6 +251,16 @@ button:focus{
         padding: 20px 10px;
         margin-top: 5%;
         margin-left:25%;
+    }
+
+    .fp-row {
+        margin-top: 10%;
+    }
+    
+    .media-btn {
+        font-size:30px;
+        color: #81c9ee;
+        border-radius: 50%;
     }
 }
 @media only screen and (max-width: 1024px){
