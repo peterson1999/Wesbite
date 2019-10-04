@@ -50,22 +50,6 @@
     text-align: center;
     vertical-align: middle;
 }
-/* .team-story{
-    padding: 5% 5%;
-    text-align: center;
-    background-color: violet;
-}
-.contact{
-    font-size: 22px;
-    padding-top: 1%;
-    padding-bottom: 3%;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    background-color: lightskyblue;
-}
-.questions{
-    text-align: center;
-} */
 .container-fluid{
     padding-right: 0;
 }
@@ -87,5 +71,32 @@
     }
     .photo1{
         display: none;
+    }
+    .team{
+        border-radius: 15px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 640px){
+    .team{
+        margin-left: 3%;
+    }
+}
+@media only screen and (min-width: 541px) and (max-width: 575px){
+    .team{
+        margin-left: 3%;
+    }
+    .blob{
+        bottom: -30%;
+    }
+}
+@media only screen and (max-width: 540px){
+    .body{
+        margin: 0;
+    }
+    .container-fluid{
+        padding: 0;
+    }
+    .blob{
+        bottom: -30%;
     }
 }
