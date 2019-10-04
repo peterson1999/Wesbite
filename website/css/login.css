@@ -6,6 +6,7 @@
     border: none;
     position: fixed;
     transition: width 2s height 2s;
+    /* align: center; */
 
     /* The Modal (background) */
     z-index: 4; /*Sit on top*/ 
@@ -19,6 +20,50 @@
     
 }
 
+.btn-login {
+    width: 50%;
+    height: 46px;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.btn-login:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+#btn-login {
+    background-image: linear-gradient(to right, rgb(94, 243, 254) 0%, #C779D0 51%, rgb(194, 58, 160) 100%);
+}
+
+#forgot-pass {
+    color: black;
+    text-align: center;
+}
+
+#user-logicon {
+    font-size:22px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 16px;
+}
+
+#pass-logicon {
+    font-size:21px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 16px; 
+}
+
 .exitbutton{
     float: right;
     font-size: 26px;
@@ -26,7 +71,7 @@
     height: 40px;
     margin:0;
     border:none;
-    color:#bf2828;
+    color: black;
     background-color: transparent;
     z-index: 6;
     position: fixed;
@@ -60,14 +105,14 @@
     border-radius: 25px;
     width:100%;
     box-sizing: border-box;
-    color:#bf2828;
+    color:black;
     border-color: transparent;
-    background-color: rgb(255, 255, 255);
+    background-color: #f8f9fa;
 }
-.login-container>input[type=text]:focus, .login-container>input[type=password]:focus{
+/* .login-container>input[type=text]:focus, .login-container>input[type=password]:focus{
     outline: none;
     border-color:#bf2828;
-} 
+}  */
 .login-container>input[type=checkbox]:focus{
     outline:2px solid #bf2828;
     outline-offset: -2px;
@@ -85,7 +130,7 @@
     width: 50%;
     height: 75%;
     border-radius: 20px;
-    background: rgb(238, 234, 234);
+    background-image: linear-gradient(to bottom right, rgba(97, 99, 219, 0.897) 0%, #C779D0 51%, rgb(144, 35, 117) 100%);
     padding: 20px 10px;
     margin-top: 5%;
     margin-left:25%;
@@ -119,7 +164,7 @@ button:focus{
     width: 50%;
     height: 75%;
     border-radius: 20px;
-    background: rgb(238, 234, 234);
+    background-image: linear-gradient(to bottom right, rgba(97, 99, 219, 0.897) 0%, #C779D0 51%, rgb(144, 35, 117) 100%);
     padding: 20px 10px;
     margin-top: 5%;
     margin-left:25%;
@@ -166,11 +211,12 @@ button:focus{
     .exitbutton{
         font-size: 26px;
         right: 26%;
-        top: 10vh;
+        top: 75px;
     }
     .login-container{
-        padding: 15px;
+        /* padding: 15px; */
         width: 50%;
+        margin-left: 153px;
     }
     .login-container>input[type=text], .login-container>input[type=password]{
         padding:12px 20px;

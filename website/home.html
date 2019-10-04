@@ -183,31 +183,34 @@
             <div class = "modl">
                 <button class="exitbutton" onclick=fadeout()>×</button>
                 <div class="login-popup animate">
-                    <b>
-                    <div class="login-container login-picture"></div>
-                    <div class="login-container">
-                        User Name<br>
-                        <input type="text" placeholder="Enter User Name">
-                    </div>
-                    <div class="login-container">
-                        Password<br>
-                        <input type="password" placeholder="Enter Password">
-                    </div>
+                    <h1>Log In</h1>
+                    <form action="/action_page.php">
+                        <div class="login-container">
+                            <i class='fas fa-user' id="user-logicon"></i>
+                            <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+                        </div>
+                        <div class="login-container">
+                            <i class="fa fa-lock" id="pass-logicon"></i>
+                            <input type="password" class="form-control" id="pwd" placeholder="Password" name="pswd">
+                        </div>
+                        <button type="submit" 
+                                id="btn-login"
+                                class="btn btn-block btn-info btn-login">
+                            LOG IN
+                        </button>
                     </b>
                     <div class="login-container" style="text-align: center">
-                        <input type="checkbox">Remember me<br>
-                        <button class="login-button">Login</button>
-                        <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
-                        <br>Don't have an account? <a href="sign up.html">Sign Up</a>
+                        <a id="forgot-pass" href="javascript:void(0);">Forgot Password?
+                        <br>Don't have an account? <br> <a id="forgot-pass" href="sign up.html">Sign Up</a>
                     </div>
                 </div>
                 <div class="forgot-password">
                     <b>
-                    <div class="login-container login-picture" style="float: left"></div>
-                    <div class="login-container" style="float: right;">
-                        Enter your User Name:<br>
-                        <input type="text" placeholder="Enter User Name">
-                    </div>
+                    <form action="/action_page.php">
+                        <div class="login-container">
+                            <i class='fas fa-user' id="user-logicon"></i>
+                            <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+                        </div>
                     </b>
                     <div class="login-container" style="float: right; text-align: center">
                         <button class="login-button" style="width: auto">Send me an email!</button>
