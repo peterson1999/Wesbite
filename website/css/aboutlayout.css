@@ -1,0 +1,102 @@
+.about{
+    z-index: 1;
+    height: auto;
+    padding: 5%;
+}
+.about-title{
+    height: 20%;
+    font-size: 32px;
+    /* padding-top: 2%;
+    padding-bottom: 1%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: blueviolet */
+    color: rgb(100, 6, 189);
+    font-weight: 600;
+}
+.about-text{
+    font-size: 15px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.about-btn-container{
+    padding-bottom: 5%;
+}
+.about-button{
+    height: 40px;
+    width: 150px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(to right, blue, blueviolet, violet);
+    color: white;
+}
+.about-button:hover{
+    background: linear-gradient(to right, rgb(79, 79, 255), rgb(151, 85, 212), rgb(236, 162, 236));
+    color: white;
+}
+.about-photo{
+    width: 100%;
+    height: auto;
+}
+.team{
+    text-align: right;
+    background-color: rgba(255,255,255,0.9);
+}
+.photo1{
+    text-align: center;
+    vertical-align: middle;
+}
+.photo2{
+    text-align: center;
+    vertical-align: middle;
+}
+.container-fluid{
+    padding-right: 0;
+}
+.body{
+    margin-left: 205px;
+    z-index: 2;
+}
+.blob {
+    position: absolute;
+    left: -5%;
+    bottom: -100%;
+    width: 49vw;
+    opacity: 0.5;
+    z-index: -1;
+}
+@media only screen and (max-width: 768px){
+    .body{
+        margin-left: 50px;
+    }
+    .photo1{
+        display: none;
+    }
+    .team{
+        border-radius: 15px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 640px){
+    .team{
+        margin-left: 3%;
+    }
+}
+@media only screen and (min-width: 541px) and (max-width: 575px){
+    .team{
+        margin-left: 3%;
+    }
+    .blob{
+        bottom: -30%;
+    }
+}
+@media only screen and (max-width: 540px){
+    .body{
+        margin: 0;
+    }
+    .container-fluid{
+        padding: 0;
+    }
+    .blob{
+        bottom: -30%;
+    }
+}

@@ -53,3 +53,8 @@
         left: -9%;
     }
 }
+@media only screen and (max-width: 768px){
+    .header-search>button{
+        display: none;
+    }
+}
