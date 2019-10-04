@@ -119,11 +119,11 @@
     border-color: transparent;
 }
 
-input[type="text"]::placeholder {
+.login-container>input[type="text"]::placeholder {
     color: white;
 }
 
-input[type="password"]::placeholder {
+.login-container>input[type="password"]::placeholder {
     color: white;
 }
 
@@ -260,12 +260,7 @@ button:focus{
     .fp-row {
         margin-top: 10%;
     }
-    
-    .media-btn {
-        font-size:30px;
-        color: #81c9ee;
-        border-radius: 50%;
-    }
+
 }
 @media only screen and (max-width: 1024px){
     .exitbutton{

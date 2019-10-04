@@ -46,6 +46,7 @@ input[type=password] {
     padding: 12px 20px 12px 40px;
 }
 
+
 #btn-submit {
     background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4 51%, #E55D87 100%);
 }

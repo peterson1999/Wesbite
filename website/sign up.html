@@ -152,22 +152,22 @@
                 </ul>
             </nav>
             <div id="frame">
-                <div class = "modl">
+                <div class="modl">
                     <button class="exitbutton" onclick=fadeout()>×</button>
                     <div class="login-popup animate">
                         <h1 style="color:white">Log In</h1>
                         <h6 style="color:white">via</h6>
                         <div>
-                            <a href="#" class="media-btn">
-                                <i class="fab fa-facebook-f pr-1"></i>
-                            </a> &nbsp;
-                            <a href="#" class="media-btn">
-                                <i class="fab fa-twitter-square pr-1"></i>
-                            </a> &nbsp;
-                            <a href="#" class="media-btn">
-                                <i class="fab fa-google pr-1"></i>
-                            </a>
-                        </div>
+                          <a href="#" class="media-btn">
+                              <i class="fab fa-facebook-f pr-1"></i>
+                          </a> &nbsp;
+                          <a href="#" class="media-btn">
+                              <i class="fab fa-twitter-square pr-1"></i>
+                          </a> &nbsp;
+                          <a href="#" class="media-btn">
+                              <i class="fab fa-google pr-1"></i>
+                          </a>
+                      </div>
                         <form action="/action_page.php">
                             <div class="login-container">
                                 <input type="text" class="form-control" id="username" placeholder="Username" name="username">
@@ -185,8 +185,8 @@
                             
                         </b>
                         <div class="login-container" style="text-align: center">
-                            <a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
-                            <br>Don't have an account? <br> <a id="forgot-pass" href="sign up.html">Sign Up</a>
+                            <a id="forgot-pass" href="javascript:void(0);" style="color:black">Forgot Password?</a>
+                            <br>Don't have an account? <br> <a id="forgot-pass" href="sign up.html" style="color:black">Sign Up</a>
                         </div>
                     </div>
                     <div class="forgot-password">
@@ -195,7 +195,7 @@
                             <form action="/action_page.php">
                                 <div class="login-container">
                                     <input type="text" 
-                                           class="form-control text-light" 
+                                           class="form-control" 
                                            id="username" 
                                            placeholder="E-Mail" 
                                            name="email">
@@ -208,8 +208,8 @@
                                         class="btn btn-block btn-info btn-login">
                                         Send Code via Email
                                 </button>
-                                <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
-                                <br>Don't have an account? <br> <a href="sign up.html">Sign Up</a>
+                                <br><br><a id="backtoLogin" href="javascript:void(0);" style="color:black">Back to Login</a>
+                                <br>Don't have an account? <br> <a href="sign up.html" style="color:black">Sign Up</a>
                             </div>
                         </div>
                     </div>
@@ -237,7 +237,6 @@
                         </div>
                     </div>
                 </div>
-                <!--/.Header-->
               
                 <div class="container">
                     <div class="row">
@@ -265,7 +264,11 @@
                                     </div>
                                     <div class="form-group">
                                         <i class="fa fa-lock" id="pass-icon"></i>
-                                        <input type="password" class="form-control" id="pwd" placeholder="Confirm Password" name="pswd">
+                                        <input type="password" 
+                                               class="form-control" 
+                                               id="pwd" 
+                                               placeholder="Confirm Password" 
+                                               name="pswd">
                                     </div>
                                     <div class="form-group form-check">
                                         <label class="form-check-label">
