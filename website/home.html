@@ -279,24 +279,28 @@
             <div class = "modl">
                 <button class="exitbutton" onclick=fadeout()>×</button>
                 <div class="login-popup animate">
-                    <h1>Log In</h1>
+                    <h1 style="color:white">Log In</h1>
+                    <h6 style="color:white">via</h6>
                     <form action="/action_page.php">
                         <div class="login-container">
-                            <i class='fas fa-user' id="user-logicon"></i>
+                            <!-- <i class='fas fa-user' id="user-logicon"></i> -->
                             <input type="text" class="form-control" id="username" placeholder="Username" name="username">
                         </div>
                         <div class="login-container">
-                            <i class="fa fa-lock" id="pass-logicon"></i>
+                            <!-- <i class="fa fa-lock" id="pass-logicon"></i> -->
                             <input type="password" class="form-control" id="pwd" placeholder="Password" name="pswd">
                         </div>
-                        <button type="submit" 
-                                id="btn-login"
-                                class="btn btn-block btn-info btn-login">
-                            LOG IN
-                        </button>
+                        <div class="login-container">
+                            <button type="submit" 
+                                    id="btn-login"
+                                    class="btn btn-block btn-info btn-login">
+                                LOG IN
+                            </button>
+                        </div>
+                        
                     </b>
                     <div class="login-container" style="text-align: center">
-                        <a id="forgot-pass" href="javascript:void(0);">Forgot Password?
+                        <a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
                         <br>Don't have an account? <br> <a id="forgot-pass" href="sign up.html">Sign Up</a>
                     </div>
                 </div>
@@ -308,10 +312,14 @@
                             <input type="text" class="form-control" id="username" placeholder="Username" name="username">
                         </div>
                     </b>
-                    <div class="login-container" style="float: right; text-align: center">
-                        <button class="login-button" style="width: auto">Send me an email!</button>
+                    <div class="login-container" style="text-align: center">
+                        <button type="submit" 
+                                id="btn-login"
+                                class="btn btn-block btn-info btn-login">
+                                Send me an Email
+                        </button>
                         <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
-                        <br>Don't have an account? <a href="sign up.html">Sign Up</a>
+                        <br>Don't have an account? <br> <a href="sign up.html">Sign Up</a>
                     </div>
                 </div>
             </div>
