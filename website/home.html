@@ -225,6 +225,17 @@
     #sidebar ul.components {
         border-bottom:none;
     }
+    .fabs {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 260px;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  transition: 1s ease-in-out;
+  border-radius: 50%;
+}
     @media(max-width: 768px) and (min-width: 540px) {
       .container-fluid{
         margin-left: 75px;
@@ -250,6 +261,9 @@
     }
     }
     @media(max-width: 540px){
+      #fourth{
+        display: none;
+      }
       .container-fluid{
         margin-left: 0px;
       }
@@ -258,8 +272,8 @@
       display:none;
     }
     .bg-light{
-      width: 199px;
-    height: 326px;
+      width: 409px;
+    height: 478px;
     }
     .card-img-top {
     width: 100%;
@@ -270,8 +284,36 @@
     .bg-light{
       margin-left: 2px;
     }
+    #con{
+      margin-left: 0px;
     }
-
+    .slide {
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    height: 50%;
+    position: absolute;
+}
+    .text-title {
+      font-family: graphik--semibold,Roboto,sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 0px;
+      /* align-items: center; */
+      color: black;
+    }
+    #brush, #trending{
+    font-size: 27px;
+    }
+    .word-container{ 
+        margin-bottom: -10px;
+    }
+    .fabs {
+    margin-top: -44px;
+    margin-left: 111px;
+}
+    }
+  
     @import url(https://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css);
 body {
   background: #64b5f6;
@@ -345,17 +387,7 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.fabs {
-  position: absolute;
-  margin-top: -30px;
-  margin-left: 260px;
-  overflow: hidden;
-  width: 80px;
-  height: 80px;
-  border-radius: 5px;
-  transition: 1s ease-in-out;
-  border-radius: 50%;
-}
+
 
 .active .fabs {
   margin-top: 0px;
@@ -777,7 +809,7 @@ body {
                                   
                         <div class="card-deck">
                           <div class="row">
-                            <div class="col-md-6 col-lg-3 col-6">
+                            <div class="col-md-6 col-lg-3 col-12">
                                 <div id="card1" class="card bg-light " data-aos="zoom-in-down">
                                         <figure class="imghvr-shutter-out-diag-1">
                                                 <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
@@ -795,7 +827,7 @@ body {
                                   </div>
                                 </div>
                                 </div>
-                                <div class="col-md-6 col-lg-3 col-6">
+                                <div class="col-md-6 col-lg-3 col-12">
                                 <div class="card bg-light" data-aos="zoom-in-down">
                                         <figure class="imghvr-shutter-out-diag-1">
                                                 <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
@@ -813,7 +845,7 @@ body {
                                   </div>
                                 </div>
                               </div>
-                            <div class="col-md-6 col-lg-3 col-6">
+                            <div class="col-md-6 col-lg-3 col-12">
                                 <div class="card bg-light" data-aos="zoom-in-down">
                                     
                                         <figure class="imghvr-shutter-out-diag-1">
@@ -831,7 +863,7 @@ body {
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-md-6 col-lg-3 col-6">
+                              <div id="fourth" class="col-md-6 col-lg-3 col-6">
                                 <div class="card bg-light" data-aos="zoom-in-down">
                                         <figure class="imghvr-shutter-out-diag-1">
                                                 <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
