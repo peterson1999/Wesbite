@@ -134,3 +134,115 @@ hr.new {
 .form-check-label {
     padding-left: 40px;
 }
+
+.body{
+    margin-left: 205px;
+    z-index: 2;
+}
+
+.blob1{
+    position: absolute;
+    left: -5%;
+    width: 30vw;
+    
+}
+.blob2 {
+    position: absolute;
+    left: 13%;
+    bottom: -140%;
+    width: 40vw;
+    opacity: 0.5;
+    z-index: -1;
+}
+.blob3 {
+    position: absolute;
+    left: 80%;
+    bottom: -900%;
+    width: 13vw;
+    opacity: 0.8;
+    z-index: -1;
+}
+.blob4 {
+    position: absolute;
+    left: 65%;
+    bottom: -400%;
+    width: 200px;
+    opacity: 0.5;
+    z-index: -1;
+}
+.blob5 {
+    position: absolute;
+    left: 70%;
+    bottom: -1845%;
+    width: 17vw;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 1024px){
+    .blob1{
+        left: -2%;
+    }
+    .blob2{
+        left: 10%;
+        bottom: -110%;
+    }
+    .blob3{
+        left: 70%;
+        bottom: -680%;
+    }
+    .blob4{
+        bottom: -370%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .body{
+        margin-left: 50px;
+    }
+    .blob1{
+        display: none;
+    }
+    .blob3{
+        left: 95%;
+        bottom: -565%;
+        width: 14vw;
+    }
+    .blob4{
+        left: 50%;
+        bottom: -310%;
+    }
+}
+@media only screen and (max-width: 540px){
+    .body{
+        margin: 0;
+    }
+    .blob2{
+        left: 20%;
+        bottom: -70%;
+    }
+    .blob4{
+        left: 38%;
+        bottom: -240%;
+    }
+}
+@media only screen and (max-width: 425px){
+    .body{
+        margin: 0;
+    }
+    .blob2{
+        left: -15%;
+        bottom: -50%;
+        width: 50vw;
+    }
+    .blob3{
+        left: 90%;
+        bottom: -460%;
+    }
+    .blob4{
+        left: 30%;
+        bottom: -165%;
+    }
+    .blob5{
+        display: none;
+    }
+}

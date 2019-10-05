@@ -20,7 +20,8 @@
         <link rel="stylesheet" href="css/homelayout.css">
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/stylesignup.css">
-        <title>Sign Up</title>
+        <link rel="stylesheet" href="css/contact.css">
+        <title>Contact Us</title>
         <style>
             *{
                 font-family: 'Poppins', sans-serif;
@@ -30,7 +31,6 @@
                 font-family: 'Poppins', sans-serif;
                 background-color: pink;
                 margin: 0px;
-                overflow-x: hidden;
             }
         
             p {
@@ -83,11 +83,55 @@
                 background-color: #ffffff;
                 opacity: 0.5;
             }
-            
+            .blob1{
+                position: absolute;
+                left:50px;
+                width:500px;
+            }
+            .blob2 {
+                position: absolute;
+                left: 60vw;
+                bottom: 44vw;
+                width: 100vw;
+                opacity: 0.5;
+            }
+            .blob3 {
+                position: absolute;
+                left: 88vw;
+                bottom: 23vw;
+                width: 13vw;
+                opacity: 0.8;
+            }
+            .blob4 {
+                position: absolute;
+                left: 88vw;
+                bottom: 23vw;
+                width: 49vw;
+                opacity: 0.5;
+                z-index: 0;
+            }
+            .blob5 {
+                position: absolute;
+                left: 87vw;
+                bottom: 4vw;
+                width: 13vw;
+                opacity: 0.5;
+                z-index: 0;
+            }
+            .sampleblob{
+                height:500px;
+                border-radius:24% 76% 27% 73% / 46% 30% 70% 54%;
+                background-color: purple;
+                z-index:1;
+            }
         </style>
     </head>
     <body>
-        <img class="blob1"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img>
+        <!-- <img class="blob1"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img> -->
+        <img class="blob2"src="Background.svg"></img>
+        <img class="blob4"src="Blue.svg"></img>
+        <img class="blob3"src="yellow.svg"></img>
+        <img class="blob5"src="Blue.svg"></img>
         <div class="flex">
             <nav id="sidebar">
                 <ul class="list-unstyled components">
@@ -163,11 +207,6 @@
                         </div>
                         <!-- Collapsible content -->
                         <div class="col-4  header-login">
-                            <!-- Blobs -->
-                            <img class="blob2"src="Background.svg"></img>
-                            <img class="blob4"src="Blue.svg"></img>
-                            <img class="blob3"src="yellow.svg"></img>
-                            <img class="blob5"src="Blue.svg"></img>
                             <!-- Navbar brand -->
                             <button class="navbar-brand" onclick="fadein()">Login</button>
                         </div>
@@ -175,64 +214,67 @@
                 </div>
                 <!--/.Header-->
               
-                <div class="container">
+                <div class="container px-lg-3 px-md-3 px-0 mb-4">
                     <div class="row">
-                        <div class="col-md-2 col-lg-3"></div>
-                        <div class="col-md-8 col-lg-6 m-2">
-                            <h1>Let's get your account set up</h1>
-                        </div>
-                        <div class="col-md-2 col-lg-3"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-2 col-lg-3"></div>
-                            <div class="col-12 col-md-8 col-lg-6 p-12">
-                                <form action="/action_page.php">
-                                    <div class="form-group">
-                                        <i class='fas fa-user' id="user-icon"></i>
-                                        <input type="username" class="form-control" id="username" placeholder="Username" name="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <i class="material-icons" id="email-icon">&#xe0be;</i>
-                                        <input type="email" class="form-control" id="email" placeholder="Email Address" name="email">
-                                    </div>
-                                    <div class="form-group">
-                                        <i class="fa fa-lock" id="pass-icon"></i>
-                                        <input type="password" class="form-control" id="pwd" placeholder="Password" name="pswd">
-                                    </div>
-                                    <div class="form-group">
-                                        <i class="fa fa-lock" id="pass-icon"></i>
-                                        <input type="password" class="form-control" id="pwd" placeholder="Confirm Password" name="pswd">
-                                    </div>
-                                    <div class="form-group form-check">
-                                        <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox" name="Agree"> I agree to the <b>Terms of Use</b> and <b>Privacy Policy.</b>
-                                        </label>
-                                    </div>
-                                    <button type="submit" 
-                                            id="btn-submit"
-                                            class="btn btn-block btn-info btn-submit">
-                                        <h6>SIGN UP</h6>
-                                    </button>
-                                    <hr class="new">
-                                    <button type="button" 
-                                            id="btn-fbk"
-                                            class="btn btn-fb btn-block btn-info">
-                                            <i class="fab fa-facebook-f pr-1"></i>
-                                            Sign up with Facebook
-                                    </button>
-                                    <button type="button" 
-                                            class="btn btn-googlr"
-                                            id="btn-google">
-                                            <i class="fab fa-google pr-1"></i> 
-                                            Sign up with Google
-                                    </button>
-                                </form>
+                        <div class="col-lg-2 col-md-3 col-sm-2"></div>
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-12">
+                            <div class="row my-5">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-6 text-center">
+                                    <h1>Contact Us</h1>
+                                  <p>Have any questions? We'd love to hear from you.</p>
+                                </div>
+                                <div class="col-lg-3"></div>
                             </div>
-                            <div class="col-12 col-md-2 col-lg-3"></div>
+                            <div class="row">
+                                <div class="col-lg-4 my-lg-1 my-sm-2 my-2 align-self-center">
+                                    <div class="card card-rounded card-md card-purple">
+                                        <div class="card-body align-content-around">
+                                            <h4 class="card-title">Press</h4>
+                                            <p class="card-text">Are you interested in our
+                                                latest news or working on
+                                                a Grammarly story and
+                                                need to get in touch?
+                                            </p>
+                                            <button class="mb-4 btn btn-block btn-purple-outline">
+                                                Visit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 my-lg-1 my-sm-2 my-2 px-lg-0">
+                                    <div class="card card-rounded card-lg card-purple-dark">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Help & Support</h4>
+                                            <p class="card-text">Our support team is
+                                                spread across the globe to
+                                                give you answers fast.
+                                            </p>
+                                            <button class="mb-4 btn btn-block btn-purple-dark">
+                                                Visit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 my-lg-1 my-sm-2 my-2 align-self-center">
+                                    <div class="card card-rounded card-md card-purple">
+                                        <div class="card-body">
+                                          <h4 class="card-title">Sales</h4>
+                                          <p class="card-text">Get in touch with our sales
+                                                team to see how we can
+                                                work together.</p>
+                                                <button class="mb-4 btn btn-block btn-purple-outline">
+                                                    Visit
+                                                </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
             <!-- Footer -->
     <footer class="foot-style">
             <!-- Footer Elements -->
