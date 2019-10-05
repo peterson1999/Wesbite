@@ -504,7 +504,7 @@
 
   <!-- LogIn Modal -->
   <div id="signup-modal">
-    <div class="modal-dialog">
+    <div class="modal-dialog fadein">
       <div class="modal-content" id="login-popup">
         <div class="float-right mr-3 mt-2">
           <button class="close" id="close-btn" onclick=loginToggle()>&times;</button>
@@ -555,10 +555,10 @@
 
   <!-- Forgot Password Modal -->
   <div id="forgot-pass-modal">
-    <div class="modal-dialog" id="login-dialog">
+    <div class="modal-dialog fadein" id="login-dialog">
       <div class="modal-content" id="login-popup">
         <div class="float-right mr-3 mt-2">
-          <button class="close" id="close-btn" onclick=loginForgotToggle()>&times;</button>
+          <button class="close" id="close-btn" onclick=exitForgotToggle()>&times;</button>
         </div>
         <div class="modal-body" id="login-body">
           <div class="input-form">
@@ -575,7 +575,7 @@
           </div>
           </b>
           <div class="login-container" style="text-align: center">
-            <br><br><a id="backtoLogin" onclick="loginForgotToggle()" href="javascript:void(0)" style="color:black">Back to Login</a>
+            <br><br><a id="backtoLogin" href="javascript:void(0)" onclick="loginForgotToggle()" style="color:black">Back to Login</a>
             <br>Don't have an account? <br>
             <a href="sign up.html" style="color:black">Sign Up</a>
           </div>
