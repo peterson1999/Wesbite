@@ -186,6 +186,7 @@
         color: white;
         border:none;
         border-radius: 4%;
+        margin-bottom: 30px;
     }
     .card:hover{
         background-color: pink;
@@ -221,9 +222,55 @@
         font-size: 20px;
         text-align: center;
     }
+    #sidebar ul.components {
+        border-bottom:none;
+    }
+    @media(max-width: 768px) and (min-width: 540px) {
+      .container-fluid{
+        margin-left: 75px;
+      }
+      .active1{
+        margin-bottom: 70px;
+      }
+      .components{
+        margin-bottom: 0px;
+      }
+      .slide {
+        width: 97%;
+        left: 2%;
+        top: 0%;
+        height: 50%;
+        position: absolute;
+    }
+    #con {
+        margin-left: 0px;
+    }
+    #cd2{
+      display:none;
+    }
+    }
+    @media(max-width: 540px){
+      .container-fluid{
+        margin-left: 0px;
+      }
 
-
-
+      #cd2{
+      display:none;
+    }
+    .bg-light{
+      width: 199px;
+    height: 326px;
+    }
+    .card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    height: 100%;
+}
+    .bg-light{
+      margin-left: 2px;
+    }
+    }
 
     @import url(https://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css);
 body {
@@ -580,8 +627,8 @@ body {
 <body>
     <img id="blob1"class="img-responsive"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img>
     <!-- <img id="blob2" class="img-responsive"src="Background.svg"></img> -->
-    <img id="blob3" class="img-responsive"src="yellow.svg"></img>
-    
+    <!-- <img id="blob3" class="img-responsive"src="yellow.svg"></img>
+     -->
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <!--Pictures-->
         <div class="carousel-inner">
@@ -701,7 +748,9 @@ body {
                 <hr>
                                   
                         <div class="card-deck">
-                                <div id="card1" class="card bg-light" data-aos="zoom-in-down">
+                          <div class="row">
+                            <div class="col-md-6 col-lg-3 col-6">
+                                <div id="card1" class="card bg-light " data-aos="zoom-in-down">
                                         <figure class="imghvr-shutter-out-diag-1">
                                                 <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
                                                 <figcaption>
@@ -717,6 +766,8 @@ body {
                                     <button class="material-icons" href="#">turned_in_not</button>
                                   </div>
                                 </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-6">
                                 <div class="card bg-light" data-aos="zoom-in-down">
                                         <figure class="imghvr-shutter-out-diag-1">
                                                 <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
@@ -733,6 +784,8 @@ body {
                                     <button class="material-icons" href="#">turned_in_not</button>
                                   </div>
                                 </div>
+                              </div>
+                            <div class="col-md-6 col-lg-3 col-6">
                                 <div class="card bg-light" data-aos="zoom-in-down">
                                     
                                         <figure class="imghvr-shutter-out-diag-1">
@@ -749,6 +802,8 @@ body {
                                     <button class="material-icons" href="#">turned_in_not</button>
                                   </div>
                                 </div>
+                              </div>
+                              <div class="col-md-6 col-lg-3 col-6">
                                 <div class="card bg-light" data-aos="zoom-in-down">
                                         <figure class="imghvr-shutter-out-diag-1">
                                                 <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
@@ -765,8 +820,12 @@ body {
                                     <button class="material-icons" href="#">turned_in_not</button>
                                   </div>
                                 </div>  
+                                </div>
                               </div>
-                              <div class="card-deck">
+                            </div>
+                              <div id="cd2" class="card-deck">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-3">
                                     <div class="card bg-light" data-aos="zoom-in-down">
                                             <figure class="imghvr-shutter-out-diag-1">
                                             <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
@@ -782,6 +841,8 @@ body {
                                         <button class="material-icons" href="#">turned_in_not</button>
                                       </div>
                                     </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6  col-lg-3">
                                     <div class="card bg-light" data-aos="zoom-in-down">
                                             <figure class="imghvr-shutter-out-diag-1">
                                                     <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
@@ -797,6 +858,8 @@ body {
                                         <button class="material-icons" href="#">turned_in_not</button>
                                       </div>
                                     </div>
+                                  </div>
+                                <div class=" col-sm-6 col-md-6 col-lg-3">
                                     <div class="card bg-light" data-aos="zoom-in-down">
                                             <figure class="imghvr-shutter-out-diag-1">
                                                     <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
@@ -812,6 +875,8 @@ body {
                                         <button class="material-icons" href="#">turned_in_not</button>
                                       </div>
                                     </div>
+                                  </div>
+                                  <div class="col-md-6 col-sm-6  col-lg-3">
                                     <div class="card bg-light" data-aos="zoom-in-down">
                                             <figure class="imghvr-shutter-out-diag-1">
                                                     <img class="card-img-top" src="photos/designui.jpg" alt="Card image cap">
@@ -828,6 +893,8 @@ body {
                                       </div>
                                     </div>  
                                   </div>
+                                </div>
+                              </div>
                         <div id="row2" class="row">
                          <button id="see-more" >See More</button>
                               </div>
@@ -842,6 +909,8 @@ body {
                                 </div>
                                 <hr>
                                 <div class="card-deck">
+                                  <div class="row">
+                                    <div class="col-xl-4 col-md-12 col-sm-12">
                                     <div id="card2" class="1 card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                         <div class="content">
                                           <div class="post main">
@@ -915,6 +984,8 @@ body {
                                           </div>
                                         </div>
                                       </div>
+                                    </div>
+                                    <div class="col-xl-4 col-md-12 col-sm-12">
                                       <div id="card2" class="2 card" data-aos="flip-left"      data-aos-easing="ease-out-cubic"
                                       data-aos-duration="2000">
                                         <div class="content">
@@ -989,6 +1060,8 @@ body {
                                           </div>
                                         </div>
                                       </div>
+                                    </div>
+                                    <div class="col-xl-4 col-md-12  col-sm-12">
                                       <div id="card2"class="3 card" data-aos="flip-left"      data-aos-easing="ease-out-cubic"
                                       data-aos-duration="2000" >
                                         <div class="content">
@@ -1063,12 +1136,15 @@ body {
                                           </div>
                                         </div>
                                       </div>
+                                    </div>
+                                  </div>
                                   </div>
                         <div id="row2" class="row">
                             <button id="see-more" >See More</button>
                         </div>
+                    
                     </div>
-            </div>
+                </div>
         </div>
     </div>
     <!-- Footer -->
