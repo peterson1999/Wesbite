@@ -7,7 +7,9 @@
     background-color: rgba(0,0,0,0.6);
     z-index:3;
 }
-
+.d-flex>h1{
+    color: #fff;
+}
 #login-popup{
     background-image: linear-gradient(to bottom right, rgba(97, 99, 219, 0.644) 0%, #C779D0 51%, rgba(144, 35, 117, 0.514) 90%);
 }
@@ -166,3 +168,38 @@ to {opacity: 1;}
 from {opacity: 0;} 
 to {opacity: 1;}
 }
+@media only screen and (max-width: 540px){
+    .modal-dialog {
+      height:100%;
+    }
+    .modal-content{
+      height:100%;
+    }
+    .h1, h1 {
+      font-size: 6.5rem;
+    }
+    .h6, h6 {
+      font-size: 2rem;
+  }
+  .media-btn {
+    font-size: 68px;
+  }
+  .login-container>input[type=text], .login-container>input[type=password] {
+    font-size: 7.2vw;
+  }
+  .btn-login {
+    height: 66px;
+    font-size: 39px;
+  }
+  .login-container {
+    font-size: 8.1vw;
+}
+}
+@media only screen and (max-width: 1000px) and (min-width:540px){
+    .login-container {
+        font-size: 2.1vw;
+    }
+    .login-container>input[type=text], .login-container>input[type=password] {
+        font-size: 2.1vw;
+      }
+  }

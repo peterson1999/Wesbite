@@ -24,6 +24,11 @@ input[type=username] {
     padding: 12px 20px 12px 40px;
 }
 
+#login-popup {
+    background-image: linear-gradient(to bottom right, rgba(97, 99, 219, 0.644) 0%, #C779D0 51%, rgba(144, 35, 117, 0.514) 90%);
+    opacity: 0.9;
+    border-radius: 20px;
+}
 input[type=email] {
     width: 100%;
     height: 46px;
