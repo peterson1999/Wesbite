@@ -30,6 +30,7 @@
                 font-family: 'Poppins', sans-serif;
                 background-color: pink;
                 margin: 0px;
+                overflow-x: hidden;
             }
         
             p {
@@ -82,55 +83,11 @@
                 background-color: #ffffff;
                 opacity: 0.5;
             }
-            .blob1{
-                position: absolute;
-                left:50px;
-                width:500px;
-            }
-            .blob2 {
-                position: absolute;
-                left: 60vw;
-                bottom: 44vw;
-                width: 100vw;
-                opacity: 0.5;
-            }
-            .blob3 {
-                position: absolute;
-                left: 88vw;
-                bottom: 23vw;
-                width: 13vw;
-                opacity: 0.8;
-            }
-            .blob4 {
-                position: absolute;
-                left: 88vw;
-                bottom: 23vw;
-                width: 49vw;
-                opacity: 0.5;
-                z-index: 0;
-            }
-            .blob5 {
-                position: absolute;
-                left: 87vw;
-                bottom: 4vw;
-                width: 13vw;
-                opacity: 0.5;
-                z-index: 0;
-            }
-            .sampleblob{
-                height:500px;
-                border-radius:24% 76% 27% 73% / 46% 30% 70% 54%;
-                background-color: purple;
-                z-index:1;
-            }
+            
         </style>
     </head>
     <body>
         <img class="blob1"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img>
-        <img class="blob2"src="Background.svg"></img>
-        <img class="blob4"src="Blue.svg"></img>
-        <img class="blob3"src="yellow.svg"></img>
-        <img class="blob5"src="Blue.svg"></img>
         <div class="flex">
             <nav id="sidebar">
                 <ul class="list-unstyled components">
@@ -206,6 +163,11 @@
                         </div>
                         <!-- Collapsible content -->
                         <div class="col-4  header-login">
+                            <!-- Blobs -->
+                            <img class="blob2"src="Background.svg"></img>
+                            <img class="blob4"src="Blue.svg"></img>
+                            <img class="blob3"src="yellow.svg"></img>
+                            <img class="blob5"src="Blue.svg"></img>
                             <!-- Navbar brand -->
                             <button class="navbar-brand" onclick="fadein()">Login</button>
                         </div>
@@ -215,15 +177,15 @@
               
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6 m-2">
+                        <div class="col-md-2 col-lg-3"></div>
+                        <div class="col-md-8 col-lg-6 m-2">
                             <h1>Let's get your account set up</h1>
                         </div>
-                        <div class="col-lg-3"></div>
+                        <div class="col-md-2 col-lg-3"></div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3"></div>
-                            <div class="col-lg-6 p-12">
+                        <div class="col-12 col-md-2 col-lg-3"></div>
+                            <div class="col-12 col-md-8 col-lg-6 p-12">
                                 <form action="/action_page.php">
                                     <div class="form-group">
                                         <i class='fas fa-user' id="user-icon"></i>
@@ -266,7 +228,7 @@
                                     </button>
                                 </form>
                             </div>
-                            <div class="col-lg-3"></div>
+                            <div class="col-12 col-md-2 col-lg-3"></div>
                         </div>
                     </div>
                 </div>
