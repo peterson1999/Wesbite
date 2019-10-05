@@ -6,6 +6,7 @@
     border-bottom: 0px;
     border-radius: 10px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 2px -2px rgba(0,0,0,.2), 0 1px 50px 0 rgba(0,0,0,.50);
+    transition: height 1s;
 }
 
 .card-rounded>.card-body
@@ -39,6 +40,13 @@
 .card-md
 {
     height: 380px;
+}
+
+
+@media screen and (max-width: 999px) {
+    .card-md, .card-lg {
+        height: 240px;
+    }
 }
 
 .card-text
