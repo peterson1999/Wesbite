@@ -74,8 +74,14 @@ ul ul a {
         min-width: 220px;
         max-width: 220px; 
     }
+    .header{
+        display: block;
+    }
     .navbar{
         display:none;
+    }
+    .header-search>input{
+        display: block;
     }
     #header-component{
         width:50%;
@@ -100,9 +106,12 @@ ul ul a {
     .navbar{
         padding: 1.5% 2%;
     }
+    .header-search>input{
+        display: block;
+    }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 539px) {
     #sidebar {
         display:none;
     }

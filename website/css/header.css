@@ -53,12 +53,12 @@
         left: -9%;
     }
 }
-@media only screen and (max-width: 768px) and (min-width: 541px){
+@media only screen and (max-width: 768px) and (min-width: 540px){
     .header-search>button{
         display: none;
     }
 }
-@media only screen and (max-width: 540px){
+@media only screen and (max-width: 539px){
     .header-search>button{
         width: 3em;
         border-radius: 0px;
