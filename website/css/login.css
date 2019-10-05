@@ -2,26 +2,46 @@
     display: none;
 }
 
-#frame>.modl{
-    border: none;
+/* #frame>.modl{ */
+    /* border: none;
     position: fixed;
-    transition: width 2s height 2s;
+    transition: width 2s height 2s; */
     /* align: center; */
 
     /* The Modal (background) */
-    z-index: 4; /*Sit on top*/ 
-    left: 0;
-    top: 0;
-    width: 100%; /*Full height */
-    height: 100%; /*Full height */
-    overflow: hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    /* z-index: 4; Sit on top  */
+    /* left: 0;
+    top: 0; */
+    /* width: 100%; Full height */
+    /* height: 100%; Full height */
+    /* overflow: hidden; Enable scroll if needed */
+    /* background-color: rgb(0,0,0); Fallback color */
+    /* background-color: rgba(0,0,0,0.4); Black w/ opacity */
     
+/* } */
+#signup-modal, #forgot-pass-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index:3;
+}
+
+#login-popup{
+    background-image: linear-gradient(to bottom right, rgba(97, 99, 219, 0.644) 0%, #C779D0 51%, rgba(144, 35, 117, 0.514) 90%);
+}
+
+#login-body {
+    margin: 0px 25px;
+}
+
+#close-btn:hover {
+    background: none;
 }
 
 .btn-login {
-    width: 100%;
     height: 46px;
     box-sizing: border-box;
     border: 2px solid;
@@ -71,7 +91,6 @@
     text-align: left;
     font-size: 1.1vw;
     padding: 8px;
-    width: 50%;
     margin: 0;
     overflow: auto;
     color:white;
@@ -85,26 +104,12 @@
     padding:12px 20px;
     margin-top: 8px;
     height: 42px;
-    width:100%;
     color:white;
     border-radius: 0px;
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom:2px solid white;
-}
-
-.login-popup{
-    text-align: center;
-    z-index: 5;
-    position: relative;
-    width: 50%;
-    height: 75%;
-    border-radius: 20px;
-    background-image: linear-gradient(to bottom right, rgba(97, 99, 219, 0.644) 0%, #C779D0 51%, rgba(144, 35, 117, 0.712) 90%);
-    padding: 20px 10px;
-    margin-top: 5%;
-    margin-left:25%;
 }
 
 .login-button{
@@ -167,220 +172,6 @@ button:focus{
     color: white;
 }
 
-/*Media Queries for Responsive Design*/
-@media only screen and (min-width: 2001px){
-    .exitbutton{
-        font-size: 26px;
-        right: 26%;
-        top: 14vh;
-    }
-    .login-container{
-        padding: 15px;
-        width: 50%;
-    }
-    .login-container>input[type=text], .login-container>input[type=password]{
-        padding:12px 20px;
-        margin-top: 8px;
-        /* border-radius: 25px; */
-        width:100%;
-    }
-    .login-popup{
-        width: 50%;
-        height: 75%;
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-    .login-button{
-        padding:12px 20px;
-        margin-top: 8px;
-        border-radius: 25px;
-        width:50%;
-    }
-    .forgot-password{
-        width: 50%;
-        height: 75%;
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-}
-@media only screen and (max-width: 2000px){
-    .btn-login {
-        width: 100%;
-        height: 46px;
-        box-sizing: border-box;
-        border: 2px solid;
-        border-radius: 25px;
-        font-size: 16px;
-        text-align: center;
-        color: white;
-        transition: 0.5s;
-        background-size: 200% auto;
-    }
-
-    .exitbutton{
-        font-size: 26px;
-        right: 26%;
-        top: 75px;
-    }
-    .login-container{
-        /* padding: 15px; */
-        width: 50%;
-        margin-left: 153px;
-    }
-    .login-container>input[type=text], .login-container>input[type=password]{
-        padding:12px 20px;
-        margin-top: 8px;
-        /* border-radius: 25px; */
-        width:100%;
-        color:white;
-    }
-    .login-popup{
-        width: 50%;
-        height: 75%;
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-    .login-button{
-        padding:12px 20px;
-        margin-top: 8px;
-        border-radius: 25px;
-        width:50%;
-    }
-    .forgot-password{
-        width: 50%;
-        height: 75%;
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-
-    .fp-row {
-        margin-top: 10%;
-    }
-
-}
-@media only screen and (max-width: 1024px){
-    .exitbutton{
-        font-size: 26px;
-        right: 26%;
-        top: 50px;
-    }
-    .login-container{
-        padding: 15px;
-        width: 50%;
-    }
-    .login-container>input[type=text], .login-container>input[type=password]{
-        padding:12px 20px;
-        margin-top: 8px;
-        /* border-radius: 25px; */
-        width:100%;
-    }
-    .login-popup{
-        width: 50%;
-        height: 75%;
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-    .login-button{
-        padding:12px 20px;
-        margin-top: 8px;
-        border-radius: 25px;
-        width:50%;
-    }
-    .forgot-password{
-        width: 50%;
-        height: 75%;
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-}
-@media only screen and (max-width: 768px){
-    .exitbutton{
-        font-size: 26px;
-        right: 26%;
-        top: 7vh;
-    }
-    .login-container{
-        padding: 15px;
-        width: 100%;
-        font-size: 12px;
-    }
-    .login-container>input[type=text], .login-container>input[type=password]{
-        padding:12px 20px;
-        margin-top: 8px;
-        /* border-radius: 25px; */
-        width:100%;
-        font-size: 12px;
-    }
-    .login-picture{
-        display:none;
-    }
-    .login-popup{
-        width: 50%;
-        height: 75%;
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-    .login-button{
-        padding:12px 20px;
-        margin-top: 8px;
-        border-radius: 25px;
-        width:50%;
-    }
-    .forgot-password{
-        width: 50%;
-        height: 75%;
-        padding: 20px 10px;
-        margin-top: 5%;
-        margin-left:25%;
-    }
-}
-@media only screen and (max-width: 576px){
-    .exitbutton{
-        font-size: 26px;
-        right: 1.5vh;
-        top: 2vh;
-    }
-    .login-container{
-        padding: 15px;
-        width: 100%;
-        font-size: 12px;
-    }
-    .login-container>input[type=text], .login-container>input[type=password]{
-        padding:12px 20px;
-        margin-top: 8px;
-        /* border-radius: 25px; */
-        width:100%;
-        font-size: 12px;
-    }
-    .login-picture{
-        display:none;
-    }
-    .login-popup{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        border-radius: 0px;
-    }
-    .login-button{
-        padding:12px 20px;
-        margin-top: 8px;
-        border-radius: 25px;
-        width:50%;
-    }
-    .forgot-password{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        border-radius: 0px;
-    }
-}
 /* Add Fade In Animation */
 .animate {
 -webkit-animation: fadein 1s;
