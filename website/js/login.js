@@ -28,5 +28,11 @@ function loginForgotToggle() {
 
 }
 
+function exitForgotToggle() {
+    var forgotPass = document.getElementById('forgot-pass-modal');
+    var login = document.getElementById('signup-modal');
+    forgotPass.style.display = "none";
+    login.style.display = "none";
+}
 
         
