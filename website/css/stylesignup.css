@@ -1,0 +1,248 @@
+h1 {
+    font-size: 24px;
+    color: #ea4c88;
+}
+
+h4 {
+    display: inline-block;
+}
+
+h6 {
+    font-size: 1rem;
+    margin-top: 6px;
+    margin-right: 0px;
+}
+
+input[type=username] {
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    border: 2px solid #ee88f1;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+}
+
+input[type=email] {
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    border: 2px solid #ee88f1;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+}
+
+input[type=password] {
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    border: 2px solid #ee88f1;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+}
+
+#btn-submit {
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4 51%, #E55D87 100%);
+}
+
+.btn-submit {
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.btn-submit:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+hr.new {
+    border-top: 1px solid gray;
+    position: relative;
+  }
+
+#btn-fbk {
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background-color: #4267b2; 
+}
+
+#btn-fbk:hover {
+    background-color: #29487d;
+}
+
+#btn-google {
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 25px;
+    font-size: 16px;
+    margin: 2px;
+    text-align: center;
+    color: white;
+    background-color: #ea4335;  
+}
+
+#btn-google:hover {
+    background-color: #c21010;
+}
+
+#user-icon {
+    font-size:22px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 16px;
+}
+
+#email-icon {
+    font-size:22px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 16px;
+}
+
+#pass-icon {
+    font-size:21px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 16px; 
+}
+
+.form-check-label {
+    padding-left: 40px;
+}
+
+.body{
+    margin-left: 205px;
+    z-index: 2;
+}
+
+.blob1{
+    position: absolute;
+    left: -5%;
+    width: 30vw;
+    
+}
+.blob2 {
+    position: absolute;
+    left: 13%;
+    bottom: -140%;
+    width: 40vw;
+    opacity: 0.5;
+    z-index: -1;
+}
+.blob3 {
+    position: absolute;
+    left: 80%;
+    bottom: -900%;
+    width: 13vw;
+    opacity: 0.8;
+    z-index: -1;
+}
+.blob4 {
+    position: absolute;
+    left: 65%;
+    bottom: -400%;
+    width: 200px;
+    opacity: 0.5;
+    z-index: -1;
+}
+.blob5 {
+    position: absolute;
+    left: 70%;
+    bottom: -1845%;
+    width: 17vw;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 1024px){
+    .blob1{
+        left: -2%;
+    }
+    .blob2{
+        left: 10%;
+        bottom: -110%;
+    }
+    .blob3{
+        left: 70%;
+        bottom: -680%;
+    }
+    .blob4{
+        bottom: -370%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .body{
+        margin-left: 50px;
+    }
+    .blob1{
+        display: none;
+    }
+    .blob3{
+        left: 95%;
+        bottom: -565%;
+        width: 14vw;
+    }
+    .blob4{
+        left: 50%;
+        bottom: -310%;
+    }
+}
+@media only screen and (max-width: 540px){
+    .body{
+        margin: 0;
+    }
+    .blob2{
+        left: 20%;
+        bottom: -70%;
+    }
+    .blob4{
+        left: 38%;
+        bottom: -240%;
+    }
+}
+@media only screen and (max-width: 425px){
+    .body{
+        margin: 0;
+    }
+    .blob2{
+        left: -15%;
+        bottom: -50%;
+        width: 50vw;
+    }
+    .blob3{
+        left: 90%;
+        bottom: -460%;
+    }
+    .blob4{
+        left: 30%;
+        bottom: -165%;
+    }
+    .blob5{
+        display: none;
+    }
+}

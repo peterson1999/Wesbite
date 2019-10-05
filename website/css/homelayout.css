@@ -1,0 +1,43 @@
+.body{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    overflow: auto;
+}   
+
+.body>.mainbody1{
+    display:flex;
+    flex-direction:row;
+    height:40%;
+}
+.body>.mainbody1>.section1-1{
+    width:50%;
+}
+
+.body>.mainbody1>.section1-2{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+}   
+.body>.mainbody1>.section1-2>.section1-2-contents{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+} 
+.body>.mainbody1>.section1-2>.section1-2-contents>.section1-2-x{
+    width:33.33%
+}
+.body>.mainbody2{
+    display:flex;
+    flex-direction:row;
+    height:40%;
+}
+.body>.mainbody2>.section2-1{
+    width:50%;
+}
+.body>.mainbody2>.section2-2{
+    width:50%;
+}    
+.body>.footer{
+    height:10%;
+}
