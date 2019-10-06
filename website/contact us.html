@@ -11,6 +11,7 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <!-- Our Custom CSS -->
@@ -21,6 +22,7 @@
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/stylesignup.css">
         <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/contactmodal.css">
         <title>Contact Us</title>
         <style>
             *{
@@ -127,6 +129,30 @@
         </style>
     </head>
     <body>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address:</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="comment">Comment:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                            <button type="button" class="modalbtn btn btn-purple-outline" data-dismiss="modal">Close</button>
+                            <button type="submit" id="modalSubmit" class="modalbtn btn btn-purple-dark" style="float:right">Submit</button>
+                        </form>                              
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- <img class="blob1"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img> -->
         <img class="blob2"src="Background.svg"></img>
         <img class="blob4"src="Blue.svg"></img>
@@ -246,8 +272,8 @@
               
                 <div class="container px-lg-3 px-md-3 px-0 mb-4">
                     <div class="row">
-                        <div class="col-lg-2 col-md-3 col-sm-2"></div>
-                        <div class="col-lg-10 col-md-9 col-sm-10 col-12">
+                        <div class="col-md-1"></div>
+                        <div class="col-lg-12 col-md-10 col-sm-11 col-12">
                             <div class="row my-5">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-6 text-center">
@@ -266,7 +292,7 @@
                                                 a Grammarly story and
                                                 need to get in touch?
                                             </p>
-                                            <button class="mb-4 btn btn-block btn-purple-outline">
+                                            <button type="button" class="mb-4 btn btn-block btn-purple-outline" data-toggle="modal" data-target="#myModal">
                                                 Visit
                                             </button>
                                         </div>
@@ -280,7 +306,7 @@
                                                 spread across the globe to
                                                 give you answers fast.
                                             </p>
-                                            <button class="mb-4 btn btn-block btn-purple-dark">
+                                            <button class="mb-4 btn btn-block btn-purple-dark"  data-toggle="modal" data-target="#myModal">
                                                 Visit
                                             </button>
                                         </div>
@@ -293,7 +319,7 @@
                                           <p class="card-text">Get in touch with our sales
                                                 team to see how we can
                                                 work together.</p>
-                                                <button class="mb-4 btn btn-block btn-purple-outline">
+                                                <button class="mb-4 btn btn-block btn-purple-outline"  data-toggle="modal" data-target="#myModal">
                                                     Visit
                                                 </button>
                                         </div>
@@ -301,6 +327,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-1"></div>
                     </div>
                 </div>
             </div>
