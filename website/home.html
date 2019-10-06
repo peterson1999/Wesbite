@@ -223,7 +223,6 @@
     }
 
     #see-more {
-      margin-left: 47.5%;
       background-color: blueviolet;
       color: white;
       border: none;
@@ -749,6 +748,13 @@
       margin-bottom: 0;
       color: white;
     }
+
+    @media screen and (max-width: 999px) {
+      .hide-md {
+        visibility: hidden;
+      }
+    }
+
   </style>
 </head>
 
@@ -792,8 +798,8 @@
         <button class="header-nav-searchButton" type="button" onclick="searchBar()"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
     </form>
     <!-- Login & Signup Buttons -->
-    <a class="navbar-brand" href="#" onclick="fadein()">Login</a>
-    <a class="navbar-brand" href="sign up.html">Sign Up</a>
+    <a class="navbar-brand hide-md" href="#" onclick="fadein()">Login</a>
+    <a class="navbar-brand hide-md" href="sign up.html">Sign Up</a>
     <!-- Burger Menu Links -->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
@@ -1200,7 +1206,7 @@
               </div>
             </div>
           </div>
-          <div id="row2" class="row">
+          <div id="row2" class="row justify-content-center">
             <button id="see-more"><a href="popular-art.html">See More</a></button>
           </div>
 
