@@ -211,6 +211,9 @@ hr.new {
         left: 50%;
         bottom: -310%;
     }
+    .container{
+        margin-top:100px;
+    }
 }
 @media only screen and (max-width: 540px){
     .body{
