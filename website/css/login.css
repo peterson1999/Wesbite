@@ -44,10 +44,10 @@
 }
  
 .login-container{
-    text-align: left;
+    /* text-align: left; */
     font-size: 1.1vw;
     padding: 15px;
-    width: 50%;
+    /* width: 50%; */
     margin: 0;
     overflow: auto;
 }
@@ -168,10 +168,10 @@ button:focus{
         right: 26%;
         top: 10vh;
     }
-    .login-container{
+    /* .login-container{
         padding: 15px;
         width: 50%;
-    }
+    } */
     .login-container>input[type=text], .login-container>input[type=password]{
         padding:12px 20px;
         margin-top: 8px;
