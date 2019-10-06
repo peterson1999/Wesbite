@@ -1,4 +1,4 @@
-#myModal>.modal-dialog>.modal-content
+#myModal>.modal-dialog>.modal-content, #modalSuccess>.modal-dialog>.modal-content
 {
     border-radius: 20px;
     border-top: 9px solid #c371c0;
