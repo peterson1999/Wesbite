@@ -5,7 +5,7 @@
 .md-form{
     width: 100%;
 }
-
+/* PC Version */
 .header-search>input[type=text]{
     height: 100%;
     width: 90%;
@@ -16,8 +16,7 @@
     height: 2em;
     width: 8%;
     position: relative;
-    left: 81.5%;
-    top: -34.5px;
+    left: -9.5%;
     vertical-align: middle;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -49,6 +48,13 @@
     background-color: transparent;
     color: rgb(238, 130, 238);
 }
+/* Tablet and Phone Version */
+.header-nav-searchBar{
+    height: 100%;
+    width: 75vw;
+    padding-right: 10%;
+    border-radius: 25px;
+}
 .header-nav-searchButton{
     height: 2em;
     width: 3em;
@@ -65,20 +71,22 @@
 }
 @media only screen and (min-width: 1180px){
     .header-search>button{
-        left: 81.5%;
-    }
-}
-@media only screen and (min-width: 769px){
-    .header-search>button{
-        display: block;
+        left: -9%;
     }
 }
 @media only screen and (max-width: 768px) and (min-width: 540px){
-    .header-search>button{
+    /* .header-search>button{
         display: none;
-    }
+    } */
     .header-nav-searchButton{
         display: none;
     }
-
+    .header-nav-searchBar{
+        width: auto;
+    }
+}
+@media only screen and (max-width: 539px){
+    .header-nav-searchBar{
+        display: none;
+    }
 }

@@ -669,10 +669,10 @@ body {
 </head>
 
 <body>
-    
     <!-- <img id="blob1"class="img-responsive"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img> -->
-   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <!--Pictures-->
+    <!-- Carousel -->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <!-- Pictures -->
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100 picture-1" alt="">
@@ -694,6 +694,7 @@ body {
             </a>
         </div>
     </div>
+    <!-- Tablet and Phone Navbar -->
     <nav class="navbar bg-custom navbar-dark">
         <!-- Burger Menu Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -701,8 +702,8 @@ body {
         </button>
         <!-- Search Bar -->
         <form class="form-inline mr-auto ml-1">
-            <div class="md-form my-0 header-search">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            <div class="md-form my-0">
+                <input class="form-control header-nav-searchBar" type="text" placeholder="Search" aria-label="Search">
             </div>
             <button class="header-nav-searchButton" onclick="searchBar()"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
         </form>
@@ -724,6 +725,7 @@ body {
           </ul>
         </div>  
       </nav>
+    <!-- Body -->
     <div class="flex1">
 
     <div class="flex">
@@ -1175,7 +1177,7 @@ body {
                         </footer>
                         <!-- Footer -->
                         </div>
-                      
+                        <script src="js/header.js"></script>
                         <script src="js/login.js"></script>
                         <script>
                           AOS.init();
