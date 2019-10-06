@@ -87,26 +87,56 @@
 </head>
 
 <body>
-    <div class="flex">
-        <nav id="sidebar">
-            <ul class="list-unstyled components">
-                <li class="active1">
-                        <a class="material-icons" href="#">home<span class="words">Home</span></a>
-                </li>
-                <li class="active1">
-                        <a class="material-icons" href="#">notifications<span class="words">Notifications</span></a>
-                </li>
-                <li class="active1" >
-                        <a class="material-icons" href="#">bookmarks<span class="words">Bookmarks</span></a>
-                </li>
-                <li class="active1">
-                        <a class="material-icons" href="#">forum<span class="words">Forum</span></a>
-                </li>
-                <li class="active1">
-                        <a class="material-icons" href="#">help_outline<span class="words">Help</span></a>
-                </li>
+    <nav class="navbar navbar-expand-md bg-custom navbar-dark">
+        <!-- Burger Menu Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Search Bar -->
+        <form class="form-inline mr-auto">
+            <div class="md-form my-0 header-search">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <button onclick="search()"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
+            </div>
+        </form>
+        <!-- Login & Signup Buttons -->
+        <a class="navbar-brand" href="#" onclick="fadein()">Login</a>
+        <a class="navbar-brand" href="sign up.html">Sign Up</a>
+        <!-- Burger Menu Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="fadein()">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sign up.html">Sign Up</a>
+            </li>    
             </ul>
-        </nav>  
+        </div>  
+    </nav>
+    <div class="flex">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>    
+                      </ul>
+                    </div>  
+                  </nav>
         <div id="frame">
             <div class = "modl">
                 <button class="exitbutton" onclick=fadeout()>×</button>
@@ -241,5 +271,6 @@
     <!-- Footer -->
 
     <script src="../js/login.js"></script>
+    <script src="../js/header.js"></script>
 </body>
 </html>

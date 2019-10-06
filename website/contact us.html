@@ -5,28 +5,31 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- JQuery -->
-        <script src="../jquery/jquery-3.4.1.min.js"></script>
+        <script src="jquery/jquery-3.4.1.min.js"></script>
         <!-- Bootstrap CSS -->
-        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="bootstrap/js/bootstrap.min.js"></script>
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="../css/login.css">
-        <link rel="stylesheet" href="../css/sidebar.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/homelayout.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/stylesignup.css">
-        <link rel="stylesheet" href="../css/aboutlayout.css">
-        <title>About Us</title>
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/sidebar.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/homelayout.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/stylesignup.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/contactmodal.css">
+        <title>Contact Us</title>
         <style>
             *{
                 font-family: 'Poppins', sans-serif;
              }
+
             body {
                 font-family: 'Poppins', sans-serif;
                 background-color: pink;
@@ -66,7 +69,7 @@
             .btn:hover{
                 background-color: violet;
             }
-
+        
             #navlist{
                 display: none;
             }
@@ -83,9 +86,79 @@
                 background-color: #ffffff;
                 opacity: 0.5;
             }
+            .blob1{
+                position: absolute;
+                left:50px;
+                width:500px;
+            }
+            .blob2 {
+                position: absolute;
+                left: 60vw;
+                bottom: 44vw;
+                width: 100vw;
+                opacity: 0.5;
+            }
+            .blob3 {
+                position: absolute;
+                left: 88vw;
+                bottom: 23vw;
+                width: 13vw;
+                opacity: 0.8;
+            }
+            .blob4 {
+                position: absolute;
+                left: 88vw;
+                bottom: 23vw;
+                width: 49vw;
+                opacity: 0.5;
+                z-index: 0;
+            }
+            .blob5 {
+                position: absolute;
+                left: 87vw;
+                bottom: 4vw;
+                width: 13vw;
+                opacity: 0.5;
+                z-index: 0;
+            }
+            .sampleblob{
+                height:500px;
+                border-radius:24% 76% 27% 73% / 46% 30% 70% 54%;
+                background-color: purple;
+                z-index:1;
+            }
         </style>
     </head>
     <body>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address:</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="comment">Comment:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                            <button type="button" class="modalbtn btn btn-purple-outline" data-dismiss="modal">Close</button>
+                            <button type="submit" id="modalSubmit" class="modalbtn btn btn-purple-dark" style="float:right">Submit</button>
+                        </form>                              
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img class="blob1"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img> -->
+        <img class="blob2"src="Background.svg"></img>
+        <img class="blob4"src="Blue.svg"></img>
+        <img class="blob3"src="yellow.svg"></img>
+        <img class="blob5"src="Blue.svg"></img>
         <nav class="navbar bg-custom navbar-dark">
             <!-- Burger Menu Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -115,7 +188,7 @@
                 </li>    
                 </ul>
             </div>  
-        </nav>
+        </nav>        
         <div class="flex">
             <nav id="sidebar">
                 <ul class="list-unstyled components">
@@ -155,7 +228,7 @@
                                 <input type="checkbox">Remember me<br>
                                 <button class="login-button">Login</button>
                                 <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
-                                <br>Don't have an account? <a href="../sign up.html">Sign Up</a>
+                                <br>Don't have an account? <a href="sign up.html">Sign Up</a>
                             </div>
                         </div>
                         <div class="forgot-password">
@@ -169,7 +242,7 @@
                             <div class="login-container" style="float: right; text-align: center">
                                 <button class="login-button" style="width: auto">Send me an email!</button>
                                 <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
-                                <br>Don't have an account? <a href="../sign up.html">Sign Up</a>
+                                <br>Don't have an account? <a href="sign up.html">Sign Up</a>
                             </div>
                         </div>
                     </div>
@@ -191,55 +264,73 @@
                         </div>
                         <!-- Collapsible content -->
                         <div class="col-4  header-login">
-                            <!--Blue blob-->
-                            <img class="blob"src="../Blue.svg"></img>
                             <!-- Navbar brand -->
                             <button class="navbar-brand" onclick="fadein()">Login</button>
-                            <button class="navbar-brand"><a href="../sign up.html">Sign Up</a></button>
                         </div>
                     </div>
                 </div>
                 <!--/.Header-->
-                <!-- Body -->
-                <div class="container about">
+              
+                <div class="container px-lg-3 px-md-3 px-0 mb-4">
                     <div class="row">
-                        <div class="col-12 col-lg-4">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 about-title">WHAT IS OZWEEBO?</div>
-                                    <div class="col-12 about-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque rerum voluptates, eligendi vel odit cum maiores inventore nemo. Quisquam porro rem id sint ipsum numquam qui incidunt saepe officiis voluptates?
+                        <div class="col-md-1"></div>
+                        <div class="col-lg-12 col-md-10 col-sm-11 col-12">
+                            <div class="row my-5">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-6 text-center">
+                                    <h1>Contact Us</h1>
+                                  <p>Have any questions? We'd love to hear from you.</p>
+                                </div>
+                                <div class="col-lg-3"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 my-lg-1 my-sm-2 my-2 align-self-center">
+                                    <div class="card card-rounded card-md card-purple">
+                                        <div class="card-body align-content-around">
+                                            <h4 class="card-title">Press</h4>
+                                            <p class="card-text">Are you interested in our
+                                                latest news or working on
+                                                a Grammarly story and
+                                                need to get in touch?
+                                            </p>
+                                            <button type="button" class="mb-4 btn btn-block btn-purple-outline" data-toggle="modal" data-target="#myModal">
+                                                Visit
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="col-12 about-btn-container">
-                                        <a href="../home.html"><button class="about-button">Learn More</button></a>
+                                </div>
+                                <div class="col-lg-4 my-lg-1 my-sm-2 my-2 px-lg-0">
+                                    <div class="card card-rounded card-lg card-purple-dark">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Help & Support</h4>
+                                            <p class="card-text">Our support team is
+                                                spread across the globe to
+                                                give you answers fast.
+                                            </p>
+                                            <button class="mb-4 btn btn-block btn-purple-dark"  data-toggle="modal" data-target="#myModal">
+                                                Visit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 my-lg-1 my-sm-2 my-2 align-self-center">
+                                    <div class="card card-rounded card-md card-purple">
+                                        <div class="card-body">
+                                          <h4 class="card-title">Sales</h4>
+                                          <p class="card-text">Get in touch with our sales
+                                                team to see how we can
+                                                work together.</p>
+                                                <button class="mb-4 btn btn-block btn-purple-outline"  data-toggle="modal" data-target="#myModal">
+                                                    Visit
+                                                </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-8 photo1">
-                            <img class="about-photo" src="../photos/ui-pop-art.jpg" alt="Photo">
-                        </div>
+                        <div class="col-md-1"></div>
                     </div>
                 </div>
-                <div class="container about team">
-                    <div class="row">
-                        <div class="col-12 col-lg-8 photo2">
-                            <img class="about-photo" src="../photos/designui.jpg" alt="Photo">
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 about-title">ABOUT US</div>
-                                    <div class="col-12 about-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque rerum voluptates, eligendi vel odit cum maiores inventore nemo. Quisquam porro rem id sint ipsum numquam qui incidunt saepe officiis voluptates?
-                                    </div>
-                                    <div class="col-12 about-btn-container">
-                                        <a href="contact.html"><button class="about-button">Contact Us</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Body -->
             </div>
         </div>
             <!-- Footer -->
@@ -284,15 +375,15 @@
             <!-- Footer Elements -->
             <!-- Copyright -->
             <div class="footer-copyright text-center py-3">© 2019 Copyright:
-                <a href="../home.html"> ozweebo.com</a>
+                <a href="home.html"> FoodReviews.com</a>
             </div>
             <!-- Copyright -->
-            <script src="../js/footer.js"></script>
+            <script src="js/footer.js"></script>
         </footer>
         <!-- Footer -->
         </div>
-        <script src="../js/login.js"></script>
-        <script src="../js/header.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/header.js"></script>
     </body>
     
 </html>
