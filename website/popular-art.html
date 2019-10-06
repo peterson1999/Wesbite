@@ -671,7 +671,11 @@ body {
     justify-content: center;
     margin-bottom: 50px;
 }
-
+@media screen and (max-width: 999px) {
+      .hide-md {
+        visibility: hidden;
+      }
+    }
 </style>
 </head>
 
@@ -690,8 +694,8 @@ body {
           <button class="header-nav-searchButton" type="button" onclick="searchBar()"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
       </form>
       <!-- Login & Signup Buttons -->
-      <a class="navbar-brand" href="#" onclick="fadein()">Login</a>
-      <a class="navbar-brand" href="sign up.html">Sign Up</a>
+      <a class="navbar-brand hide-md" href="#" onclick="fadein()">Login</a>
+      <a class="navbar-brand hide-md" href="sign up.html">Sign Up</a>
       <!-- Burger Menu Links -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
@@ -706,7 +710,7 @@ body {
           </li>    
         </ul>
       </div>  
-    </nav>
+    </nav>      
     <div class="flex1">
 
     <div class="flex">
