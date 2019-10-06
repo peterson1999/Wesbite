@@ -66,6 +66,12 @@
     color: white;
 }
 
+.btn-purple-outline:focus
+{
+    background-color: #c371c0 !important;
+    color: white;
+}
+
 .btn-purple-dark
 {
     background-color: #9373d2;
@@ -81,3 +87,9 @@
     background-color: white !important;
 }
 
+.btn-purple-dark:focus
+{
+    border: 2px solid #9373d2;
+    color: black;
+    background-color: white !important;
+}
