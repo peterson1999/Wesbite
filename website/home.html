@@ -685,17 +685,17 @@ body {
             </a>
         </div>
     </div>
-    <nav class="navbar navbar-expand-md bg-custom navbar-dark">
+    <nav class="navbar bg-custom navbar-dark">
         <!-- Burger Menu Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Search Bar -->
-        <form class="form-inline mr-auto">
+        <form class="form-inline mr-auto ml-1">
             <div class="md-form my-0 header-search">
                 <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                <button onclick="search()"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
             </div>
+            <button class="header-nav-searchButton" onclick="searchBar()"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
         </form>
         <!-- Login & Signup Buttons -->
         <a class="navbar-brand" href="#" onclick="fadein()">Login</a>
