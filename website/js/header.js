@@ -5,23 +5,22 @@ function searchBar(){
     $(".navbar-brand").css({
         "display": "none"
     });
-    $(".header-search>input").css({
-        "display": "block",
-        "width": "75vw"
+    $(".header-nav-searchBar").css({
+        "display": "block"
     });
-    $(".header-search>input").focus();
+    $(".header-nav-searchBar").focus();
 }
 
 $(document).ready(function(){
-    $(".header-search>input").focusout(function(){
-        $(".header-search>input").css({
+    $(".header-nav-searchBar").focusout(function(){
+        $(".header-nav-searchBar").css({
             "display": "none"
         });
         $(".header-nav-searchButton").css({
             "display": "block"
         });
         $(".navbar-brand").css({
-            "display": "block"
+            "display": "inline-block"
         });
     });
 })

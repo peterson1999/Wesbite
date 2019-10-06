@@ -15,35 +15,24 @@ ul ul a {
     overflow: auto;
     z-index: 1;
 }
-::-webkit-scrollbar {
-    display: none;
-}
 #sidebar .sidebar-header {
     padding: 20px;
     background: blueviolet;
     border-top-right-radius: 50px;
 }
-
-.active1{
-    text-align: center;
-}
-
 #sidebar .active1 .material-icons{
     font-size:50px;
     margin: 30px;
     margin-left:10px;
 }
-
 #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #47748b;
 }
-
 #sidebar ul p {
     color: #fff;
     padding: 10px;
 }
-
 #sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
@@ -52,35 +41,35 @@ ul ul a {
 #sidebar ul li .material-icons:hover {
     color: #a4afdf;
 }
-
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
 }
-
 #sidebar>ul {
     overflow: hidden;
 } 
+
+.active1{
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 .navbar{
     position: fixed;
     width: 100%;
+    padding: 1.5% 2%;
     z-index: 3;
 }
 .bg-custom{
     background-color: blueviolet;
 }
+
 @media only screen and (min-width: 769px) {
     #sidebar{
         min-width: 220px;
         max-width: 220px; 
-    }
-    .header{
-        display: block;
-    }
-    .navbar{
-        display:none;
-    }
-    .header-search>input[type=text]{
-        display: block;
     }
     #header-component{
         width:50%;
@@ -93,6 +82,12 @@ ul ul a {
     #sidebar .active1 .material-icons{
         float: left;
     }
+    .header{
+        display: block;
+    }
+    .navbar{
+        display:none;
+    }
 }
 
 @media(max-width: 768px) and (min-width: 540px) {
@@ -102,12 +97,6 @@ ul ul a {
     .header{
         display: none;
     }
-    .navbar{
-        padding: 1.5% 2%;
-    }
-    .header-search>input{
-        display: block;
-    }
 }
 
 @media (max-width: 539px) {
@@ -115,12 +104,6 @@ ul ul a {
         display:none;
     }
     .header{
-        display: none;
-    }
-    .navbar{
-        padding: 1.5% 2%;
-    }
-    .header-search>input{
         display: none;
     }
 }
