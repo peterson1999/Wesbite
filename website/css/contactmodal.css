@@ -1,0 +1,52 @@
+#myModal>.modal-dialog>.modal-content
+{
+    border-radius: 20px;
+    border-top: 9px solid #c371c0;
+}
+
+.modal-dialog-centered {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: calc(100% - 1rem)
+}
+
+.modal-dialog-centered::before {
+    display: block;
+    height: calc(100vh - 1rem);
+    content: ""
+}
+
+.modal-dialog .modal-content {
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    border: 0;
+    border-radius: .125rem;
+}
+
+#name, #email, #comment
+{
+    border: 0px;
+    border-bottom: 2px solid;
+    border-color:  #9373d2;
+    border-radius: 0px;
+    padding: 12px 30px;
+    font-size: 20px;
+    transition: 2s border-color ease-in-out;
+}
+
+#name:focus, #email:focus, #comment:focus
+{
+    border-color: #c371c0;
+    box-shadow: none;
+}
+
+.modalbtn
+{
+    width: 80px;
+}
+
+#modalSubmit
+{
+    float:right;
+}
