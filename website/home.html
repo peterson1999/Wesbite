@@ -1,1269 +1,1228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- JQuery -->
-    <script src="jquery/jquery-3.4.1.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/homelayout.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/carousel-design.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/imagehover.min.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <title>HomePage</title>
-<style>
-    *{
-        font-family: 'Poppins', sans-serif;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- JQuery -->
+  <script src="jquery/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b0c06c45a8.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+    crossorigin="anonymous"></script>
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/homelayout.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/carousel-design.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/imagehover.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>HomePage</title>
+  <style>
+    * {
+      font-family: 'Poppins', sans-serif;
     }
-    
+
 
     body {
-        font-family: 'Poppins', sans-serif;
-        background-color: pink;
-        margin: 0px;
-        overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+      background-color: pink;
+      margin: 0px;
+      overflow-x: hidden;
     }
 
 
     p {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.1em;
-        font-weight: 300;
-        line-height: 1.7em;
-        color: #999;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1em;
+      font-weight: 300;
+      line-height: 1.7em;
+      color: #999;
     }
 
-    a, a:hover, a:focus {
-        color: inherit;
-        text-decoration: none;
-        transition: all 0.3s;
+    a,
+    a:hover,
+    a:focus {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.3s;
     }
 
-    html ,body, .flex{
-        height: 100%;
-        background-color: papayawhip;
+    html,
+    body,
+    .flex {
+      height: 100%;
+      background-color: papayawhip;
     }
 
-    .flex{
-        display: flex;
-        width: 100%;
-        align-items: stretch;
-        flex-direction: row;
+    .flex {
+      display: flex;
+      width: 100%;
+      align-items: stretch;
+      flex-direction: row;
     }
+
     .wrapper {
-    display: flex;
-    align-items: stretch;
+      display: flex;
+      align-items: stretch;
     }
 
-    #navlist{
-        display: none;
+    #navlist {
+      display: none;
     }
 
-    #row1{
-        height:33.33%;
-        
+    #row1 {
+      height: 33.33%;
+
     }
-    #con{
-        height:100%;
-        max-width:1500px;
-        margin-top: 250px;
-        background-color: #ffffff;
-        opacity: 0.9;
-        border-radius: 1%;
-        overflow: scroll;
-        margin-left: 20px;
+
+    #con {
+      height: 100%;
+      max-width: 1500px;
+      margin-top: 250px;
+      background-color: #ffffff;
+      opacity: 0.9;
+      border-radius: 1%;
+      overflow: scroll;
+      margin-left: 20px;
     }
-    #blob1{
-        position: absolute;
-        left: 50px;
-        width: 29vw;
-        z-index: 1;
+
+    #blob1 {
+      position: absolute;
+      left: 50px;
+      width: 29vw;
+      z-index: 1;
     }
+
     #blob2 {
-        position: absolute;
-        right: -253px;
-        bottom: 100px;
-        width: 667px;
-        opacity: 0.5;
-        z-index: 1;
-    }  
+      position: absolute;
+      right: -253px;
+      bottom: 100px;
+      width: 667px;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
     #blob3 {
-        position: absolute;
-        left: 379px;
-        bottom: -197px;
-        width: 300px;
-        z-index: 1;
+      position: absolute;
+      left: 379px;
+      bottom: -197px;
+      width: 300px;
+      z-index: 1;
     }
-    .sampleblob{
-        height:500px;
-        border-radius:24% 76% 27% 73% / 46% 30% 70% 54%;
-        background-color: purple;
-        z-index:1;
+
+    .sampleblob {
+      height: 500px;
+      border-radius: 24% 76% 27% 73% / 46% 30% 70% 54%;
+      background-color: purple;
+      z-index: 1;
     }
-    .flex1{
-        display:flex;
-        flex-direction: column;
+
+    .flex1 {
+      display: flex;
+      flex-direction: column;
     }
-    .slide{
-        width: 97%;
-        left: 9%;
-        top: 0%;
-        height: 50%;
-        position: absolute;
+
+    .slide {
+      width: 97%;
+      left: 9%;
+      top: 0%;
+      height: 50%;
+      position: absolute;
     }
-    .body{
-        margin-left: 200px;
-        z-index: 2;
+
+    .body {
+      margin-left: 200px;
+      z-index: 2;
     }
-    .text-title{
-        font-family: graphik--semibold,Roboto,sans-serif;
-        font-weight: 600;
-        font-size: 30px;
-        margin-bottom: 0px;
-        /* align-items: center; */
-        color: black;
+
+    .text-title {
+      font-family: graphik--semibold, Roboto, sans-serif;
+      font-weight: 600;
+      font-size: 30px;
+      margin-bottom: 0px;
+      /* align-items: center; */
+      color: black;
     }
-    #trending{
-        background-color: rgb(190, 17, 176);
-        color: white;
-        border-radius: 46%;
-        padding: 3px;
-        font-size: 36px;
-        margin: 10px;
+
+    #trending {
+      background-color: rgb(190, 17, 176);
+      color: white;
+      border-radius: 46%;
+      padding: 3px;
+      font-size: 36px;
+      margin: 10px;
     }
-    #column{
-        padding-top:5px;
+
+    #column {
+      padding-top: 5px;
     }
+
     .card-img-top {
-    width: 100%;
-    border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px);
-    height: 60%;
+      width: 100%;
+      border-top-left-radius: calc(.25rem - 1px);
+      border-top-right-radius: calc(.25rem - 1px);
+      height: 100%;
     }
-    .word-container{
-        height: 45px;
-        margin-bottom: 26px;
+
+    .word-container {
+      height: 45px;
+      margin-bottom: 26px;
     }
-    hr{
-    border: 0;
-    border-top: 1px solid rgba(0,0,0,.1);
+
+    hr {
+      border: 0;
+      border-top: 1px solid rgba(0, 0, 0, .1);
     }
+
     .card-deck .card {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex: 1 0 0%;
-    flex: 1 0 0%;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-right: 15px;
-    margin-bottom: 18px;
-    margin-left: 15px;
-    box-shadow: 10px 5px 5px rgba(215, 215, 193);
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex: 1 0 0%;
+      flex: 1 0 0%;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-right: 15px;
+      margin-bottom: 18px;
+      margin-left: 15px;
+      box-shadow: 10px 5px 5px rgba(215, 215, 193);
     }
-    #row2{
-        height:20px;
+
+    #row2 {
+      height: 20px;
     }
-    #see-more{
-        margin-left: 47.5%;
-        background-color: blueviolet;
-        color: white;
-        border:none;
-        border-radius: 4%;
-        margin-bottom: 30px;
+
+    #see-more {
+      margin-left: 47.5%;
+      background-color: blueviolet;
+      color: white;
+      border: none;
+      border-radius: 4%;
+      margin-bottom: 30px;
     }
-    .card:hover{
-        background-color: pink;
+
+    .card:hover {
+      background-color: pink;
     }
 
     .card-deck {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: .5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: .5rem;
     }
-    .card-title,.card-text{
-        text-align:left;
+
+    .card-title,
+    .card-text {
+      text-align: left;
     }
-    button.material-icons{
-        border:none;
-        background: transparent;
-        font-size: 30px;
-        color:#212529;
+
+    button.material-icons {
+      border: none;
+      background: transparent;
+      font-size: 30px;
+      color: #212529;
     }
-    button.material-icons:focus{
-        color: red;
+
+    button.material-icons:focus {
+      color: red;
     }
-    #brush{
-        background-color: greenyellow;
-        color: white;
-        border-radius: 46%;
-        padding: 3px;
-        font-size: 36px;
-        margin: 10px;
+
+    #brush {
+      background-color: greenyellow;
+      color: white;
+      border-radius: 46%;
+      padding: 3px;
+      font-size: 36px;
+      margin: 10px;
     }
-    .img-description{
-        color: white;
-        font-size: 20px;
-        text-align: center;
+
+    .img-description {
+      color: white;
+      font-size: 20px;
+      text-align: center;
     }
+
     #sidebar ul.components {
-        border-bottom:none;
+      border-bottom: none;
     }
+
     @media(max-width: 768px) and (min-width: 540px) {
-      .container-fluid{
+      .container-fluid {
         margin-left: 75px;
       }
-      .active1{
+
+      .active1 {
         margin-bottom: 70px;
       }
-      .components{
+
+      .components {
         margin-bottom: 0px;
       }
+
       .slide {
         width: 97%;
         left: 2%;
         top: 0%;
         height: 50%;
         position: absolute;
-    }
-    #con {
-        margin-left: 0px;
-    }
-    #cd2{
-      display:none;
-    }
-    }
-    @media(max-width: 540px){
-      .container-fluid{
+      }
+
+      #con {
         margin-left: 0px;
       }
 
-      #cd2{
-      display:none;
+      #cd2 {
+        display: none;
+      }
     }
-    .bg-light{
-      width: 199px;
-    height: 326px;
-    }
-    .card-img-top {
-    width: 100%;
-    border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px);
-    height: 100%;
-}
-    .bg-light{
-      margin-left: 2px;
-    }
+
+    @media(max-width: 540px) {
+      .container-fluid {
+        margin-left: 0px;
+      }
+
+      #cd2 {
+        display: none;
+      }
+
+      .bg-light {
+        width: 199px;
+        height: 326px;
+      }
+
+      .card-img-top {
+        width: 100%;
+        border-top-left-radius: calc(.25rem - 1px);
+        border-top-right-radius: calc(.25rem - 1px);
+        height: 100%;
+      }
+
+      .bg-light {
+        margin-left: 2px;
+      }
     }
 
     @import url(https://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css);
-body {
-  background: #64b5f6;
-  text-align: center;
-}
 
-#card2 {
-  height: 400px;
-  width: 300px;
-  background: #fff;
-  font-family: Roboto;
-  display: block;
-  position: relative;
-  margin: 50px auto;
-  border-radius: 5px;
-  transition: all 0.2s ease-in-out;
-}
+    body {
+      background: #64b5f6;
+      text-align: center;
+    }
 
-.card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
+    #card2 {
+      height: 400px;
+      width: 300px;
+      background: #fff;
+      font-family: Roboto;
+      display: block;
+      position: relative;
+      margin: 50px auto;
+      border-radius: 5px;
+      transition: all 0.2s ease-in-out;
+    }
 
-.fab {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  margin-top: 0;
-  margin-left: 50px;
-  visibility: hidden;
-  background-color: #ffd54f;
-  border-radius: 50%;
-  transform: scale(0);
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: margin-top 0.6s 0.0s ease-in-out, margin-left 0.6s 0.1s ease-in-out, transform 0.6s 0.0s ease-in-out, visibility 0.6s ease-in-out;
-}
+    .card:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
 
-.active .fab {
-  margin-top: 50px;
-  margin-left: 120px;
-  transform: scale(12);
-  visibility: visible;
-  transition: margin-top 0.5s ease-in-out, margin-left 0.6s ease-in-out, transform 0.4s 0.3s ease-in-out, visibility 0.4s ease-in-out;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
+    .fab {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      margin-top: 0;
+      margin-left: 50px;
+      visibility: hidden;
+      background-color: #ffd54f;
+      border-radius: 50%;
+      transform: scale(0);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: margin-top 0.6s 0.0s ease-in-out, margin-left 0.6s 0.1s ease-in-out, transform 0.6s 0.0s ease-in-out, visibility 0.6s ease-in-out;
+    }
 
-.avatar {
-  margin-top: 5px;
-  margin-left: -30px;
-  width: 60px;
-  height: 60px;
-  font-size:2em;
-  line-height:60px;
-  color: #37474f;
-  border-radius: 50%;
-  background-color: #ffd54f;
-  position: absolute;
-  transition: 0.6s ease-in-out;
-  cursor: pointer;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
+    .active .fab {
+      margin-top: 50px;
+      margin-left: 120px;
+      transform: scale(12);
+      visibility: visible;
+      transition: margin-top 0.5s ease-in-out, margin-left 0.6s ease-in-out, transform 0.4s 0.3s ease-in-out, visibility 0.4s ease-in-out;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
 
-.active .avatar {
-  transform: scale(2);
-  margin-top: 50px;
-  margin-left: -30px;
-  transition: 0.6s ease-in-out;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
+    .avatar {
+      margin-top: 5px;
+      margin-left: -30px;
+      width: 60px;
+      height: 60px;
+      font-size: 2em;
+      line-height: 60px;
+      color: #37474f;
+      border-radius: 50%;
+      background-color: #ffd54f;
+      position: absolute;
+      transition: 0.6s ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
 
-.active .avatar:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
+    .active .avatar {
+      transform: scale(2);
+      margin-top: 50px;
+      margin-left: -30px;
+      transition: 0.6s ease-in-out;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
 
-.fabs {
-  position: absolute;
-  margin-top: -30px;
-  margin-left: 260px;
-  overflow: hidden;
-  width: 80px;
-  height: 80px;
-  border-radius: 5px;
-  transition: 1s ease-in-out;
-  border-radius: 50%;
-}
+    .active .avatar:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
 
-.active .fabs {
-  margin-top: 0px;
-  margin-left: 0px;
-  width: 300px;
-  height: 400px;
-  transition: 0.4s ease-in-out;
-  border-radius: 0;
-}
+    .fabs {
+      position: absolute;
+      margin-top: -30px;
+      margin-left: 260px;
+      overflow: hidden;
+      width: 80px;
+      height: 80px;
+      border-radius: 5px;
+      transition: 1s ease-in-out;
+      border-radius: 50%;
+    }
 
-.content {
-  position: absolute;
-  width: 280px;
-  height: 380px;
-  margin: 10px;
-  text-align: center;
-  overflow-y: auto;
-  transition: 0.5s 0.3s cubic-bezier(.55, 0, .1, 1);
-}
+    .active .fabs {
+      margin-top: 0px;
+      margin-left: 0px;
+      width: 300px;
+      height: 400px;
+      transition: 0.4s ease-in-out;
+      border-radius: 0;
+    }
 
-.active .content {
-  transform: scale(0.2);
-  opacity: 0;
-  transition: 0.2s 0.3s cubic-bezier(.55, 0, .1, 1);
-}
+    .content {
+      position: absolute;
+      width: 280px;
+      height: 380px;
+      margin: 10px;
+      text-align: center;
+      overflow-y: auto;
+      transition: 0.5s 0.3s cubic-bezier(.55, 0, .1, 1);
+    }
 
-.post {
-  position: relative;
-  display: inline-block;
-  height: 100px;
-  margin: 10px auto 0;
-  background: #eceff1;
-  border-radius: 3px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  transition: all 0.2s ease-in-out;
-}
+    .active .content {
+      transform: scale(0.2);
+      opacity: 0;
+      transition: 0.2s 0.3s cubic-bezier(.55, 0, .1, 1);
+    }
 
-.post:hover{
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
+    .post {
+      position: relative;
+      display: inline-block;
+      height: 100px;
+      margin: 10px auto 0;
+      background: #eceff1;
+      border-radius: 3px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      transition: all 0.2s ease-in-out;
+    }
 
-.counter {
-  border-radius: 50%;
-  background: #3E50B4;
-  cursor: pointer;
-}
+    .post:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
 
-.detail {
-  border: 1px solid #607d8b;
-}
+    .counter {
+      border-radius: 50%;
+      background: #3E50B4;
+      cursor: pointer;
+    }
 
-.main {
-  width: 99%;
-  height: 130px;
-}
+    .detail {
+      border: 1px solid #607d8b;
+    }
 
-.main>.preview {
-  width: 50%;
-  height: 100%;
-  background: #ef5350;
-}
+    .main {
+      width: 200%;
+      height: 140px;
+    }
 
-.main>.counter {
-  width: 40px;
-  height: 40px;
-  margin-left: 220px;
-  margin-top: -120px;
-}
+    .main>.preview {
+      width: 50%;
+      height: 100%;
+      background: #ef5350;
+    }
 
-.main>.detail{
-  width:50px;
-  margin-top: -10px;
-  margin-left: 150px;
-}
+    .main>.counter {
+      width: 40px;
+      height: 40px;
+      margin-left: 220px;
+      margin-top: -120px;
+    }
 
-.main>.details{
-  border: 1px solid #607d8b;
-  width:100px;
-  margin-top: 30px;
-  margin-left: 150px;
-}
+    .main>.detail {
+      width: 50px;
+      margin-top: -10px;
+      margin-left: 150px;
+    }
 
-.sec {
-  width: 49%;
-}
+    .main>.details {
+      border: 1px solid #607d8b;
+      width: 100px;
+      margin-top: 30px;
+      margin-left: 150px;
+    }
 
-.sec>.preview {
-  width: 100%;
-  height: 70%;
-  background: #42a5f5;
-}
+    .sec {
+      width: 49%;
+    }
 
-.sec>.counter {
-  width: 20px;
-  height: 20px;
-  margin-left: 110px;
-  margin-top: -10px;
-}
+    .sec>.preview {
+      width: 100%;
+      height: 70%;
+      background: #42a5f5;
+    }
 
-.sec>.detail{
-  width:50px;
-  margin-left: 10px;
-}
+    .sec>.counter {
+      width: 20px;
+      height: 20px;
+      margin-left: 110px;
+      margin-top: -10px;
+    }
 
-.ter {
-  width: 32%;
-}
+    .sec>.detail {
+      width: 50px;
+      margin-left: 10px;
+    }
 
-.ter>.preview {
-  width: 100%;
-  height: 80%;
-  background: #d4e157;
-}
+    .ter {
+      width: 32%;
+    }
 
-.ter>.counter {
-  width: 15px;
-  height: 15px;
-  margin-left: 65px;
-  margin-top: -7px;
-}
+    .ter>.preview {
+      width: 100%;
+      height: 80%;
+      background: #d4e157;
+    }
 
-.ter>.detail{
-  width:40px;
-  margin-left: 10px;
-}
+    .ter>.counter {
+      width: 15px;
+      height: 15px;
+      margin-left: 65px;
+      margin-top: -7px;
+    }
 
-.user {
-  position: absolute;
-  width: 280px;
-  height: 200px;
-  margin: 150px 10px 0 10px;
-  text-align: center;
-  visibility: hidden;
-  transition: 0.5s cubic-bezier(.55, 0, .1, 1);
-}
+    .ter>.detail {
+      width: 40px;
+      margin-left: 10px;
+    }
 
-.active .user {
-  visibility: visible;
-}
+    .user {
+      position: absolute;
+      width: 280px;
+      height: 200px;
+      margin: 150px 10px 0 10px;
+      text-align: center;
+      visibility: hidden;
+      transition: 0.5s cubic-bezier(.55, 0, .1, 1);
+    }
 
-.socials {
-  display: inline-block;
-}
+    .active .user {
+      visibility: visible;
+    }
 
-.social {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  transform: translate(0px, -10px);
-  opacity: 0;
-  float: left;
-  margin: 0 auto;
-  overflow: hidden;
-  z-index: 2;
-  transition: 0.2s cubic-bezier(.55, 0, .1, 1);
-  cursor: pointer;
-}
+    .socials {
+      display: inline-block;
+    }
 
-.social>i {
-  line-height: 40px;
-  font-size: 2em;
-  color: #37474f;
-}
+    .social {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transform: translate(0px, -10px);
+      opacity: 0;
+      float: left;
+      margin: 0 auto;
+      overflow: hidden;
+      z-index: 2;
+      transition: 0.2s cubic-bezier(.55, 0, .1, 1);
+      cursor: pointer;
+    }
 
-.active .social {
-  transform: translate(0px, 0px);
-  opacity: 1;
-  transition: 0.3s 0.5s cubic-bezier(.55, 0, .1, 1);
-}
+    .social>i {
+      line-height: 40px;
+      font-size: 2em;
+      color: #37474f;
+    }
 
-.profiles {
-  display: inline-block;
-}
+    .active .social {
+      transform: translate(0px, 0px);
+      opacity: 1;
+      transition: 0.3s 0.5s cubic-bezier(.55, 0, .1, 1);
+    }
 
-.profile {
-  width: 50%;
-  height: auto;
-  transform: translate(0px, -10px);
-  opacity: 0;
-  float: left;
-  margin: 0 auto;
-  overflow: hidden;
-  z-index: 2;
-  transition: 0.2s cubic-bezier(.55, 0, .1, 1);
-  color: #37474f;
-}
+    .profiles {
+      display: inline-block;
+    }
 
-.profile>span {
-  line-height: 40px;
-  font-size: 1.2em;
-  font-weight: 600;
-  display: block;
-  font-style: none;
-  color: #37474f;
-}
+    .profile {
+      width: 50%;
+      height: auto;
+      transform: translate(0px, -10px);
+      opacity: 0;
+      float: left;
+      margin: 0 auto;
+      overflow: hidden;
+      z-index: 2;
+      transition: 0.2s cubic-bezier(.55, 0, .1, 1);
+      color: #37474f;
+    }
 
-.active .profile {
-  transform: translate(0px, 0px);
-  opacity: 1;
-  transition: 0.3s 0.8s cubic-bezier(.55, 0, .1, 1);
-}
-/* Ripple */
+    .profile>span {
+      line-height: 40px;
+      font-size: 1.2em;
+      font-weight: 600;
+      display: block;
+      font-style: none;
+      color: #37474f;
+    }
 
-.ink {
-  display: block;
-  position: absolute;
-  background: rgba(38, 50, 56, 0.4);
-  border-radius: 100%;
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  /* webkit-transform: scale(0); */
-  transform: scale(0);
-}
-/*animation effect*/
+    .active .profile {
+      transform: translate(0px, 0px);
+      opacity: 1;
+      transition: 0.3s 0.8s cubic-bezier(.55, 0, .1, 1);
+    }
 
-.ink.animate {
-  animation: ripple 0.5s ease-in-out;
-}
+    /* Ripple */
 
-@keyframes ripple {
-  /*scale the element to 250% to safely cover the entire link and fade it out*/
-  
-  100% {
-    opacity: 0;
-    -moz-transform: scale(5);
-    -ms-transform: scale(5);
-    webkit-transform: scale(5);
-    transform: scale(5);
-  }
-}
-/*Scrollbar*/
+    .ink {
+      display: block;
+      position: absolute;
+      background: rgba(38, 50, 56, 0.4);
+      border-radius: 100%;
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      /* webkit-transform: scale(0); */
+      transform: scale(0);
+    }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
+    /*animation effect*/
 
-::-webkit-scrollbar-track {
-  border-radius: 0;
-}
+    .ink.animate {
+      animation: ripple 0.5s ease-in-out;
+    }
 
-::-webkit-scrollbar-thumb {
-  margin: 2px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.2);
-}
-#id1,#id2,#id3{
-    background:transparent;
-}
-#fabs2{
-    background-color: #ef5350;
-}
+    @keyframes ripple {
+      /*scale the element to 250% to safely cover the entire link and fade it out*/
 
-#fabs3{
-    background-color: #64b5f6;
-}
-#profile{
-    width:100%;
-}
+      100% {
+        opacity: 0;
+        -moz-transform: scale(5);
+        -ms-transform: scale(5);
+        webkit-transform: scale(5);
+        transform: scale(5);
+      }
+    }
 
-.username{
-    font-size:25px;
-    margin-bottom: 0;
-    color:white;
-}
+    /*Scrollbar*/
 
-</style>
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      margin: 2px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    #id1,
+    #id2,
+    #id3 {
+      background: transparent;
+    }
+
+    #fabs2 {
+      background-color: #ef5350;
+    }
+
+    #fabs3 {
+      background-color: #64b5f6;
+    }
+
+    #profile {
+      width: 100%;
+    }
+
+    .username {
+      font-size: 25px;
+      margin-bottom: 0;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
-    <img id="blob1"class="img-responsive"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img>
-    <!-- <img id="blob2" class="img-responsive"src="Background.svg"></img> -->
-    <!-- <img id="blob3" class="img-responsive"src="yellow.svg"></img>
+  <img id="blob1" class="img-responsive" src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img>
+  <!-- <img id="blob2" class="img-responsive"src="Background.svg"></img> -->
+  <!-- <img id="blob3" class="img-responsive"src="yellow.svg"></img>
      -->
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <!--Pictures-->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100 picture-1" alt="">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100 picture-2" alt="">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100 picture-3" alt="">
-            </div>
-            <!--Buttons-->
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <!--Pictures-->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100 picture-1" alt="">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 picture-2" alt="">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 picture-3" alt="">
+      </div>
+      <!--Buttons-->
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <div class="flex1">
+  </div>
+  <div class="flex1">
 
     <div class="flex">
-            <!-- <div class="sampleblob"></div> -->
-        <nav id="sidebar">
-                    <ul class="list-unstyled components">
-                        <li class="active1">
-                                <a class="material-icons" href="#">home<span class="words">Home</span></a>  
-                        </li>
-                        <li class="active1">
-                                <a class="material-icons" href="#">notifications<span class="words">Notifications</span></a>
-                        </li>
-                        <li class="active1" >
-                                <a class="material-icons" href="#">bookmarks<span class="words">Bookmarks</span></a>
-                        </li>
-                        <li class="active1">
-                                <a class="material-icons" href="#">forum<span class="words">Forum</span></a>
-                        </li>
-                        <li class="active1">
-                                <a class="material-icons" href="#">help_outline<span class="words">Help</span></a>
-                        </li>
-                    </ul>
-        </nav> 
-        <div id="frame">
-            <div class = "modl">
-                <button class="exitbutton" onclick=fadeout()>×</button>
-                <div class="login-popup animate">
-                    <b>
-                    <div class="login-container login-picture"></div>
-                    <div class="login-container">
-                        User Name<br>
-                        <input type="text" placeholder="Enter User Name">
-                    </div>
-                    <div class="login-container">
-                        Password<br>
-                        <input type="password" placeholder="Enter Password">
-                    </div>
-                    </b>
-                    <div class="login-container" style="text-align: center">
-                        <input type="checkbox">Remember me<br>
-                        <button class="login-button">Login</button>
-                        <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
-                        <br>Don't have an account? <a href="sign up.html">Sign Up</a>
-                    </div>
-                </div>
-                <div class="forgot-password">
-                    <b>
-                    <div class="login-container login-picture" style="float: left"></div>
-                    <div class="login-container" style="float: right;">
-                        Enter your User Name:<br>
-                        <input type="text" placeholder="Enter User Name">
-                    </div>
-                    </b>
-                    <div class="login-container" style="float: right; text-align: center">
-                        <button class="login-button" style="width: auto">Send me an email!</button>
-                        <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
-                        <br>Don't have an account? <a href="sign up.html">Sign Up</a>
-                    </div>
-                </div>
+      <!-- <div class="sampleblob"></div> -->
+      <nav id="sidebar">
+        <ul class="list-unstyled components">
+          <li class="active1">
+            <a class="material-icons" href="#">home<span class="words">Home</span></a>
+          </li>
+          <li class="active1">
+            <a class="material-icons" href="#">notifications<span class="words">Notifications</span></a>
+          </li>
+          <li class="active1">
+            <a class="material-icons" href="#">bookmarks<span class="words">Bookmarks</span></a>
+          </li>
+          <li class="active1">
+            <a class="material-icons" href="#">forum<span class="words">Forum</span></a>
+          </li>
+          <li class="active1">
+            <a class="material-icons" href="#">help_outline<span class="words">Help</span></a>
+          </li>
+        </ul>
+      </nav>
+      <div id="frame">
+        <div class="modl">
+          <button class="exitbutton" onclick=fadeout()>×</button>
+          <div class="login-popup animate">
+            <b>
+              <div class="login-container login-picture"></div>
+              <div class="login-container">
+                User Name<br>
+                <input type="text" placeholder="Enter User Name">
+              </div>
+              <div class="login-container">
+                Password<br>
+                <input type="password" placeholder="Enter Password">
+              </div>
+            </b>
+            <div class="login-container" style="text-align: center">
+              <input type="checkbox">Remember me<br>
+              <button class="login-button">Login</button>
+              <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
+              <br>Don't have an account? <a href="sign up.html">Sign Up</a>
             </div>
-        </div>
-        <div class="body container-fluid"> <!--.Header-->
-            <div class="container header">
-                <div class="row">
-                    <!-- Collapsible content -->
-                    <div class="col-8">
-                
-                        <!-- Search form -->
-                        <form class="form-inline mr-auto">
-                            <div class="md-form my-0 header-search">
-                                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                                <button type="submit"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
-                            </div>
-                        </form>
-                    
-                    </div>
-                    <!-- Collapsible content -->
-                    <div class="col-4  header-login">
-                        <!-- Navbar brand -->
-                        <button class="navbar-brand" onclick="fadein()">Login</button>
-                        <button class="navbar-brand"><a href="sign up.html">Sign Up</a></button>
-                    </div>
-                </div>
+          </div>
+          <div class="forgot-password">
+            <b>
+              <div class="login-container login-picture" style="float: left"></div>
+              <div class="login-container" style="float: right;">
+                Enter your User Name:<br>
+                <input type="text" placeholder="Enter User Name">
+              </div>
+            </b>
+            <div class="login-container" style="float: right; text-align: center">
+              <button class="login-button" style="width: auto">Send me an email!</button>
+              <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
+              <br>Don't have an account? <a href="sign up.html">Sign Up</a>
             </div>
-    
-            <!-- <hr class="bg-info mt-6"> -->
-            <div id="con" class="container">   
-                <div class="word-container">
-                        <div id="row1" class="row">
-                                <div  class="col-0.5"> <i id="trending" class="material-icons" href="#">trending_up </i> </div>
-                                <div  id="column" class="col-11.5"><p class="text-title">Popular Artworks</p></div>
-                        </div>
-                </div>
-                <hr>
-                                  
-                        <div class="card-deck">
-                          <div class="row">
-                            <div class="col-md-6 col-lg-3 col-6">
-                                <div id="card1" class="card bg-light " data-aos="zoom-in-down">
-                                        <figure class="imghvr-shutter-out-diag-1">
-                                                <img class="card-img-top" src="photos/starrynight.jpg" alt="Card image cap">
-                                                <figcaption>
-                                                    <p class="img-description">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
-                                                </figcaption>
-                                            </figure>
-                                        
-                                  <div class="card-body text-center">
-                                        <h4 class="card-title">Starry Night</h4>
-                                    <p id="card1"class="card-text">Vincent Van Gogh</p>
-                                    <button class="material-icons" href="#">favorite_border</button>
-                                    <button class="material-icons" href="#">chat_bubble_outline</button>
-                                    <button class="material-icons" href="#">turned_in_not</button>
-                                  </div>
-                                </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 col-6">
-                                <div class="card bg-light" data-aos="zoom-in-down">
-                                        <figure class="imghvr-shutter-out-diag-1">
-                                                <img class="card-img-top" src="photos/gleaners.jpg" alt="Card image cap">
-                                                <figcaption>
-                                                    <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
-                                                </figcaption>
-                                            </figure>
-                                        
-                                  <div class="card-body text-center">
-                                        <h4 class="card-title">The Gleaners</h4>
-                                        <p class="card-text">Jean-Francois Millet</p>
-                                    <button class="material-icons" href="#">favorite_border</button>
-                                    <button class="material-icons" href="#">chat_bubble_outline</button>
-                                    <button class="material-icons" href="#">turned_in_not</button>
-                                  </div>
-                                </div>
-                              </div>
-                            <div class="col-md-6 col-lg-3 col-6">
-                                <div class="card bg-light" data-aos="zoom-in-down">
-                                    
-                                        <figure class="imghvr-shutter-out-diag-1">
-                                                <img class="card-img-top" src="photos/glowing.jpg" alt="Card image cap">
-                                                <figcaption>
-                                                    <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
-                                                </figcaption>
-                                            </figure>
-                                  <div class="card-body text-center">
-                                        <h4 class="card-title">Glowing Landscapes</h4>
-                                        <p class="card-text">Albert Bierstadt</p>
-                                    <button class="material-icons" href="#">favorite_border</button>
-                                    <button class="material-icons" href="#">chat_bubble_outline</button>
-                                    <button class="material-icons" href="#">turned_in_not</button>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-md-6 col-lg-3 col-6">
-                                <div class="card bg-light" data-aos="zoom-in-down">
-                                        <figure class="imghvr-shutter-out-diag-1">
-                                                <img class="card-img-top" src="photos/impression.jpg" alt="Card image cap">
-                                                <figcaption>
-                                                    <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
-                                                </figcaption>
-                                            </figure>
-                                        
-                                  <div class="card-body text-center">
-                                        <h4 class="card-title">Impression, Sunrise</h4>
-                                        <p class="card-text">Claude Monet</p>
-                                    <button class="material-icons" href="#">favorite_border</button>
-                                    <button class="material-icons" href="#">chat_bubble_outline</button>
-                                    <button class="material-icons" href="#">turned_in_not</button>
-                                  </div>
-                                </div>  
-                                </div>
-                              </div>
-                            </div>
-                              <div id="cd2" class="card-deck">
-                                <div class="row">
-                                    <div class="col-sm-6 col-md-6 col-lg-3">
-                                    <div class="card bg-light" data-aos="zoom-in-down">
-                                            <figure class="imghvr-shutter-out-diag-1">
-                                            <img class="card-img-top" src="photos/toledo.jpg" alt="Card image cap">
-                                            <figcaption>
-                                                <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
-                                            </figcaption>
-                                        </figure>
-                                      <div class="card-body text-center">
-                                            <h4 class="card-title">View of Toledo</h4>
-                                            <p class="card-text">El Greco</p>
-                                        <button class="material-icons" href="#">favorite_border</button>
-                                        <button class="material-icons" href="#">chat_bubble_outline</button>
-                                        <button class="material-icons" href="#">turned_in_not</button>
-                                      </div>
-                                    </div>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6  col-lg-3">
-                                    <div class="card bg-light" data-aos="zoom-in-down">
-                                            <figure class="imghvr-shutter-out-diag-1">
-                                                    <img class="card-img-top" src="photos/spoliarium.jpg" alt="Card image cap">
-                                                    <figcaption>
-                                                        <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
-                                                    </figcaption>
-                                                </figure>
-                                      <div class="card-body text-center">
-                                            <h4 class="card-title">The Spoliarium</h4>
-                                            <p class="card-text">Juan Luna</p>
-                                        <button class="material-icons" href="#">favorite_border</button>
-                                        <button class="material-icons" href="#">chat_bubble_outline</button>
-                                        <button class="material-icons" href="#">turned_in_not</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                <div class=" col-sm-6 col-md-6 col-lg-3">
-                                    <div class="card bg-light" data-aos="zoom-in-down">
-                                            <figure class="imghvr-shutter-out-diag-1">
-                                                    <img class="card-img-top" src="photos/ninth.jpg" alt="Card image cap">
-                                                    <figcaption>
-                                                        <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
-                                                    </figcaption>
-                                                </figure>
-                                      <div class="card-body text-center">
-                                            <h4 class="card-title">The Ninth Wave</h4>
-                                            <p class="card-text">Ivan Aivazovsky</p>
-                                        <button class="material-icons" href="#">favorite_border</button>
-                                        <button class="material-icons" href="#">chat_bubble_outline</button>
-                                        <button class="material-icons" href="#">turned_in_not</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-6 col-sm-6  col-lg-3">
-                                    <div class="card bg-light" data-aos="zoom-in-down">
-                                            <figure class="imghvr-shutter-out-diag-1">
-                                                    <img class="card-img-top" src="photos/gypsy.jpg" alt="Card image cap">
-                                                    <figcaption>
-                                                        <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
-                                                    </figcaption>
-                                                </figure>
-                                      <div class="card-body text-center">
-                                            <h4 class="card-title">The Sleeping Gypsy</h4>
-                                            <p class="card-text">Henri Rousseau</p>
-                                        <button class="material-icons" href="#">favorite_border</button>
-                                        <button class="material-icons" href="#">chat_bubble_outline</button>
-                                        <button class="material-icons" href="#">turned_in_not</button>
-                                      </div>
-                                    </div>  
-                                  </div>
-                                </div>
-                              </div>
-                        <div id="row2" class="row">
-                         <button id="see-more" >See More</button>
-                              </div>
-                              <hr>
-
-                              <div class="word-container">
-                                <div id="row1" class="row">
-                                        <div  class="col-0.5"> <i id="brush" class="material-icons" href="#">brush</i> </div>
-                                        <div  id="column" class="col-11.5"><p class="text-title">Today's Featured Artists</p></div>
-                            
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="card-deck">
-                                  <div class="row">
-                                    <div class="col-xl-4 col-md-12 col-sm-12">
-                                    <div id="card2" class="1 card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                                        <div class="content">
-                                          <div class="post main">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                            <div class="detail"></div>
-                                            <div class="details"></div>
-                                            <div class="details"></div>
-                                          </div>
-                                          <div class="post sec">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post sec">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                        </div>
-                                        <div  class="fabs">
-                                          <div id="fabs1" class="fab"></div>
-                                          <i id="id1" class="avatar zmdi zmdi-account"><img id="profile" src="photos/jh.png"></img></i>
-                                        </div>
-                                        <div class="user">
-                                          <div class="socials">
-                                              <p class="username">J-Hope</p>
-                                            <!-- <div class="social"><i class="zmdi zmdi-twitter"></i></div>
-                                            <div class="social"><i class="zmdi zmdi-github"></i></div>
-                                            <div class="social"><i class="zmdi zmdi-google-plus"></i></div>
-                                            <div class="social"><i class="zmdi zmdi-codepen"></i></div> -->
-                                          </div>
-                                          <div class="profiles">
-                                            <div class="profile"><span>51</span>Upvoted</div>
-                                            <div class="profile"><span>9</span>Created</div>
-                                            <div class="profile"><span>9</span>Showcased</div>
-                                            <div class="profile"><span>1</span>Collections</div>
-                                            <div class="profile"><span>2</span>Followers</div>
-                                            <div class="profile"><span>5</span>Following</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-12 col-sm-12">
-                                      <div id="card2" class="2 card" data-aos="flip-left"      data-aos-easing="ease-out-cubic"
-                                      data-aos-duration="2000">
-                                        <div class="content">
-                                          <div class="post main">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                            <div class="detail"></div>
-                                            <div class="details"></div>
-                                            <div class="details"></div>
-                                          </div>
-                                          <div class="post sec">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post sec">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                        </div>
-                                        <div  class="fabs">
-                                          <div  id="fabs2"class="fab"></div>
-                                          <i id="id2" class="avatar zmdi zmdi-account"><img id="profile" src="photos/jk.png"></img></i>
-                                        </div>
-                                        <div class="user">
-                                          <div class="socials">
-                                              <p class="username">Jungkook</p>
-                                            <!-- <div class="social"><i class="zmdi zmdi-twitter"></i></div>
-                                            <div class="social"><i class="zmdi zmdi-github"></i></div>
-                                            <div class="social"><i class="zmdi zmdi-google-plus"></i></div>
-                                            <div class="social"><i class="zmdi zmdi-codepen"></i></div> -->
-                                          </div>
-                                          <div class="profiles">
-                                            <div class="profile"><span>51</span>Upvoted</div>
-                                            <div class="profile"><span>9</span>Created</div>
-                                            <div class="profile"><span>9</span>Showcased</div>
-                                            <div class="profile"><span>1</span>Collections</div>
-                                            <div class="profile"><span>2</span>Followers</div>
-                                            <div class="profile"><span>5</span>Following</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-12  col-sm-12">
-                                      <div id="card2"class="3 card" data-aos="flip-left"      data-aos-easing="ease-out-cubic"
-                                      data-aos-duration="2000" >
-                                        <div class="content">
-                                          <div class="post main">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                            <div class="detail"></div>
-                                            <div class="details"></div>
-                                            <div class="details"></div>
-                                          </div>
-                                          <div class="post sec">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post sec">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                          <div class="post ter">
-                                            <div class="preview"></div>
-                                            <div class="counter"></div>
-                                            <div class="detail"></div>
-                                          </div>
-                                        </div>
-                                        <div  class="fabs">
-                                          <div id="fabs3"class="fab"></div>
-                                          <i id="id3"class="avatar zmdi zmdi-account"><img id="profile" src="photos/rm.png"></img></i>
-                                        </div>
-                                        <div class="user">
-                                          <div class="socials">
-                                              <p class="username">RM</p>
-                                            <!-- <div class="social"><i class="zmdi zmdi-twitter"></i></div>
-                                            <div class="social"><i class="zmdi zmdi-github"></i></div>
-                                            <div class="social"><i class="zmdi zmdi-google-plus"></i></div>
-                                            <div class="social"><i class="zmdi zmdi-codepen"></i></div> -->
-                                          </div>
-                                          <div class="profiles">
-                                            <div class="profile"><span>51</span>Upvoted</div>
-                                            <div class="profile"><span>9</span>Created</div>
-                                            <div class="profile"><span>9</span>Showcased</div>
-                                            <div class="profile"><span>1</span>Collections</div>
-                                            <div class="profile"><span>2</span>Followers</div>
-                                            <div class="profile"><span>5</span>Following</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  </div>
-                        <div id="row2" class="row">
-                            <button id="see-more" >See More</button>
-                        </div>
-                    
-                    </div>
-                </div>
+          </div>
         </div>
-    </div>
-    <!-- Footer -->
-    <footer class="foot-style">
+      </div>
+      <div class="body container-fluid">
+        <!--.Header-->
+        <div class="container header">
+          <div class="row">
+            <!-- Collapsible content -->
+            <div class="col-8">
 
-            <!-- Footer Elements -->
-            <div class="container">
-        
-            <!-- Grid row-->
+              <!-- Search form -->
+              <form class="form-inline mr-auto">
+                <div class="md-form my-0 header-search">
+                  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                  <button type="submit"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
+                </div>
+              </form>
+
+            </div>
+            <!-- Collapsible content -->
+            <div class="col-4  header-login">
+              <!-- Navbar brand -->
+              <button class="navbar-brand" onclick="fadein()">Login</button>
+              <button class="navbar-brand"><a href="sign up.html">Sign Up</a></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- <hr class="bg-info mt-6"> -->
+        <div id="con" class="container">
+          <div class="word-container">
+            <div id="row1" class="row">
+              <div class="col-0.5"> <i id="trending" class="material-icons" href="#">trending_up </i> </div>
+              <div id="column" class="col-11.5">
+                <p class="text-title">Popular Artworks</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="card-deck">
             <div class="row">
-        
-                <!-- Grid column -->
-                <div class="col-md-12 py-5">
-                <div class="mt-5 flex-center">
-        
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=home.html" class="fb-ic">
-                    <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" style="color: #ffffff"> </i>
-                    </a>
-                    <!-- Twitter -->
-                    <a class="tw-ic" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonText%3DTry%2520out%2520this%2520new%2520food%2520review%2520website%2521%26buttonType%3DTweetButton%26buttonUrl%3Dhttp%253A%252F%252Fwww.ozweebo.com%26widget%3DButton&ref_src=twsrc%5Etfw&text=Try%20out%20this%20new%20food%20review%20website!&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ozweebo.com">
-                    <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                    <!-- Google+ -->
-                    <a class="gplus-ic">
-                    <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                    <!-- Linkedin -->
-                    <a class="li-ic">
-                    <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                    <!-- Instagram -->
-                    <a class="ins-ic">
-                    <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                    <!-- Pinterest -->
-                    <a class="pin-ic">
-                    <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-                    </a>
+              <div class="col-md-6 col-lg-3 col-6">
+                <div id="card1" class="card bg-light " data-aos="zoom-in-down">
+                  <figure class="imghvr-shutter-out-diag-1">
+                    <img class="card-img-top" src="photos/starrynight.jpg" alt="Card image cap">
+                    <figcaption>
+                      <p class="img-description">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+                    </figcaption>
+                  </figure>
+
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Starry Night</h4>
+                    <p id="card1" class="card-text">Vincent Van Gogh</p>
+                    <button class="material-icons" href="#">favorite_border</button>
+                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                    <button class="material-icons" href="#">turned_in_not</button>
+                  </div>
                 </div>
+              </div>
+              <div class="col-md-6 col-lg-3 col-6">
+                <div class="card bg-light" data-aos="zoom-in-down">
+                  <figure class="imghvr-shutter-out-diag-1">
+                    <img class="card-img-top" src="photos/gleaners.jpg" alt="Card image cap">
+                    <figcaption>
+                      <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
+                    </figcaption>
+                  </figure>
+
+                  <div class="card-body text-center">
+                    <h4 class="card-title">The Gleaners</h4>
+                    <p class="card-text">Jean-Francois Millet</p>
+                    <button class="material-icons" href="#">favorite_border</button>
+                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                    <button class="material-icons" href="#">turned_in_not</button>
+                  </div>
                 </div>
-                <!-- Grid column -->
-        
+              </div>
+              <div class="col-md-6 col-lg-3 col-6">
+                <div class="card bg-light" data-aos="zoom-in-down">
+
+                  <figure class="imghvr-shutter-out-diag-1">
+                    <img class="card-img-top" src="photos/glowing.jpg" alt="Card image cap">
+                    <figcaption>
+                      <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
+                    </figcaption>
+                  </figure>
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Glowing Landscapes</h4>
+                    <p class="card-text">Albert Bierstadt</p>
+                    <button class="material-icons" href="#">favorite_border</button>
+                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                    <button class="material-icons" href="#">turned_in_not</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 col-6">
+                <div class="card bg-light" data-aos="zoom-in-down">
+                  <figure class="imghvr-shutter-out-diag-1">
+                    <img class="card-img-top" src="photos/impression.jpg" alt="Card image cap">
+                    <figcaption>
+                      <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
+                    </figcaption>
+                  </figure>
+
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Impression, Sunrise</h4>
+                    <p class="card-text">Claude Monet</p>
+                    <button class="material-icons" href="#">favorite_border</button>
+                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                    <button class="material-icons" href="#">turned_in_not</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- Grid row -->
-        
+          </div>
+          <div id="cd2" class="card-deck">
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card bg-light" data-aos="zoom-in-down">
+                  <figure class="imghvr-shutter-out-diag-1">
+                    <img class="card-img-top" src="photos/toledo.jpg" alt="Card image cap">
+                    <figcaption>
+                      <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
+                    </figcaption>
+                  </figure>
+                  <div class="card-body text-center">
+                    <h4 class="card-title">View of Toledo</h4>
+                    <p class="card-text">El Greco</p>
+                    <button class="material-icons" href="#">favorite_border</button>
+                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                    <button class="material-icons" href="#">turned_in_not</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6  col-lg-3">
+                <div class="card bg-light" data-aos="zoom-in-down">
+                  <figure class="imghvr-shutter-out-diag-1">
+                    <img class="card-img-top" src="photos/spoliarium.jpg" alt="Card image cap">
+                    <figcaption>
+                      <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
+                    </figcaption>
+                  </figure>
+                  <div class="card-body text-center">
+                    <h4 class="card-title">The Spoliarium</h4>
+                    <p class="card-text">Juan Luna</p>
+                    <button class="material-icons" href="#">favorite_border</button>
+                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                    <button class="material-icons" href="#">turned_in_not</button>
+                  </div>
+                </div>
+              </div>
+              <div class=" col-sm-6 col-md-6 col-lg-3">
+                <div class="card bg-light" data-aos="zoom-in-down">
+                  <figure class="imghvr-shutter-out-diag-1">
+                    <img class="card-img-top" src="photos/ninth.jpg" alt="Card image cap">
+                    <figcaption>
+                      <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
+                    </figcaption>
+                  </figure>
+                  <div class="card-body text-center">
+                    <h4 class="card-title">The Ninth Wave</h4>
+                    <p class="card-text">Ivan Aivazovsky</p>
+                    <button class="material-icons" href="#">favorite_border</button>
+                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                    <button class="material-icons" href="#">turned_in_not</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6  col-lg-3">
+                <div class="card bg-light" data-aos="zoom-in-down">
+                  <figure class="imghvr-shutter-out-diag-1">
+                    <img class="card-img-top" src="photos/gypsy.jpg" alt="Card image cap">
+                    <figcaption>
+                      <p class="img-description">"Lorem ipsum dolor, sit amet consectetur adipisicing elit."</p>
+                    </figcaption>
+                  </figure>
+                  <div class="card-body text-center">
+                    <h4 class="card-title">The Sleeping Gypsy</h4>
+                    <p class="card-text">Henri Rousseau</p>
+                    <button class="material-icons" href="#">favorite_border</button>
+                    <button class="material-icons" href="#">chat_bubble_outline</button>
+                    <button class="material-icons" href="#">turned_in_not</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- Footer Elements -->
-        
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="home.html"> ozweebo.com</a>
+          </div>
+          <div id="row2" class="row">
+            <button id="see-more">See More</button>
+          </div>
+          <hr>
+
+          <div class="word-container">
+            <div id="row1" class="row">
+              <div class="col-0.5"> <i id="brush" class="material-icons" href="#">brush</i> </div>
+              <div id="column" class="col-11.5">
+                <p class="text-title">Today's Featured Artists</p>
+              </div>
+
             </div>
-            <!-- Copyright -->
-            <script src="js/footer.js"></script>
-        </footer>
-        <!-- Footer -->
+          </div>
+          <hr>
+          <div class="card-deck">
+            <div class="row">
+              <div class="col-xl-4 col-md-12 col-sm-12">
+                <div id="card2" class="1 card" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                  data-aos-duration="2000">
+                  <div class="content">
+                    <div class="post main">
+                      <!-- Florine Stettheimer -->
+                      <div class="preview">
+                        <img class="card-img-top" src="photos/sister.jpg">
+                      </div>
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/ashbury.jpg" alt="Card image cap">
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/picnic.jpg" alt="Card image cap">
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/natatorium.jpg" alt="Card image cap">
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/family-.jpg" alt="Card image cap">
+                    </div>
+                  </div>
+                  <div class="fabs">
+                    <div id="fabs1" class="fab"></div>
+                    <i id="id1" class="avatar zmdi zmdi-account"><img id="profile" src="photos/jh.png"></img></i>
+                  </div>
+                  <div class="user">
+                    <div class="socials">
+                      <p class="username">J-Hope</p>
+                    </div>
+                    <div class="profiles">
+                      <div class="profile"><span>51</span>Upvoted</div>
+                      <div class="profile"><span>9</span>Created</div>
+                      <div class="profile"><span>9</span>Showcased</div>
+                      <div class="profile"><span>1</span>Collections</div>
+                      <div class="profile"><span>2</span>Followers</div>
+                      <div class="profile"><span>5</span>Following</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-12 col-sm-12">
+                <div id="card2" class="2 card" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                  data-aos-duration="2000">
+                  <div class="content">
+                    <div class="post main">
+                      <!-- Fernando Amorsolo -->
+                      <div class="preview">
+                        <img class="card-img-top" src="photos/plantingrice.jpg">
+                      </div>
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/afternoon.jpg" alt="Card image cap">
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/totown.jpg"alt="Card image cap">
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/tinikling.jpg" alt="Card image cap">
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/fruitpick.jpg" alt="Card image cap">
+                    </div>
+                  </div>
+                  <div class="fabs">
+                    <div id="fabs2" class="fab"></div>
+                    <i id="id2" class="avatar zmdi zmdi-account"><img id="profile" src="photos/jk.png"></img></i>
+                  </div>
+                  <div class="user">
+                    <div class="socials">
+                      <p class="username">Jungkook</p>
+                    </div>
+                    <div class="profiles">
+                      <div class="profile"><span>51</span>Upvoted</div>
+                      <div class="profile"><span>9</span>Created</div>
+                      <div class="profile"><span>9</span>Showcased</div>
+                      <div class="profile"><span>1</span>Collections</div>
+                      <div class="profile"><span>2</span>Followers</div>
+                      <div class="profile"><span>5</span>Following</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-12  col-sm-12">
+                <div id="card2" class="3 card" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                  data-aos-duration="2000">
+                  <div class="content">
+                    <div class="post main">
+                      <!-- Pablo Picasso -->
+                      <div class="preview">
+                        <img class="card-img-top" src="photos/weeping.jpg">
+                      </div>
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/painter.jpg" alt="Card image cap">
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/accordionist.jpg" alt="Card image cap">
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/avignon.jpg" alt="Card image cap">
+                    </div>
+                    <div class="post sec">
+                      <img class="card-img-top" src="photos/blue-nude.jpg" alt="Card image cap">
+                    </div>
+                  </div>
+                  <div class="fabs">
+                    <div id="fabs3" class="fab"></div>
+                    <i id="id3" class="avatar zmdi zmdi-account"><img id="profile" src="photos/rm.png"></img></i>
+                  </div>
+                  <div class="user">
+                    <div class="socials">
+                      <p class="username">RM</p>
+                    </div>
+                    <div class="profiles">
+                      <div class="profile"><span>51</span>Upvoted</div>
+                      <div class="profile"><span>9</span>Created</div>
+                      <div class="profile"><span>9</span>Showcased</div>
+                      <div class="profile"><span>1</span>Collections</div>
+                      <div class="profile"><span>2</span>Followers</div>
+                      <div class="profile"><span>5</span>Following</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="row2" class="row">
+            <button id="see-more">See More</button>
+          </div>
+
+        </div>
+      </div>
     </div>
-    
-    <script src="js/login.js"></script>
-    <script>
-        AOS.init();
-//         $('.avatar').click(//
-//         function (e) {
-//             $(this).attr('class').toggleClass('active');
-// });
+  </div>
+  <!-- Footer -->
+  <footer class="foot-style">
 
-// $('#id1').click(function(e) {
-//   $("[name='ok']").toggleClass('active');
-// });
+    <!-- Footer Elements -->
+    <div class="container">
 
- $('#id1').click(function(e) {
-   $('.1').toggleClass('active');
-});
-$('#id2').click(function(e) {
-   $('.2').toggleClass('active');
-});
-$('#id3').click(function(e) {
-   $('.3').toggleClass('active');
-});
-// function myFunction(clicked_id) {
-//   var element = document.getElementById(clicked_id);
-//   console.log("Sadasd");
-// //   element.classList.toggle("active");
-// document.getElementById("id1").classList.toggle("active");
-// }
-// Ripple effect
-var target, ink, d, x, y;
-$(".social").click(function(e) {
-  target = $(this);
-  //create .ink element if it doesn't exist
-  if (target.find(".ink").length === 0)
-    target.prepend("<span class='ink'></span>");
+      <!-- Grid row-->
+      <div class="row">
 
-  ink = target.find(".ink");
-  //incase of quick double clicks stop the previous animation
-  ink.removeClass("animate");
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="mt-5 flex-center">
 
-  //set size of .ink
-  if (!ink.height() && !ink.width()) {
-    //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
-    d = Math.max(target.outerWidth(), target.outerHeight());
-    ink.css({
-      height: d,
-      width: d
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=home.html" class="fb-ic">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" style="color: #ffffff"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic"
+              href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonText%3DTry%2520out%2520this%2520new%2520food%2520review%2520website%2521%26buttonType%3DTweetButton%26buttonUrl%3Dhttp%253A%252F%252Fwww.ozweebo.com%26widget%3DButton&ref_src=twsrc%5Etfw&text=Try%20out%20this%20new%20food%20review%20website!&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ozweebo.com">
+              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Google+ -->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Instagram -->
+            <a class="ins-ic">
+              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Pinterest -->
+            <a class="pin-ic">
+              <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="home.html"> ozweebo.com</a>
+    </div>
+    <!-- Copyright -->
+    <script src="js/footer.js"></script>
+  </footer>
+  <!-- Footer -->
+  </div>
+
+  <script src="js/login.js"></script>
+  <script>
+    AOS.init();
+    //         $('.avatar').click(//
+    //         function (e) {
+    //             $(this).attr('class').toggleClass('active');
+    // });
+
+    // $('#id1').click(function(e) {
+    //   $("[name='ok']").toggleClass('active');
+    // });
+
+    $('#id1').click(function (e) {
+      $('.1').toggleClass('active');
     });
-  }
+    $('#id2').click(function (e) {
+      $('.2').toggleClass('active');
+    });
+    $('#id3').click(function (e) {
+      $('.3').toggleClass('active');
+    });
+    // function myFunction(clicked_id) {
+    //   var element = document.getElementById(clicked_id);
+    //   console.log("Sadasd");
+    // //   element.classList.toggle("active");
+    // document.getElementById("id1").classList.toggle("active");
+    // }
+    // Ripple effect
+    var target, ink, d, x, y;
+    $(".social").click(function (e) {
+      target = $(this);
+      //create .ink element if it doesn't exist
+      if (target.find(".ink").length === 0)
+        target.prepend("<span class='ink'></span>");
 
-  //get click coordinates
-  //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
-  x = e.pageX - target.offset().left - ink.width() / 2;
-  y = e.pageY - target.offset().top - ink.height() / 2;
+      ink = target.find(".ink");
+      //incase of quick double clicks stop the previous animation
+      ink.removeClass("animate");
 
-  //set the position and add class .animate
-  ink.css({
-    top: y + 'px',
-    left: x + 'px'
-  }).addClass("animate");
-});
-      </script>
+      //set size of .ink
+      if (!ink.height() && !ink.width()) {
+        //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
+        d = Math.max(target.outerWidth(), target.outerHeight());
+        ink.css({
+          height: d,
+          width: d
+        });
+      }
+
+      //get click coordinates
+      //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
+      x = e.pageX - target.offset().left - ink.width() / 2;
+      y = e.pageY - target.offset().top - ink.height() / 2;
+
+      //set the position and add class .animate
+      ink.css({
+        top: y + 'px',
+        left: x + 'px'
+      }).addClass("animate");
+    });
+  </script>
 </body>
+
 </html>
