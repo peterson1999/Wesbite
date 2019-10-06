@@ -32,21 +32,22 @@
 .header-login>.navbar-brand{
     font: inherit;
     font-weight: 200;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    background-color: #c231c7ba; 
+    color:white;
+    border: 2px solid white;
     border-radius: 5px;
     margin: 0;
 }
 .navbar-brand:hover{
-    border-color: rgb(238, 130, 238);
+    border-color:white;
     background-color: transparent;
-    color: rgb(238, 130, 238);
+    border: 1px solid white;
+    color: white;
 }
 .navbar-brand:focus{
-    border-color: rgb(238, 130, 238);
+    border-color: white;
     background-color: transparent;
-    color: rgb(238, 130, 238);
+    color: white;
 }
 /* Tablet and Phone Version */
 .header-nav-searchBar{
