@@ -4,12 +4,16 @@ ul ul a {
     background: #6d7fcc;
 }
 #sidebar {
-    /* don't forget to add all the previously mentioned styles here too */
     background: blueviolet;
     background-image: linear-gradient(225deg, blueviolet 0%, #FF0099 214%);
     color: #fff;
     transition: all 0.3s;
     position: fixed;
+    min-height: 100vh;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: auto;
+    z-index: 1;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -52,13 +56,32 @@ ul ul a {
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
 }
-@media (min-width: 768px) {
+
+#sidebar>ul {
+    overflow: hidden;
+} 
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+.bg-custom{
+    background-color: blueviolet;
+}
+
+@media (min-width: 769px) {
     #sidebar{
         min-width: 220px;
         max-width: 220px; 
     }
+    .header{
+        display: block;
+    }
     .navbar{
         display:none;
+    }
+    .header-search>input{
+        display: block;
     }
     #header-component{
         width:50%;
@@ -75,58 +98,30 @@ ul ul a {
 
 @media(max-width: 768px) and (min-width: 540px) {
     #sidebar{
-        min-width: 80px;
-        max-width: 80px;
-        text-align: center;
+        display: none;
     }
-
-    #sidebar.active ,.words {
-        min-width:220px;
-        max-width:220px;
-        margin-left: 0px !important;
-        display:inline-block;
-    }
-
-    #sidebar .active1 .material-icons{
-        font-size:30px;
-        margin:0;
-    }
-    #sidebar .active1 .material-icons .words{
-        display:none;
+    .header{
+        display: none;
     }
     .navbar{
-        width:20%;
+        padding: 1.5% 2%;
     }
-    #header-component{
-        width:40%;
-        align-self: center;
+    .header-search>input{
+        display: block;
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 539px) {
     #sidebar {
         display:none;
     }
-    #sidebar.active {
-        margin-left: 0;
-        display:inline-block;
-        min-width: 220px;
-        max-width: 220px; 
+    .header{
+        display: none;
     }
     .navbar{
-        display:inline-block;
+        padding: 1.5% 2%;
+    }
+    .header-search>input{
+        display: none;
     }
 }
-
-#sidebar {
-    min-height: 100vh;
-    border-bottom-right-radius: 50px;
-    border-top-right-radius: 50px;
-    overflow: auto;
-    z-index: 1;
-}
-
-#sidebar >ul {
-    overflow: hidden;
-} 
-
