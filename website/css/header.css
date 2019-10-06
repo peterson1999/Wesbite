@@ -16,7 +16,8 @@
     height: 2em;
     width: 8%;
     position: relative;
-    left: -9.5%;
+    left: 81.5%;
+    top: -34.5px;
     vertical-align: middle;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -48,23 +49,36 @@
     background-color: transparent;
     color: rgb(238, 130, 238);
 }
+.header-nav-searchButton{
+    height: 2em;
+    width: 3em;
+    position: relative;
+    left: 0;
+    vertical-align: middle;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 5px;
+    margin-left: 1%;
+}
+.header-nav-searchButton:hover{
+    background-color: transparent;
+}
 @media only screen and (min-width: 1180px){
     .header-search>button{
-        left: -9%;
+        left: 81.5%;
+    }
+}
+@media only screen and (min-width: 769px){
+    .header-search>button{
+        display: block;
     }
 }
 @media only screen and (max-width: 768px) and (min-width: 540px){
     .header-search>button{
         display: none;
     }
-}
-@media only screen and (max-width: 539px){
-    .header-search>button{
-        width: 3em;
-        border-radius: 0px;
-        background-color: transparent;
+    .header-nav-searchButton{
+        display: none;
     }
-    .header-search>button:hover{
-        background-color: transparent;
-    }
+
 }
