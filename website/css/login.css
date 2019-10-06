@@ -57,11 +57,8 @@
     font-size: 1.2vw;
     padding:12px 20px;
     margin-top: 8px;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px solid black;
-    width:100%;
+    border-radius: 25px;
+    width:50%;
     box-sizing: border-box;
     color:#bf2828;
     border-color: transparent;
@@ -141,7 +138,7 @@ button:focus{
         padding:12px 20px;
         margin-top: 8px;
         /* border-radius: 25px; */
-        width:100%;
+        width:50%;
     }
     .login-popup{
         width: 50%;
@@ -168,7 +165,7 @@ button:focus{
     .exitbutton{
         font-size: 26px;
         right: 26%;
-        top: 10vh;
+        top: 12vh;
     }
     /* .login-container{
         padding: 15px;
@@ -178,7 +175,7 @@ button:focus{
         padding:12px 20px;
         margin-top: 8px;
         /* border-radius: 25px; */
-        width:100%;
+        width:50%;
     }
 
     .login-popup{
@@ -208,10 +205,10 @@ button:focus{
         right: 26%;
         top: 50px;
     }
-    .login-container{
+    /* .login-container{
         padding: 15px;
         width: 50%;
-    }
+    } */
     .login-container>input[type=text], .login-container>input[type=password]{
         padding:12px 20px;
         margin-top: 8px;
