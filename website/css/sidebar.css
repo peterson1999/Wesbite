@@ -24,7 +24,20 @@ ul ul a {
     font-size:50px;
     margin: 30px;
     margin-left:10px;
+    margin-top: 0;
 }
+
+.Logo{
+    font-size: 35px;
+    font-weight: 5px;
+  }
+  .trade{
+    font-size: 20px;
+  }
+  a.logo{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #47748b;
