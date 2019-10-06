@@ -68,8 +68,7 @@ ul ul a {
 .bg-custom{
     background-color: blueviolet;
 }
-
-@media (min-width: 769px) {
+@media only screen and (min-width: 769px) {
     #sidebar{
         min-width: 220px;
         max-width: 220px; 
@@ -80,7 +79,7 @@ ul ul a {
     .navbar{
         display:none;
     }
-    .header-search>input{
+    .header-search>input[type=text]{
         display: block;
     }
     #header-component{

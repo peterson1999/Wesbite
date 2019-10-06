@@ -1,5 +1,5 @@
-function search(){
-    $(".header-search>button").css({
+function searchBar(){
+    $(".header-nav-searchButton").css({
         "display": "none"
     });
     $(".navbar-brand").css({
@@ -7,40 +7,21 @@ function search(){
     });
     $(".header-search>input").css({
         "display": "block",
-        "width": "80vw"
+        "width": "75vw"
     });
     $(".header-search>input").focus();
 }
-// $(".header-search>input").focusout(function(){
-//     if(screen.width<=540){
-//         $(".header-search>input").css({
-//             "display": "none"
-//         });
-//         $(".header-search>button").css({
-//             "display": "block"
-//         });
-//         $(".navbar-brand").css({
-//             "display": "block"
-//         });
-//     }
-// });
-$(document).mouseup(function(e) 
-{
-    var container = $(".header-search>input");
 
-    // if the target of the click isn't the container nor a descendant of the container
-    if (!container.is(e.target) && container.has(e.target).length === 0) 
-    {
-        if(screen.width<=540){
-            $(".header-search>input").css({
-                "display": "none"
-            });
-            $(".header-search>button").css({
-                "display": "block"
-            });
-            $(".navbar-brand").css({
-                "display": "block"
-            });
-        }
-    }
-});
+$(document).ready(function(){
+    $(".header-search>input").focusout(function(){
+        $(".header-search>input").css({
+            "display": "none"
+        });
+        $(".header-nav-searchButton").css({
+            "display": "block"
+        });
+        $(".navbar-brand").css({
+            "display": "block"
+        });
+    });
+})
