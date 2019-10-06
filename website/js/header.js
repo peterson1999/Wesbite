@@ -20,7 +20,7 @@ $(document).ready(function(){
             "display": "block"
         });
         $(".navbar-brand").css({
-            "display": "block"
+            "display": "inline-block"
         });
     });
 })
