@@ -749,6 +749,20 @@
       margin-bottom: 0;
       color: white;
     }
+
+    .nav-icon{
+      color: white;
+      float: left;
+      margin: 20px;
+    }
+    button.navbar-toggler:focus{
+      background-color: none;
+      color:white;
+    }
+
+    button:hover{
+      background-color: transparent;
+    }
   </style>
 </head>
 
@@ -798,14 +812,20 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+            <a class="material-icons nav-icon" href="#">home<span class="words">Home</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" onclick="fadein()">Login</a>
+            <a class="material-icons nav-icon" href="#">notifications<span class="words">Notifications</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sign up.html">Sign Up</a>
-        </li>    
+            <a class="material-icons nav-icon" href="#">bookmarks<span class="words">Bookmarks</span></a>
+        </li>   
+        <li class="nav-item">
+            <a class="material-icons nav-icon" href="#">forum<span class="words">Forum</span></a>
+        </li> 
+        <li class="nav-item">
+            <a class="material-icons nav-icon" href="#">help_outline<span class="words">Help</span></a>
+        </li>  
       </ul>
     </div>  
   </nav>
