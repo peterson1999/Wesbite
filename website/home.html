@@ -777,17 +777,18 @@
       </a>
     </div>
   </div>
-  <nav class="navbar navbar-expand-md bg-custom navbar-dark">
+  <!-- Tablet and Phone Navbar -->
+  <nav class="navbar bg-custom navbar-dark">
     <!-- Burger Menu Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Search Bar -->
-    <form class="form-inline mr-auto">
-      <div class="md-form my-0 header-search">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        <button onclick="search()"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
-      </div>
+    <form class="form-inline mr-auto ml-1">
+        <div class="md-form my-0">
+            <input class="form-control header-nav-searchBar" type="text" placeholder="Search" aria-label="Search">
+        </div>
+        <button class="header-nav-searchButton" onclick="searchBar()"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
     </form>
     <!-- Login & Signup Buttons -->
     <a class="navbar-brand" href="#" onclick="fadein()">Login</a>
@@ -803,9 +804,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="sign up.html">Sign Up</a>
-        </li>
+        </li>    
       </ul>
-    </div>
+    </div>  
   </nav>
   <div class="flex1">
 
