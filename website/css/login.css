@@ -26,7 +26,7 @@
     height: 40px;
     margin:0;
     border:none;
-    color:#bf2828;
+    color: black;
     background-color: transparent;
     z-index: 6;
     position: fixed;
@@ -68,7 +68,7 @@
 }
 .login-container>input[type=text]:focus, .login-container>input[type=password]:focus{
     outline: none;
-    border-color:#bf2828;
+    border-color:#ac9393;
 } 
 .login-container>input[type=checkbox]:focus{
     outline:2px solid #bf2828;
@@ -99,13 +99,13 @@
     border-radius: 25px;
     width:50%;
     box-sizing: border-box;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border-color: transparent;
 }
 button:hover{
     background-color: white;
-    color: #bf2828;
+    color: purple;
 }
 button:focus{
     outline: none;
@@ -180,6 +180,7 @@ button:focus{
         /* border-radius: 25px; */
         width:100%;
     }
+
     .login-popup{
         width: 50%;
         height: 75%;
