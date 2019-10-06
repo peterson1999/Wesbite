@@ -9,7 +9,7 @@
     border: 3px solid transparent;
     border-radius: 50%;
     left: 74vw;
-    top: 80%;
+    top: 65%;
     background-color: purple;
     z-index: 3;
 }
@@ -20,7 +20,7 @@
     border-radius: 50%;
     right:0;
     left: 82vw;
-    top: 80%;
+    top: 65%;
     background-color: purple;
     z-index: 3;
 }
@@ -37,4 +37,52 @@
 .picture-3{
     background: linear-gradient(rgba(0,0,0,0.6) 0%, transparent 60%, papayawhip 100%),url("../photos/ui-pop-art.jpg")no-repeat center;
     background-size: cover;
+}
+@media only screen and (max-width: 768px){
+    .carousel-control-prev{
+        height: 55%;
+        left: 0;
+        top: 53px;
+        border-radius: 0%;
+        background-color: transparent;
+    }
+    .carousel-control-next{
+        height: 55%;
+        left: 89.5vw;
+        top: 53px;
+        border-radius: 0%;
+        background-color: transparent;
+    }
+}
+@media only screen and (max-width: 539px){
+    .carousel-control-prev{
+        height: 55%;
+        left: 0;
+        top: 53px;
+        border-radius: 0%;
+        background-color: transparent;
+    }
+    .carousel-control-next{
+        height: 55%;
+        left: 88vw;
+        top: 53px;
+        border-radius: 0%;
+        background-color: transparent;
+    }
+}
+@media only screen and (max-width: 375px){
+    .carousel-control-prev{
+        height: 55%;
+        left: 0;
+        top: 53px;
+        border-radius: 0%;
+        background-color: transparent;
+    }
+    .carousel-control-next{
+        height: 55%;
+        left: 86vw;
+        top: 53px;
+        border-radius: 0%;
+        background-color: transparent;
+    }
 }
