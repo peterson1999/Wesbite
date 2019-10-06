@@ -52,17 +52,19 @@
     overflow: auto;
 }
 .login-container>input[type=text], .login-container>input[type=password]{
-    background-image: none;
+    background: white;
     text-align: center;
     font-size: 1.2vw;
     padding:12px 20px;
     margin-top: 8px;
-    border-radius: 25px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid black;
     width:100%;
     box-sizing: border-box;
     color:#bf2828;
     border-color: transparent;
-    background-color: rgb(255, 255, 255);
 }
 .login-container>input[type=text]:focus, .login-container>input[type=password]:focus{
     outline: none;
@@ -85,7 +87,7 @@
     width: 50%;
     height: 75%;
     border-radius: 20px;
-    background: rgb(238, 234, 234);
+    background-image: linear-gradient(to bottom right, rgba(97, 99, 219, 0.644) 0%, #C779D0 51%, rgba(144, 35, 117, 0.514) 90%);
     padding: 20px 10px;
     margin-top: 5%;
     margin-left:25%;
@@ -113,13 +115,13 @@ button:focus{
 
 .forgot-password{
     display: none;
+    background-image: linear-gradient(to bottom right, rgba(97, 99, 219, 0.644) 0%, #C779D0 51%, rgba(144, 35, 117, 0.514) 90%);
     z-index: 5;
     text-align: center;
     position: relative;
     width: 50%;
     height: 75%;
     border-radius: 20px;
-    background: rgb(238, 234, 234);
     padding: 20px 10px;
     margin-top: 5%;
     margin-left:25%;
@@ -138,7 +140,7 @@ button:focus{
     .login-container>input[type=text], .login-container>input[type=password]{
         padding:12px 20px;
         margin-top: 8px;
-        border-radius: 25px;
+        /* border-radius: 25px; */
         width:100%;
     }
     .login-popup{
@@ -175,7 +177,7 @@ button:focus{
     .login-container>input[type=text], .login-container>input[type=password]{
         padding:12px 20px;
         margin-top: 8px;
-        border-radius: 25px;
+        /* border-radius: 25px; */
         width:100%;
     }
     .login-popup{
@@ -188,7 +190,7 @@ button:focus{
     .login-button{
         padding:12px 20px;
         margin-top: 8px;
-        border-radius: 25px;
+        /* border-radius: 25px; */
         width:50%;
     }
     .forgot-password{
@@ -212,7 +214,7 @@ button:focus{
     .login-container>input[type=text], .login-container>input[type=password]{
         padding:12px 20px;
         margin-top: 8px;
-        border-radius: 25px;
+        /* border-radius: 25px; */
         width:100%;
     }
     .login-popup{
@@ -250,7 +252,7 @@ button:focus{
     .login-container>input[type=text], .login-container>input[type=password]{
         padding:12px 20px;
         margin-top: 8px;
-        border-radius: 25px;
+        /* border-radius: 25px; */
         width:100%;
         font-size: 12px;
     }
@@ -292,7 +294,7 @@ button:focus{
     .login-container>input[type=text], .login-container>input[type=password]{
         padding:12px 20px;
         margin-top: 8px;
-        border-radius: 25px;
+        /* border-radius: 25px; */
         width:100%;
         font-size: 12px;
     }
