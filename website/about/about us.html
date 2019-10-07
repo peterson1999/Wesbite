@@ -18,9 +18,7 @@
         <link rel="stylesheet" href="../css/login.css">
         <link rel="stylesheet" href="../css/sidebar.css">
         <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/homelayout.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/stylesignup.css">
         <link rel="stylesheet" href="../css/aboutlayout.css">
         <title>About Us</title>
         <style>
@@ -63,17 +61,9 @@
                 display:flex;
                 flex-direction: column;
             }
-            .wrapper {
-            display: flex;
-            align-items: stretch;
-            }
             
             .btn:hover{
                 background-color: violet;
-            }
-
-            #navlist{
-                display: none;
             }
         
             #row1{
@@ -88,31 +78,10 @@
                 background-color: #ffffff;
                 opacity: 0.5;
             }
-            .nav-icon{
-            color: white;
-            float: left;
-            margin: 20px;
-            }
-            .nav-icon:hover{
-            color: pink;
-            }
-            button:focus{
-            background-color: none;
-            color:white;
-            }
-
-            button:hover{
-            background-color: transparent;
-            }
-            button:active{
-            background-color:transparent;
-            }
-            .words{
-            margin-left:5px;
-            }
+            
             .navbar-brand:hover{
-            border: none;
-            color:darkorchid;
+                border: none;
+                color:darkorchid;
             }
         </style>
     </head>
@@ -157,70 +126,69 @@
         </nav>
         <div class="flex1">
         <div class="flex">
-                <nav id="sidebar">
-                        <ul class="list-unstyled components">
-                                <li class="active1">
-                                        <a class="logo" href="../home.html"><span class="Logo"><b>Ozweebo	<span class="trade">&trade;</span></b></span></a>
-                                      </li>
-                          <li class="active1">
-                            <a class="material-icons" href="../home.html">home<span class="words">Home</span></a>
-                          </li>
-                          <li class="active1">
-                            <a class="material-icons" href="../popular-art.html">stars<span class="words">What's Hot</span></a>
-                          </li>
-                          <li class="active1">
-                              <a class="material-icons" href="../feature-artist.html">account_circle<span class="words">Profile</span></a>
-                            </li>
-                          <li class="active1">
-                            <a class="material-icons" href="about us.html">supervised_user_circle<span class="words">About Us</span></a>
-                          </li>
-                          <li class="active1">
-                            <a class="material-icons" href="../contact us.html">local_phone<span class="words">Contact Us</span></a>
-                          </li>
-                
-                        </ul>
-                      </nav>
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li class="active1">
+                        <a class="logo" href="../home.html"><span class="Logo"><b>Ozweebo	<span class="trade">&trade;</span></b></span></a>
+                    </li>
+                    <li class="active1">
+                        <a class="material-icons" href="../home.html">home<span class="words">Home</span></a>
+                    </li>
+                    <li class="active1">
+                        <a class="material-icons" href="../popular-art.html">stars<span class="words">What's Hot</span></a>
+                    </li>
+                    <li class="active1">
+                        <a class="material-icons" href="../feature-artist.html">account_circle<span class="words">Profile</span></a>
+                        </li>
+                    <li class="active1">
+                        <a class="material-icons" href="about us.html">supervised_user_circle<span class="words">About Us</span></a>
+                    </li>
+                    <li class="active1">
+                        <a class="material-icons" href="../contact us.html">local_phone<span class="words">Contact Us</span></a>
+                    </li>
+                </ul>
+            </nav>
                 
             <div id="frame">
-                    <div class = "modl">
-                        <button class="exitbutton" onclick=fadeout()>×</button>
-                        <div class="login-popup animate">
-                            <b>
-                            <div class="login-container">
-                                User Name<br>
+                <div class = "modl">
+                    <button class="exitbutton" onclick=fadeout()>×</button>
+                    <div class="login-popup animate">
+                        <b>
+                        <div class="login-container">
+                            User Name<br>
+                            <input type="text" placeholder="Enter User Name">
+                        </div>
+                        <div class="login-container">
+                            Password<br>
+                            <input type="password" placeholder="Enter Password">
+                        </div>
+                        </b>
+                        <div class="login-container" style="text-align: center">
+                            <input type="checkbox">Remember me<br>
+                            <button class="login-button">Login</button>
+                            <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
+                            <br>Don't have an account? <a href="../sign up.html">Sign Up</a>
+                        </div>
+                    </div>
+                    <div class="forgot-password">
+                        <b>
+                            <div class="login-container" style="margin-top: 9%;">
+                                Enter your User Name:<br>
                                 <input type="text" placeholder="Enter User Name">
                             </div>
-                            <div class="login-container">
-                                Password<br>
-                                <input type="password" placeholder="Enter Password">
-                            </div>
-                            </b>
-                            <div class="login-container" style="text-align: center">
-                                <input type="checkbox">Remember me<br>
-                                <button class="login-button">Login</button>
-                                <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
-                                <br>Don't have an account? <a href="../sign up.html">Sign Up</a>
-                            </div>
-                        </div>
-                        <div class="forgot-password">
-                            <b>
-                                <div class="login-container" style="margin-top: 9%;">
-                                    Enter your User Name:<br>
-                                    <input type="text" placeholder="Enter User Name">
-                                </div>
-                            </b>
-                            <div class="login-container" style="text-align: center;">
-                                <button class="login-button" style="width: auto">Send Code</button>
-                                <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
-                                <br>Don't have an account?<br> <a href="../sign up.html">Sign Up</a>
-                            </div>
+                        </b>
+                        <div class="login-container" style="text-align: center;">
+                            <button class="login-button" style="width: auto">Send Code</button>
+                            <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
+                            <br>Don't have an account?<br> <a href="../sign up.html">Sign Up</a>
                         </div>
                     </div>
                 </div>
-            <div class="body container-fluid"> <!--.Header-->
+            </div>
+            <div class="body container-fluid"> 
+                <!--.Header-->
                 <div class="container header">
                     <div class="row">
-                        <!-- Collapsible content -->
                         <div class="col-8">
                     
                             <!-- Search form -->
@@ -232,7 +200,6 @@
                             </form>
                         
                         </div>
-                        <!-- Collapsible content -->
                         <div class="col-4  header-login">
                             <!--Blue blob-->
                             <img class="blob"src="../photos/Blue.svg"></img>
@@ -285,8 +252,8 @@
                 <!-- /Body -->
             </div>
         </div>
-            <!-- Footer -->
-    <footer class="foot-style">
+        <!-- Footer -->
+        <footer class="foot-style">
             <!-- Footer Elements -->
             <div class="container">
                 <!-- Grid row-->
@@ -296,27 +263,27 @@
                         <div class="mt-5 flex-center">
                             <!-- Facebook -->
                             <a href="https://www.facebook.com/sharer/sharer.php?u=home.html" class="fb-ic">
-                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" style="color: #ffffff"> </i>
+                                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" style="color: #ffffff"> </i>
                             </a>
                             <!-- Twitter -->
                             <a class="tw-ic" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonText%3DTry%2520out%2520this%2520new%2520food%2520review%2520website%2521%26buttonType%3DTweetButton%26buttonUrl%3Dhttp%253A%252F%252Fwww.ozweebo.com%26widget%3DButton&ref_src=twsrc%5Etfw&text=Try%20out%20this%20new%20food%20review%20website!&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ozweebo.com">
-                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                             </a>
                             <!-- Google+ -->
                             <a class="gplus-ic">
-                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                                <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                             </a>
                             <!-- Linkedin -->
                             <a class="li-ic">
-                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                                <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                             </a>
                             <!-- Instagram -->
                             <a class="ins-ic">
-                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                             </a>
                             <!-- Pinterest -->
                             <a class="pin-ic">
-                            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                                <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
                             </a>
                         </div>
                     </div>
@@ -330,12 +297,12 @@
                 <a href="../home.html"> ozweebo.com</a>
             </div>
             <!-- Copyright -->
-            <script src="../js/footer.js"></script>
         </footer>
         <!-- Footer -->
         </div>
+        <!-- Our JS files -->
         <script src="../js/login.js"></script>
         <script src="../js/header.js"></script>
+        <script src="../js/footer.js"></script>
     </body>
-    
 </html>
