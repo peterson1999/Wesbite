@@ -37,6 +37,8 @@
 .about-photo{
     width: 100%;
     height: auto;
+    border-radius: 14px;
+    box-shadow: 19px 12px #a7a7a7;
 }
 .team{
     text-align: right;
