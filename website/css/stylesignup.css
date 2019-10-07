@@ -46,6 +46,10 @@ input[type=password] {
     padding: 12px 20px 12px 40px;
 }
 
+.container-fluid{
+    overflow-x: hidden;
+}
+
 #btn-submit {
     background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4 51%, #E55D87 100%);
 }
@@ -210,6 +214,9 @@ hr.new {
     .blob4{
         left: 50%;
         bottom: -310%;
+    }
+    .container{
+        margin-top:100px;
     }
 }
 @media only screen and (max-width: 540px){

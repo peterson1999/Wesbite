@@ -24,10 +24,10 @@
     <link rel="stylesheet" href="css/carousel-design.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/imagehover.min.css">
-
+    <link rel="stylesheet" href="css/feature-artist.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <title>Popular Artworks</title>
+    <title>Featured Artist</title>
 <style>
     *{
         font-family: 'Poppins', sans-serif;
@@ -671,7 +671,6 @@ body {
     justify-content: center;
     margin-bottom: 50px;
 }
-
 .nav-icon{
       color: white;
       float: left;
@@ -698,6 +697,7 @@ body {
       border: none;
       color:darkorchid;
     }
+
 </style>
 </head>
 
@@ -768,40 +768,40 @@ body {
     
         
         <div id="frame">
-          <div class="modl">
-            <button class="exitbutton" onclick=fadeout()>×</button>
-            <div class="login-popup animate">
-              <b>
-                <div class="login-container">
-                  User Name<br>
-                  <input type="text" placeholder="Enter User Name">
-                </div>
-                <div class="login-container">
-                  Password<br>
-                  <input type="password" placeholder="Enter Password">
-                </div>
-              </b>
-              <div class="login-container" style="text-align: center">
-                <input type="checkbox">Remember me<br>
-                <button class="login-button">Login</button>
-                <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
-                <br>Don't have an account? <a href="sign up.html">Sign Up</a>
-              </div>
-            </div>
-            <div class="forgot-password">
-                <b>
-                    <div class="login-container" style="margin-top: 9%;">
-                        Enter your User Name:<br>
+            <div class = "modl">
+                <button class="exitbutton" onclick=fadeout()>×</button>
+                <div class="login-popup animate">
+                    <b>
+                    <div class="login-container">
+                        User Name<br>
                         <input type="text" placeholder="Enter User Name">
                     </div>
-                </b>
-                <div class="login-container" style="text-align: center;">
-                    <button class="login-button" style="width: auto">Send Code</button>
-                    <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
-                    <br>Don't have an account?<br> <a href="sign up.html">Sign Up</a>
+                    <div class="login-container">
+                        Password<br>
+                        <input type="password" placeholder="Enter Password">
+                    </div>
+                    </b>
+                    <div class="login-container" style="text-align: center">
+                        <input type="checkbox">Remember me<br>
+                        <button class="login-button">Login</button>
+                        <br><br><a id="forgot-pass" href="javascript:void(0);">Forgot Password?</a>
+                        <br>Don't have an account? <a href="sign up.html">Sign Up</a>
+                    </div>
+                </div>
+                <div class="forgot-password">
+                    <b>
+                        <div class="login-container" style="margin-top: 9%;">
+                            Enter your User Name:<br>
+                            <input type="text" placeholder="Enter User Name">
+                        </div>
+                    </b>
+                    <div class="login-container" style="text-align: center;">
+                        <button class="login-button" style="width: auto">Send Code</button>
+                        <br><br><a id="backtoLogin" href="javascript:void(0);">Back to Login</a>
+                        <br>Don't have an account?<br> <a href="sign up.html">Sign Up</a>
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
         <div class="body container-fluid"> <!--.Header-->
             <div class="container header">
@@ -828,11 +828,27 @@ body {
             </div>
             <!-- <hr class="bg-info mt-6"> -->
             <div id="con" class="container">   
-                <div class="word-container">
-                        <div id="row1" class="row">
-                                <div  class="col-0.5"> <i id="trending" class="material-icons" href="#">trending_up </i> </div>
-                                <div  id="column" class="col-11.5"><p class="text-title">Popular Artworks</p></div>
+                <div class="container px-lg-5 mx-lg-5">
+                    <div class="row py-4">
+                        <div class="col-lg-4">
+                            <img id="profile-pic" src="photos/fa.png" alt="" height="200px">
                         </div>
+                        <div class="col-lg-8">
+                            <div class="row mt-5 justify-content-lg-start justify-content-center">
+                                <h2 class="text-black mx-4">Jungkook</h2>
+                                <button class="btn btn-purple-dark btn-raised mx-4 btn-icon">
+                                    <span class="mr-3 material-icons">done</span>
+                                    Following
+                                </button>
+                            </div>
+                            <div class="row mt-5 justify-content-lg-start justify-content-center">
+                                <p class="mx-4">22 post</p>
+                                <p class="mx-4">22 followers</p>
+                                <p class="mx-4">22 following</p>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
                 <hr>
                                   

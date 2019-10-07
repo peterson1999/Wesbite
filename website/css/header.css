@@ -5,7 +5,7 @@
 .md-form{
     width: 100%;
 }
-
+/* PC Version */
 .header-search>input[type=text]{
     height: 100%;
     width: 90%;
@@ -32,21 +32,43 @@
 .header-login>.navbar-brand{
     font: inherit;
     font-weight: 200;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    background-color: #c231c7ba; 
+    color:white;
+    border: 2px solid white;
     border-radius: 5px;
     margin: 0;
 }
 .navbar-brand:hover{
-    border-color: rgb(238, 130, 238);
+    border-color:white;
     background-color: transparent;
-    color: rgb(238, 130, 238);
+    border: 1px solid white;
+    color: white;
 }
 .navbar-brand:focus{
-    border-color: rgb(238, 130, 238);
+    border-color: white;
     background-color: transparent;
-    color: rgb(238, 130, 238);
+    color: white;
+}
+/* Tablet and Phone Version */
+.header-nav-searchBar{
+    height: 100%;
+    width: 75vw;
+    padding-right: 10%;
+    border-radius: 25px;
+}
+.header-nav-searchButton{
+    height: 2em;
+    width: 3em;
+    position: relative;
+    left: 0;
+    vertical-align: middle;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 5px;
+    margin-left: 1%;
+}
+.header-nav-searchButton:hover{
+    background-color: transparent;
 }
 @media only screen and (min-width: 1180px){
     .header-search>button{
@@ -54,17 +76,18 @@
     }
 }
 @media only screen and (max-width: 768px) and (min-width: 540px){
-    .header-search>button{
+    /* .header-search>button{
         display: none;
+    } */
+    .header-nav-searchButton{
+        display: none;
+    }
+    .header-nav-searchBar{
+        width: auto;
     }
 }
 @media only screen and (max-width: 539px){
-    .header-search>button{
-        width: 3em;
-        border-radius: 0px;
-        background-color: transparent;
-    }
-    .header-search>button:hover{
-        background-color: transparent;
+    .header-nav-searchBar{
+        display: none;
     }
 }
