@@ -1,65 +1,145 @@
-.foot-style{
-    width: 100%;
-    text-align: center; 
-    color: white;
-    background: #50cf30;
-    background: -webkit-linear-gradient(transparent, #ffff96);
-    background: linear-gradient(transparent, #ffff96);
-    z-index: 2;
+.foot-style {
+	width: 100%;
+	text-align: center;
+	color: white;
+	background: #50cf30;
+	background: -webkit-linear-gradient(transparent, #ffff96);
+	background: linear-gradient(transparent, #ffff96);
+	z-index: 2;
 }
-.bgcolor-animate{
-    -webkit-animation: foot-color 200ms;
-    animation: foot-color 200ms;
+.bgcolor-animate {
+	-webkit-animation: foot-color 200ms;
+	animation: foot-color 200ms;
 }
-.bgcolor-revaniamate{
-    -webkit-animation: foot-color-rev 200ms;
-    animation: foot-color-rev 200ms;
+.bgcolor-revaniamate {
+	-webkit-animation: foot-color-rev 200ms;
+	animation: foot-color-rev 200ms;
 }
-@-webkit-keyframes foot-color{
-    0%   {background: linear-gradient(transparent, #ffff96);}
-    12%   {background: linear-gradient(transparent 5%, #ffff96 100%);}
-    25%  {background: linear-gradient(transparent 10%, #ffff96 100%);}
-    38%  {background: linear-gradient(transparent 30%, #ffff96 100%);}
-    44%  {background: linear-gradient(#ffff96 75%, #50cf30 100%);}
-    50%  {background: linear-gradient(#ffff96 60%, #50cf30 100%);}
-    63%  {background: linear-gradient(#ffff96 45%, #50cf30 100%);}
-    75%  {background: linear-gradient(#ffff96 30%, #50cf30 100%);}
-    88%  {background: linear-gradient(#ffff96 15%, #50cf30 100%);}
-    100% {background: linear-gradient(#ffff96, #50cf30);}
+@-webkit-keyframes foot-color {
+	0% {
+		background: linear-gradient(transparent, #ffff96);
+	}
+	12% {
+		background: linear-gradient(transparent 5%, #ffff96 100%);
+	}
+	25% {
+		background: linear-gradient(transparent 10%, #ffff96 100%);
+	}
+	38% {
+		background: linear-gradient(transparent 30%, #ffff96 100%);
+	}
+	44% {
+		background: linear-gradient(#ffff96 75%, #50cf30 100%);
+	}
+	50% {
+		background: linear-gradient(#ffff96 60%, #50cf30 100%);
+	}
+	63% {
+		background: linear-gradient(#ffff96 45%, #50cf30 100%);
+	}
+	75% {
+		background: linear-gradient(#ffff96 30%, #50cf30 100%);
+	}
+	88% {
+		background: linear-gradient(#ffff96 15%, #50cf30 100%);
+	}
+	100% {
+		background: linear-gradient(#ffff96, #50cf30);
+	}
 }
-@keyframes foot-color{
-    0%   {background: linear-gradient(transparent, #ffff96);}
-    12%  {background: linear-gradient(transparent 5%, #ffff96 100%);}
-    25%  {background: linear-gradient(transparent 10%, #ffff96 100%);}
-    38%  {background: linear-gradient(transparent 30%, #ffff96 100%);}
-    44%  {background: linear-gradient(#ffff96 75%, #50cf30 100%);}
-    50%  {background: linear-gradient(#ffff96 60%, #50cf30 100%);}
-    63%  {background: linear-gradient(#ffff96 45%, #50cf30 100%);}
-    75%  {background: linear-gradient(#ffff96 30%, #50cf30 100%);}
-    88%  {background: linear-gradient(#ffff96 15%, #50cf30 100%);}
-    100% {background: linear-gradient(#ffff96, #50cf30);}
+@keyframes foot-color {
+	0% {
+		background: linear-gradient(transparent, #ffff96);
+	}
+	12% {
+		background: linear-gradient(transparent 5%, #ffff96 100%);
+	}
+	25% {
+		background: linear-gradient(transparent 10%, #ffff96 100%);
+	}
+	38% {
+		background: linear-gradient(transparent 30%, #ffff96 100%);
+	}
+	44% {
+		background: linear-gradient(#ffff96 75%, #50cf30 100%);
+	}
+	50% {
+		background: linear-gradient(#ffff96 60%, #50cf30 100%);
+	}
+	63% {
+		background: linear-gradient(#ffff96 45%, #50cf30 100%);
+	}
+	75% {
+		background: linear-gradient(#ffff96 30%, #50cf30 100%);
+	}
+	88% {
+		background: linear-gradient(#ffff96 15%, #50cf30 100%);
+	}
+	100% {
+		background: linear-gradient(#ffff96, #50cf30);
+	}
 }
-@-webkit-keyframes foot-color-rev{
-    0%   {background: linear-gradient(#ffff96, #50cf30);}
-    12%  {background: linear-gradient(#ffff96 15%, #50cf30 100%);}
-    25%  {background: linear-gradient(#ffff96 30%, #50cf30 100%);}
-    38%  {background: linear-gradient(#ffff96 45%, #50cf30 100%);}
-    44%  {background: linear-gradient(#ffff96 60%, #50cf30 100%);}
-    50%  {background: linear-gradient(#ffff96 75%, #50cf30 100%);}
-    63%  {background: linear-gradient(transparent 30%, #ffff96 100%);}
-    75%  {background: linear-gradient(transparent 10%, #ffff96 100%);}
-    88%  {background: linear-gradient(transparent 5%, #ffff96 100%);}
-    100% {background: linear-gradient(transparent, #ffff96);}
+@-webkit-keyframes foot-color-rev {
+	0% {
+		background: linear-gradient(#ffff96, #50cf30);
+	}
+	12% {
+		background: linear-gradient(#ffff96 15%, #50cf30 100%);
+	}
+	25% {
+		background: linear-gradient(#ffff96 30%, #50cf30 100%);
+	}
+	38% {
+		background: linear-gradient(#ffff96 45%, #50cf30 100%);
+	}
+	44% {
+		background: linear-gradient(#ffff96 60%, #50cf30 100%);
+	}
+	50% {
+		background: linear-gradient(#ffff96 75%, #50cf30 100%);
+	}
+	63% {
+		background: linear-gradient(transparent 30%, #ffff96 100%);
+	}
+	75% {
+		background: linear-gradient(transparent 10%, #ffff96 100%);
+	}
+	88% {
+		background: linear-gradient(transparent 5%, #ffff96 100%);
+	}
+	100% {
+		background: linear-gradient(transparent, #ffff96);
+	}
 }
-@keyframes foot-color-rev{
-    0%   {background: linear-gradient(#ffff96, #50cf30);}
-    12%  {background: linear-gradient(#ffff96 15%, #50cf30 100%);}
-    25%  {background: linear-gradient(#ffff96 30%, #50cf30 100%);}
-    38%  {background: linear-gradient(#ffff96 45%, #50cf30 100%);}
-    44%  {background: linear-gradient(#ffff96 60%, #50cf30 100%);}
-    50%  {background: linear-gradient(#ffff96 75%, #50cf30 100%);}
-    63%  {background: linear-gradient(transparent 30%, #ffff96 100%);}
-    75%  {background: linear-gradient(transparent 10%, #ffff96 100%);}
-    88%  {background: linear-gradient(transparent 5%, #ffff96 100%);}
-    100% {background: linear-gradient(transparent, #ffff96);}
+@keyframes foot-color-rev {
+	0% {
+		background: linear-gradient(#ffff96, #50cf30);
+	}
+	12% {
+		background: linear-gradient(#ffff96 15%, #50cf30 100%);
+	}
+	25% {
+		background: linear-gradient(#ffff96 30%, #50cf30 100%);
+	}
+	38% {
+		background: linear-gradient(#ffff96 45%, #50cf30 100%);
+	}
+	44% {
+		background: linear-gradient(#ffff96 60%, #50cf30 100%);
+	}
+	50% {
+		background: linear-gradient(#ffff96 75%, #50cf30 100%);
+	}
+	63% {
+		background: linear-gradient(transparent 30%, #ffff96 100%);
+	}
+	75% {
+		background: linear-gradient(transparent 10%, #ffff96 100%);
+	}
+	88% {
+		background: linear-gradient(transparent 5%, #ffff96 100%);
+	}
+	100% {
+		background: linear-gradient(transparent, #ffff96);
+	}
 }
