@@ -71,17 +71,8 @@
             flex-direction: column;
         }
 
-        .wrapper {
-            display: flex;
-            align-items: stretch;
-        }
-
         .btn:hover {
             background-color: violet;
-        }
-
-        #navlist {
-            display: none;
         }
 
         #row1 {
@@ -98,100 +89,82 @@
             opacity: 0.5;
         }
 
-        .nav-icon{
-      color: white;
-      float: left;
-      margin: 20px;
-    }
-    .nav-icon:hover{
-      color: pink;
-    }
-    button:focus{
-      background-color: none;
-      color:white;
-    }
-
-    button:hover{
-      background-color: transparent;
-    }
-    button:active{
-      background-color:transparent;
-    }
-    .words{
-      margin-left:5px;
-    }
-    .navbar-brand:hover{
-      border: none;
-      color:darkorchid;
-    }
-            
-        </style>
-    </head>
-    <body>
-        <img class="blob1"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img>
-        <!-- Tablet and Phone Navbar -->
-        <nav class="navbar bg-custom navbar-dark">
-            <!-- Burger Menu Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Search Bar -->
-            <form class="form-inline mr-auto ml-1">
-                <div class="md-form my-0">
-                    <input class="form-control header-nav-searchBar" type="text" placeholder="Search" aria-label="Search">
-                </div>
-                <button class="header-nav-searchButton" type="button" onclick="searchBar()"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
-            </form>
-            <!-- Login & Signup Buttons -->
-            <a class="navbar-brand" href="#" onclick="fadein()">Login</a>
-            <a class="navbar-brand" href="sign up.html">Sign Up</a>
-            <!-- Burger Menu Links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                          <a class="material-icons nav-icon" href="home.html">home<span class="words">Home</span></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="material-icons nav-icon" href="popular-art.html">stars<span class="words">What's Hot</span></a>
-                      </li> 
-                      <li class="nav-item">
-                          <a class="material-icons nav-icon" href="feature-artist.html">account_circle<span class="words">Profile</span></a>
-                      </li>   
-                      <li class="nav-item">
-                          <a class="material-icons nav-icon" href="about/about us.html">supervised_user_circle<span class="words">About Us</span></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="material-icons nav-icon" href="contact us.html">local_phone<span class="words">Contact Us</span></a>
-                      </li>   
-                    </ul>
-                  </div>  
+        .navbar-brand:hover{
+            border: none;
+            color:darkorchid;
+        } 
+        @media only screen and (min-height: 768px) {
+        .foot-style {
+            position: fixed;
+            bottom: 0;
+        }
+        }
+    </style>
+</head>
+<body>
+    <img class="blob1"src="http://sweet.io/bg-bubble__title.91def0c97d89d0548ee4.svg"></img>
+    <!-- Tablet and Phone Navbar -->
+    <nav class="navbar bg-custom navbar-dark">
+        <!-- Burger Menu Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Search Bar -->
+        <form class="form-inline mr-auto ml-1">
+            <div class="md-form my-0">
+                <input class="form-control header-nav-searchBar" type="text" placeholder="Search" aria-label="Search">
+            </div>
+            <button class="header-nav-searchButton" type="button" onclick="searchBar()"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
+        </form>
+        <!-- Login & Signup Buttons -->
+        <a class="navbar-brand" href="#" onclick="fadein()">Login</a>
+        <a class="navbar-brand" href="sign up.html">Sign Up</a>
+        <!-- Burger Menu Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="material-icons nav-icon" href="home.html">home<span class="words">Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="material-icons nav-icon" href="popular-art.html">stars<span class="words">What's Hot</span></a>
+                </li> 
+                <li class="nav-item">
+                    <a class="material-icons nav-icon" href="feature-artist.html">account_circle<span class="words">Profile</span></a>
+                </li>   
+                <li class="nav-item">
+                    <a class="material-icons nav-icon" href="about/about us.html">supervised_user_circle<span class="words">About Us</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="material-icons nav-icon" href="contact us.html">local_phone<span class="words">Contact Us</span></a>
+                </li>   
+            </ul>
+        </div>  
     </nav>
     <div class="flex1">
     <div class="flex">
-            <nav id="sidebar">
-                    <ul class="list-unstyled components">
-                            <li class="active1">
-                                    <a class="logo" href="home.html"><span class="Logo"><b>Ozweebo	<span class="trade">&trade;</span></b></span></a>
-                                  </li>
-                      <li class="active1">
-                        <a class="material-icons" href="home.html">home<span class="words">Home</span></a>
-                      </li>
-                      <li class="active1">
-                        <a class="material-icons" href="popular-art.html">stars<span class="words">What's Hot</span></a>
-                      </li>
-                      <li class="active1">
-                          <a class="material-icons" href="feature-artist.html">account_circle<span class="words">Profile</span></a>
-                        </li>
-                      <li class="active1">
-                        <a class="material-icons" href="about/about us.html">supervised_user_circle<span class="words">About Us</span></a>
-                      </li>
-                      <li class="active1">
-                        <a class="material-icons" href="contact us.html">local_phone<span class="words">Contact Us</span></a>
-                      </li>
-            
-                    </ul>
-                  </nav>
-            
+        <nav id="sidebar">
+            <ul class="list-unstyled components">
+                <li class="active1">
+                    <a class="logo" href="home.html"><span class="Logo"><b>Ozweebo	<span class="trade">&trade;</span></b></span></a>
+                </li>
+                <li class="active1">
+                    <a class="material-icons" href="home.html">home<span class="words">Home</span></a>
+                </li>
+                <li class="active1">
+                    <a class="material-icons" href="popular-art.html">stars<span class="words">What's Hot</span></a>
+                </li>
+                <li class="active1">
+                    <a class="material-icons" href="feature-artist.html">account_circle<span class="words">Profile</span></a>
+                </li>
+                <li class="active1">
+                    <a class="material-icons" href="about/about us.html">supervised_user_circle<span class="words">About Us</span></a>
+                </li>
+                <li class="active1">
+                    <a class="material-icons" href="contact us.html">local_phone<span class="words">Contact Us</span></a>
+                </li>
+            </ul>
+        </nav>
+        
         <div id="frame">
             <div class="modl">
                 <button class="exitbutton" onclick=fadeout()>×</button>
@@ -362,12 +335,12 @@
             <a href="home.html"> ozweebo.com</a>
         </div>
         <!-- Copyright -->
-        <script src="js/footer.js"></script>
     </footer>
-    <!-- Footer -->
+        <!-- Footer -->
     </div>
+    <!-- Our JS files -->
     <script src="js/login.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
 </body>
-
 </html>
